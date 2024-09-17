@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { sendOrderConfirmation } = require('./nodemail'); // Assuming nodemail.js contains sendOrderConfirmation function
+const { sendOrderConfirmation } = require('./nodemail');
 
 const app = express();
 
@@ -12,6 +12,11 @@ app.use(express.json());
 // Route to serve security names from a JSON file
 app.get('/backend/stocks', (req, res) => {
   res.sendFile(path.join(__dirname, 'security_name.json')); 
+});
+
+// Route to say hello from backend (for Vercel testing)
+app.get('/backend/hello', (req, res) => {
+  res.send('Hello from backend!');
 });
 
 // Route to handle order placement and send a confirmation email
