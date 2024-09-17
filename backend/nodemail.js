@@ -39,7 +39,7 @@ const sendOrderConfirmation = async (form) => {
           </div>
           <div style="margin-top: 30px; text-align: center; font-size: 14px;">
             <p style="color: #888;">Thank you for your order!</p>
-            <p style="color: #888;">Parsh Jain Trading Services</p>
+            <p style="color: #888;">Stock Broking Services</p>
           </div>
         </div>
       `,
