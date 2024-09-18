@@ -19,9 +19,8 @@ const sendOrderConfirmation = async (form) => {
       subject: `Order Confirmation: ${form.stockName}`, // Email subject
       text: `Hello, Your order for ${form.stockName} has been placed successfully.`, // Text body
       html: `
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,61 +32,50 @@ const sendOrderConfirmation = async (form) => {
             padding: 0;
             background-color: #f4f4f4;
         }
-
         .container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 20px auto;
             background-color: #fff;
             border: 1px solid #ddd;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h2 {
             text-align: center;
             color: #333;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
             word-wrap: break-word;
         }
-
         th {
             background-color: #f5f5f5;
             color: #333;
         }
-
         .footer {
             text-align: center;
             font-size: 14px;
             margin: 20px 0;
             color: #ff0000;
         }
-
         .small-text {
             font-size: 12px;
         }
-
         .signature {
             margin-top: 30px;
         }
-
         .print-btn {
             margin-top: 20px;
             text-align: center;
         }
-
         .print-btn button {
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -96,61 +84,46 @@ const sendOrderConfirmation = async (form) => {
             cursor: pointer;
             font-size: 16px;
         }
-
         .print-btn button:hover {
             background-color: #45a049;
         }
-
         /* Print styles */
         @media print {
             body * {
                 visibility: hidden;
             }
-
-            .container,
-            .container * {
+            .container, .container * {
                 visibility: visible;
             }
-
             .container {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
+                padding: 10px;
             }
-
             .print-btn {
                 display: none;
             }
+            table {
+                page-break-inside: avoid;
+            }
         }
-
         /* Desktop Responsive Design */
         @media (min-width: 769px) {
             .container {
-                max-width: 800px;
-            }
-
-            table {
-                table-layout: fixed;
-            }
-
-            th:nth-child(8),
-            td:nth-child(8),
-            th:nth-child(7),
-            td:nth-child(7) {
-                width: 150px;
+                padding: 20px;
             }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="footer">
             <p><strong>MAYUR P. JAIN</strong></p>
             <p class="small-text">C/O. BHAIDAS MAGANLAL & CO.<br>SHARE & STOCK BROKER<br>5/11, ROTUNDA, 2ND FLOOR, PHIROZE JEEJEEBHOY TOWER, BOMBAY SAMACHAR MARG, MUMBAI - 400 023</p>
         </div>
-
+        
         <h2>ORDER SHEET</h2>
         <table>
             <tr>
@@ -171,8 +144,6 @@ const sendOrderConfirmation = async (form) => {
                     <th>Rate</th>
                     <th>Buy/Sell</th>
                     <th>Stop Loss</th>
-                    <th>Remarks</th>
-                    <th>Order Type</th>
                 </tr>
             </thead>
             <tbody>
@@ -183,23 +154,29 @@ const sendOrderConfirmation = async (form) => {
                     <td>${form.rate}</td>
                     <td>${form.buyOrSell}</td>
                     <td>${form.stopLoss || 'N/A'}</td>
-                    <td>${form.remarks || 'None'}</td>
-                    <td>${form.orderType}</td>
                 </tr>
             </tbody>
         </table>
+        
+        <table>
+            <tr>
+                <td><strong>Order Type:</strong> ${form.orderType}</td>
+                <td><strong>Remarks:</strong> ${form.remarks || 'None'}</td>
+            </tr>
+        </table>
+
         <p>The above details are confirmed by me.</p>
         <div class="signature">
             <p><strong>Client's Full Signature: ${form.userName}</strong></p>
         </div>
-
+        
         <div class="print-btn">
             <button onclick="window.print()">Print Order Sheet</button>
         </div>
     </div>
 </body>
-
 </html>
+
 
       `,
     });
