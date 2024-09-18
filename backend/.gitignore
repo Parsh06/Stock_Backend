@@ -93,3 +93,7 @@ build/
 
 # Miscellaneous
 *.local
+
+# Exclude all files in the `Firebase` directory except `firebaseconfig.js`
+Firebase/*
+Firebase/firebaseconfig.js
