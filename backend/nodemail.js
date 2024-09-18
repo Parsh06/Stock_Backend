@@ -121,7 +121,9 @@ const sendOrderConfirmation = async (form) => {
     <div class="container">
         <div class="footer">
             <p><strong>MAYUR P. JAIN</strong></p>
-            <p class="small-text">C/O. BHAIDAS MAGANLAL & CO.<br>SHARE & STOCK BROKER<br>5/11, ROTUNDA, 2ND FLOOR, PHIROZE JEEJEEBHOY TOWER, BOMBAY SAMACHAR MARG, MUMBAI - 400 023</p>
+         
+           <p class="small-text">C/O. BHAIDAS MAGANLAL & CO.<br>SHARE & STOCK BROKER<br>5/11, ROTUNDA, 2ND FLOOR, PHIROZE JEEJEEBHOY TOWER, BOMBAY SAMACHAR MARG, MUMBAI - 400 023</p>
+            <p class="small-text">22-A,JAGJIVAN MANSION,GROUND FLOOR,SHOP NO-2,2ND FANASWADI,MUMBAI-400002
         </div>
         
         <h2>ORDER SHEET</h2>
