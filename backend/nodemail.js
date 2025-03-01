@@ -5,17 +5,11 @@ const streamBuffers = require('stream-buffers');
 const sendOrderConfirmation = async (form) => {
   try {
     // Create a PDF document in memory with adjusted margins
-    const doc = new PDFDocument({
-      margin: 30,
-    });
-
-    // Buffer for the PDF output
+    const doc = new PDFDocument({ margin: 30 });
     const pdfBuffer = new streamBuffers.WritableStreamBuffer();
-
-    // Pipe the PDF to the buffer
     doc.pipe(pdfBuffer);
 
-    // Footer section
+    // Footer section (company info)
     doc.fontSize(10).text('MAYUR P. JAIN', { align: 'center' });
     doc.fontSize(9)
       .text('C/O. BHAIDAS MAGANLAL & CO.', { align: 'center' })
@@ -36,15 +30,12 @@ const sendOrderConfirmation = async (form) => {
       .text(`UCC CODE: ${form.UCC_CODE}`, { align: 'left' })
       .moveDown()
       .text(`Date: ${form.currentDate}`, { align: 'left' })
-      .text('Order Time: ', { align: 'left' })  // Leaving this field intentionally empty
+      .text(`Order Time: ${form.orderTime}`, { align: 'left' })
       .moveDown(2);
 
-    // Define table styling
+    // Table headers
     doc.fontSize(10).font('Helvetica-Bold');
-
     const tableTop = doc.y;
-
-    // Draw table headers with proper lines and alignment
     doc.text('Sl No', 50, tableTop, { width: 50, align: 'center' })
       .text('Script/Contract Name', 100, tableTop, { width: 150, align: 'center' })
       .text('Qty', 250, tableTop, { width: 50, align: 'center' })
@@ -53,16 +44,11 @@ const sendOrderConfirmation = async (form) => {
       .text('Stop Loss', 400, tableTop, { width: 50, align: 'center' })
       .text('Order Type', 450, tableTop, { width: 50, align: 'center' })
       .text('Remark', 500, tableTop, { width: 50, align: 'center' });
-
-    // Add horizontal line after the header
     doc.moveTo(50, doc.y + 12).lineTo(550, doc.y + 12).stroke();
 
-    // Table rows with cell borders
+    // Table row data
     doc.fontSize(12).font('Helvetica');
-
     const tableRowTop = doc.y + 20;
-
-    // Add table row data
     doc.text('1', 50, tableRowTop, { width: 50, align: 'center' })
       .text(`${form.stockName}`, 100, tableRowTop, { width: 150, align: 'center' })
       .text(`${form.quantity}`, 250, tableRowTop, { width: 50, align: 'center' })
@@ -71,63 +57,50 @@ const sendOrderConfirmation = async (form) => {
       .text(`${form.stopLoss || 'N/A'}`, 400, tableRowTop, { width: 50, align: 'center' })
       .text(`${form.orderType || 'N/A'}`, 450, tableRowTop, { width: 50, align: 'center' })
       .text(`${form.remarks || 'N/A'}`, 500, tableRowTop, { width: 50, align: 'center' });
-
-    // Draw vertical lines for table cells
     const tableBottom = doc.y + 20;
-    doc.moveTo(50, tableTop).lineTo(50, tableBottom).stroke();  // Left border
-    doc.moveTo(100, tableTop).lineTo(100, tableBottom).stroke();  // First column border
-    doc.moveTo(250, tableTop).lineTo(250, tableBottom).stroke();  // Second column border
-    doc.moveTo(300, tableTop).lineTo(300, tableBottom).stroke();  // Third column border
-    doc.moveTo(350, tableTop).lineTo(350, tableBottom).stroke();  // Fourth column border
-    doc.moveTo(400, tableTop).lineTo(400, tableBottom).stroke();  // Fifth column border
-    doc.moveTo(450, tableTop).lineTo(450, tableBottom).stroke();  // Sixth column border
-    doc.moveTo(500, tableTop).lineTo(500, tableBottom).stroke();  // Right border
-    doc.moveTo(550, tableTop).lineTo(550, tableBottom).stroke();  // Seventh column border
-
-    // Horizontal line after the row
+    // Draw borders for clarity
+    [50, 100, 250, 300, 350, 400, 450, 500, 550].forEach((x) => {
+      doc.moveTo(x, tableTop).lineTo(x, tableBottom).stroke();
+    });
     doc.moveTo(50, tableBottom).lineTo(550, tableBottom).stroke();
-
-    // Draw a final horizontal line to end the table
     doc.moveTo(50, tableBottom + 20).lineTo(550, tableBottom + 20).stroke();
 
-    // Move down to add space before the Remark section
+    // Signature section
     doc.moveDown(5);
     doc.fontSize(12)
-      .moveDown()
-      .text("Client's Full Signature:", { align: 'centre' })
-      .text(form.userName, { align: 'centre' });
+      .text("Client's Full Signature:", { align: 'center' })
+      .text(form.userName, { align: 'center' });
 
     doc.end();
 
-    // Wait for the PDF to be completely generated
+    // Wait for PDF generation
     const pdfData = await new Promise((resolve, reject) => {
       pdfBuffer.on('finish', () => resolve(pdfBuffer.getContents()));
       pdfBuffer.on('error', reject);
     });
 
-
-    // Create a transporter object using the default SMTP transport
+    // Create transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,  // Your email
-        pass: process.env.EMAIL_PASS,  // App password from Google
+        user: process.env.EMAIL_USER, // set your environment variables
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Send the email with the PDF attached as a buffer
+    // Send email with PDF attached and HTML body
     const info = await transporter.sendMail({
-      from: '"Parsh Jain" <parshjain@example.com>', // Sender
-      to: 'parshjain46@gmail.com, cpjain1980@gmail.com',  // Recipients
-      subject: `Order Confirmation: ${form.stockName}`, // Email subject
-      text: `Hello, Your order for ${form.stockName} has been placed successfully.`, // Text body
-      html: createEmailTemplate(form), // Use email template
+      from: '"Parsh Jain" <parshjain@example.com>',
+      to: 'parshjain46@gmail.com, cpjain1980@gmail.com',
+      subject: `Order Confirmation (${form.buyOrSell}): ${form.stockName}`,
+      text: `Hello ${form.userName},\n\nYour order for ${form.stockName} (${form.buyOrSell}) has been placed successfully at ₹${form.rate} per share for ${form.quantity} shares on ${form.currentDate} at ${form.orderTime}.\n\nThank you.`,
+      html: createEmailTemplate(form),
       attachments: [
         {
           filename: `Order_Confirmation_${form.stockName}.pdf`,
-          content: pdfData, // Attach the PDF data as a buffer
-          contentType: 'application/pdf'
-        }
+          content: pdfData,
+          contentType: 'application/pdf',
+        },
       ],
     });
 
@@ -138,117 +111,120 @@ const sendOrderConfirmation = async (form) => {
   }
 };
 
-// Create the HTML email template
 const createEmailTemplate = (form) => {
   return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Order Sheet</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                padding: 0;
-                margin: 0;
-            }
-            .container {
-                width: 100%;
-                max-width: 800px;
-                margin: 20px auto;
-                background-color: #fff;
-                border: 1px solid #ddd;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            h2 {
-                text-align: center;
-                color: #333;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 20px 0;
-            }
-            th, td {
-                border: 1px solid #ddd;
-                padding: 10px;
-                text-align: left;
-            }
-            th {
-                background-color: #f5f5f5;
-            }
-            .footer {
-                text-align: center;
-                font-size: 14px;
-                margin-top: 20px;
-            }
-            .small-text {
-                font-size: 12px;
-            }
-            .signature {
-                margin-top: 30px;
-            }
-        </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Order Confirmation</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+          text-align: center;
+          color: #333;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+        }
+        th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+        }
+        th {
+          background-color: #f5f5f5;
+        }
+        .footer {
+          text-align: center;
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        .small-text {
+          font-size: 12px;
+        }
+        .signature {
+          margin-top: 30px;
+          text-align: center;
+        }
+      </style>
     </head>
     <body>
-        <div class="container">
-            <div class="footer">
-                <p><strong>MAYUR P. JAIN</strong></p>
-                <p class="small-text">C/O. BHAIDAS MAGANLAL & CO.<br>SHARE & STOCK BROKER<br>5/11, ROTUNDA, 2ND FLOOR, PHIROZE JEEJEEBHOY TOWER, BOMBAY SAMACHAR MARG, MUMBAI - 400 023</p>
-                <p class="small-text">22-A, JAGJIVAN MANSION, GROUND FLOOR, SHOP NO-2, 2ND FANASWADI, MUMBAI - 400002</p>
-            </div>
-            
-            <h2>ORDER SHEET</h2>
-            <table>
-                <tr>
-                    <td><strong>Client Name:</strong> ${form.userName}</td>
-                    <td><strong>UCC CODE:</strong> ${form.UCC_CODE}</td>
-                </tr>
-                <tr>
-                    <td><strong>Date:</strong> ${form.currentDate}</td>
-                    <td><strong>Order Time:</strong> ${form.orderTime}</td>
-                </tr>
-            </table>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sl No</th>
-                        <th>Script/Contract Name</th>
-                        <th>Qty</th>
-                        <th>Rate</th>
-                        <th>Buy/Sell</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>${form.stockName}</td>
-                        <td>${form.quantity}</td>
-                        <td>${form.rate}</td>
-                        <td>${form.buyOrSell}</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table>
-                <tr>
-                    <td><strong>Stop Loss:</strong> ${form.stopLoss || 'N/A'}</td>
-                    <td><strong>Order Type:</strong> ${form.orderType}</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>Remarks:</strong> ${form.remarks || 'None'}</td>
-                </tr>
-            </table>
-
-            <p>The above details are confirmed by me.</p>
-            <div class="signature">
-                <p><strong>Client's Full Signature: ${form.userName}</strong></p>
-            </div>
+      <div class="container">
+        <div class="footer">
+          <p><strong>MAYUR P. JAIN</strong></p>
+          <p class="small-text">
+            C/O. BHAIDAS MAGANLAL & CO.<br>
+            SHARE & STOCK BROKER<br>
+            5/11, ROTUNDA, 2ND FLOOR, PHIROZE JEEJEEBHOY TOWER,<br>
+            BOMBAY SAMACHAR MARG, MUMBAI - 400 023
+          </p>
+          <p class="small-text">
+            22-A, JAGJIVAN MANSION, GROUND FLOOR, SHOP NO-2, 2ND FANASWADI,<br>
+            MUMBAI - 400002
+          </p>
         </div>
+        <h2>ORDER CONFIRMATION</h2>
+        <table>
+          <tr>
+            <td><strong>Client Name:</strong> ${form.userName}</td>
+            <td><strong>UCC CODE:</strong> ${form.UCC_CODE}</td>
+          </tr>
+          <tr>
+            <td><strong>Date:</strong> ${form.currentDate}</td>
+            <td><strong>Order Time:</strong> ${form.orderTime}</td>
+          </tr>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Sl No</th>
+              <th>Script/Contract Name</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Buy/Sell</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>${form.stockName}</td>
+              <td>${form.quantity}</td>
+              <td>${form.rate}</td>
+              <td>${form.buyOrSell}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tr>
+            <td><strong>Stop Loss:</strong> ${form.stopLoss || 'N/A'}</td>
+            <td><strong>Order Type:</strong> ${form.orderType || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Remarks:</strong> ${form.remarks || 'None'}</td>
+          </tr>
+        </table>
+        <p>Your order has been processed successfully.</p>
+        <div class="signature">
+          <p><strong>Client's Full Signature: ${form.userName}</strong></p>
+        </div>
+      </div>
     </body>
     </html>
   `;
