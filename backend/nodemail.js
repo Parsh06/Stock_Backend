@@ -1,15 +1,16 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 const PDFDocument = require('pdfkit');
 const streamBuffers = require('stream-buffers');
 
 const sendOrderConfirmation = async (form) => {
   try {
-    // Create a PDF document in memory with adjusted margins
+    // Create a PDF document in memory with 30px margin
     const doc = new PDFDocument({ margin: 30 });
     const pdfBuffer = new streamBuffers.WritableStreamBuffer();
     doc.pipe(pdfBuffer);
 
-    // Footer section (company info)
+    // Company footer section
     doc.fontSize(10).text('MAYUR P. JAIN', { align: 'center' });
     doc.fontSize(9)
       .text('C/O. BHAIDAS MAGANLAL & CO.', { align: 'center' })
@@ -21,10 +22,8 @@ const sendOrderConfirmation = async (form) => {
       .text('MUMBAI - 400002', { align: 'center' })
       .moveDown(2);
 
-    // Title
+    // Title and client details
     doc.fontSize(18).text('ORDER SHEET', { align: 'center' }).moveDown(1);
-
-    // Client information
     doc.fontSize(12)
       .text(`Client Name: ${form.userName}`, { align: 'left' })
       .text(`UCC CODE: ${form.UCC_CODE}`, { align: 'left' })
@@ -33,7 +32,7 @@ const sendOrderConfirmation = async (form) => {
       .text(`Order Time: ${form.orderTime}`, { align: 'left' })
       .moveDown(2);
 
-    // Table headers
+    // Table header
     doc.fontSize(10).font('Helvetica-Bold');
     const tableTop = doc.y;
     doc.text('Sl No', 50, tableTop, { width: 50, align: 'center' })
@@ -50,15 +49,14 @@ const sendOrderConfirmation = async (form) => {
     doc.fontSize(12).font('Helvetica');
     const tableRowTop = doc.y + 20;
     doc.text('1', 50, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.stockName}`, 100, tableRowTop, { width: 150, align: 'center' })
-      .text(`${form.quantity}`, 250, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.rate}`, 300, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.buyOrSell}`, 350, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.stopLoss || 'N/A'}`, 400, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.orderType || 'N/A'}`, 450, tableRowTop, { width: 50, align: 'center' })
-      .text(`${form.remarks || 'N/A'}`, 500, tableRowTop, { width: 50, align: 'center' });
+      .text(form.stockName, 100, tableRowTop, { width: 150, align: 'center' })
+      .text(form.quantity, 250, tableRowTop, { width: 50, align: 'center' })
+      .text(form.rate, 300, tableRowTop, { width: 50, align: 'center' })
+      .text(form.buyOrSell, 350, tableRowTop, { width: 50, align: 'center' })
+      .text(form.stopLoss || 'N/A', 400, tableRowTop, { width: 50, align: 'center' })
+      .text(form.orderType || 'N/A', 450, tableRowTop, { width: 50, align: 'center' })
+      .text(form.remarks || 'N/A', 500, tableRowTop, { width: 50, align: 'center' });
     const tableBottom = doc.y + 20;
-    // Draw borders for clarity
     [50, 100, 250, 300, 350, 400, 450, 500, 550].forEach((x) => {
       doc.moveTo(x, tableTop).lineTo(x, tableBottom).stroke();
     });
@@ -73,22 +71,22 @@ const sendOrderConfirmation = async (form) => {
 
     doc.end();
 
-    // Wait for PDF generation
+    // Wait for PDF generation to complete
     const pdfData = await new Promise((resolve, reject) => {
       pdfBuffer.on('finish', () => resolve(pdfBuffer.getContents()));
       pdfBuffer.on('error', reject);
     });
 
-    // Create transporter
+    // Configure nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // set your environment variables
+        user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Send email with PDF attached and HTML body
+    // Send email with PDF attachment and HTML body
     const info = await transporter.sendMail({
       from: '"Parsh Jain" <parshjain@example.com>',
       to: 'parshjain46@gmail.com, cpjain1980@gmail.com',
