@@ -88,24 +88,24 @@ const sendOrderConfirmation = async (form) => {
 
     // Send email with PDF attachment and HTML body
     const info = await transporter.sendMail({
-      from: '"Parsh Jain" <parshjain@example.com>',
+      from: `"Parsh Jain" <${process.env.EMAIL_USER}>`,
       to: 'parshjain46@gmail.com, cpjain1980@gmail.com',
-      subject: `Order Confirmation (${form.buyOrSell}): ${form.stockName}`,
-      text: `Hello ${form.userName},\n\nYour order for ${form.stockName} (${form.buyOrSell}) has been placed successfully at ₹${form.rate} per share for ${form.quantity} shares on ${form.currentDate} at ${form.orderTime}.\n\nThank you.`,
+      subject: `Order (${form.buyOrSell}): ${form.stockName}`,
+      text: `Your order has been placed...`,
       html: createEmailTemplate(form),
       attachments: [
         {
-          filename: `Order_Confirmation_${form.stockName}.pdf`,
+          filename: `Order_${form.stockName}.pdf`,
           content: pdfData,
           contentType: 'application/pdf',
-        },
-      ],
+        }
+      ]
     });
-
-    console.log('Order confirmation email sent: %s', info.messageId);
+    console.log('Email sent: %s', info.messageId);
+    return info; // Return info instead of sending response
   } catch (error) {
-    console.error('Error sending email: ', error);
-    throw error;
+    console.error('Error generating PDF or sending email:', error);
+    throw new Error('Error generating PDF or sending email.');
   }
 };
 

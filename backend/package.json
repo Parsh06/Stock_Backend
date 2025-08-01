@@ -1,10 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Stock Backend API Server",
   "main": "server.js",
+  "author": "Parsh Jain",
+  "license": "ISC",
   "scripts": {
     "start": "node server.js",
+    "dev": "node server.js",
     "build": "echo Backend has no build process"
   },
   "dependencies": {
