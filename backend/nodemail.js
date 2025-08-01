@@ -89,7 +89,7 @@ const sendOrderConfirmation = async (form) => {
     // Send email with PDF attachment and HTML body
     const info = await transporter.sendMail({
       from: `"Parsh Jain" <${process.env.EMAIL_USER}>`,
-      to: 'parshjain46@gmail.com, cpjain1980@gmail.com',
+      to: 'parshjain46@gmail.com, mayurinvestments2011@gmail.com',
       subject: `Order (${form.buyOrSell}): ${form.stockName}`,
       text: `Your order has been placed...`,
       html: createEmailTemplate(form),
