@@ -1,0 +1,1823 @@
+[
+  {
+    "Company": "Current Infraprojects Ltd. IPO",
+    "Opening Date": null,
+    "Closing Date": null,
+    "Listing Date": null,
+    "Issue Price (Rs.)": null,
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "0.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Holani Consultants"
+  },
+  {
+    "Company": "ANB Metal Cast Ltd. IPO",
+    "Opening Date": "Fri, Aug 08, 2025",
+    "Closing Date": "Tue, Aug 12, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "148.00 to 156.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "49.92",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Sun Capital Advisory"
+  },
+  {
+    "Company": "All Time Plastics Ltd. IPO",
+    "Opening Date": "Thu, Aug 07, 2025",
+    "Closing Date": "Mon, Aug 11, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "260.00 to 275.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "400.60",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Intensive Fiscal"
+  },
+  {
+    "Company": "Connplex Cinemas Ltd. IPO",
+    "Opening Date": "Thu, Aug 07, 2025",
+    "Closing Date": "Mon, Aug 11, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "168.00 to 177.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "90.27",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "JSW Cement Ltd. IPO",
+    "Opening Date": "Thu, Aug 07, 2025",
+    "Closing Date": "Mon, Aug 11, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "139.00 to 147.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "3,600.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Sawaliya Foods Products Ltd. IPO",
+    "Opening Date": "Thu, Aug 07, 2025",
+    "Closing Date": "Mon, Aug 11, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "114.00 to 120.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "34.83",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Highway Infrastructure Ltd. IPO",
+    "Opening Date": "Tue, Aug 05, 2025",
+    "Closing Date": "Thu, Aug 07, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "65.00 to 70.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "130.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Pantomath Capital Advisors"
+  },
+  {
+    "Company": "Knowledge Realty Trust REIT",
+    "Opening Date": "Tue, Aug 05, 2025",
+    "Closing Date": "Thu, Aug 07, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "95.00 to 100.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "4,800.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Kotak Mahindra Capital"
+  },
+  {
+    "Company": "Bhadora Industries Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "97.00 to 103.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "55.62",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Parth Electricals & Engineering Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "160.00 to 170.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "49.72",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Jyoti Global Plast Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "62.00 to 66.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "35.44",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Aaradhya Disposal Industries Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "110.00 to 116.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "45.10",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Khambatta Securities"
+  },
+  {
+    "Company": "BLT Logistics Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "75",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "9.72",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Essex Marine Ltd. IPO",
+    "Opening Date": "Mon, Aug 04, 2025",
+    "Closing Date": "Wed, Aug 06, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "54",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "23.01",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Khandwala Securities"
+  },
+  {
+    "Company": "Flysbs Aviation Ltd. IPO",
+    "Opening Date": "Fri, Aug 01, 2025",
+    "Closing Date": "Tue, Aug 05, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "225",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "102.53",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Vivro Financial"
+  },
+  {
+    "Company": "Cash Ur Drive Marketing Ltd. IPO",
+    "Opening Date": "Thu, Jul 31, 2025",
+    "Closing Date": "Mon, Aug 04, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "130",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "60.79",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "Renol Polychem Ltd. IPO",
+    "Opening Date": "Thu, Jul 31, 2025",
+    "Closing Date": "Mon, Aug 04, 2025",
+    "Listing Date": null,
+    "Issue Price (Rs.)": "105",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.77",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Corporate Makers Capital"
+  },
+  {
+    "Company": "Sri Lotus Developers & Realty Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "150",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "792.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Motilal Oswal"
+  },
+  {
+    "Company": "M&B Engineering Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "385",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "650.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Equirus Capital"
+  },
+  {
+    "Company": "B.D.Industries (Pune) Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "102.00 to 108.00",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "45.36",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Aryaman Financial Services"
+  },
+  {
+    "Company": "Mehul Colours Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "72",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "21.66",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Seren Capital"
+  },
+  {
+    "Company": "Takyon Networks Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "54",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "20.48",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "National Securities Depository Ltd. IPO",
+    "Opening Date": "Wed, Jul 30, 2025",
+    "Closing Date": "Fri, Aug 01, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": "800",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "4,011.60",
+    "Listing at": "BSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "Laxmi India Finance Ltd. IPO",
+    "Opening Date": "Tue, Jul 29, 2025",
+    "Closing Date": "Thu, Jul 31, 2025",
+    "Listing Date": "Tue, Aug 05, 2025",
+    "Issue Price (Rs.)": "158",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "254.26",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "PL Capital Markets"
+  },
+  {
+    "Company": "Aditya Infotech Ltd. IPO",
+    "Opening Date": "Tue, Jul 29, 2025",
+    "Closing Date": "Thu, Jul 31, 2025",
+    "Listing Date": "Tue, Aug 05, 2025",
+    "Issue Price (Rs.)": "675",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1,300.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "Kaytex Fabrics Ltd. IPO",
+    "Opening Date": "Tue, Jul 29, 2025",
+    "Closing Date": "Thu, Jul 31, 2025",
+    "Listing Date": "Tue, Aug 05, 2025",
+    "Issue Price (Rs.)": "180",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "69.81",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Socradamus Capital"
+  },
+  {
+    "Company": "Repono Ltd. IPO",
+    "Opening Date": "Mon, Jul 28, 2025",
+    "Closing Date": "Wed, Jul 30, 2025",
+    "Listing Date": "Mon, Aug 04, 2025",
+    "Issue Price (Rs.)": "96",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "26.68",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Wealthmine Networks"
+  },
+  {
+    "Company": "Umiya Mobile Ltd. IPO",
+    "Opening Date": "Mon, Jul 28, 2025",
+    "Closing Date": "Wed, Jul 30, 2025",
+    "Listing Date": "Mon, Aug 04, 2025",
+    "Issue Price (Rs.)": "66",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "24.88",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Shanti Gold International Ltd. IPO",
+    "Opening Date": "Fri, Jul 25, 2025",
+    "Closing Date": "Tue, Jul 29, 2025",
+    "Listing Date": "Fri, Aug 01, 2025",
+    "Issue Price (Rs.)": "199",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "360.11",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Choice Capital Advisors"
+  },
+  {
+    "Company": "Sellowrap Industries Ltd. IPO",
+    "Opening Date": "Fri, Jul 25, 2025",
+    "Closing Date": "Tue, Jul 29, 2025",
+    "Listing Date": "Fri, Aug 01, 2025",
+    "Issue Price (Rs.)": "83",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "30.28",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Gretex Corporate Services"
+  },
+  {
+    "Company": "Shree Refrigerations Ltd. IPO",
+    "Opening Date": "Fri, Jul 25, 2025",
+    "Closing Date": "Tue, Jul 29, 2025",
+    "Listing Date": "Thu, Jul 31, 2025",
+    "Issue Price (Rs.)": "125",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "117.33",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "Patel Chem Specialities Ltd. IPO",
+    "Opening Date": "Fri, Jul 25, 2025",
+    "Closing Date": "Tue, Jul 29, 2025",
+    "Listing Date": "Fri, Aug 01, 2025",
+    "Issue Price (Rs.)": "84",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "58.80",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Cumulative Capital"
+  },
+  {
+    "Company": "Brigade Hotel Ventures Ltd. IPO",
+    "Opening Date": "Thu, Jul 24, 2025",
+    "Closing Date": "Mon, Jul 28, 2025",
+    "Listing Date": "Thu, Jul 31, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "759.60",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Indiqube Spaces Ltd. IPO",
+    "Opening Date": "Wed, Jul 23, 2025",
+    "Closing Date": "Fri, Jul 25, 2025",
+    "Listing Date": "Wed, Jul 30, 2025",
+    "Issue Price (Rs.)": "237",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "700.15",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "GNG Electronics Ltd. IPO",
+    "Opening Date": "Wed, Jul 23, 2025",
+    "Closing Date": "Fri, Jul 25, 2025",
+    "Listing Date": "Wed, Jul 30, 2025",
+    "Issue Price (Rs.)": "237",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "460.43",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Motilal Oswal"
+  },
+  {
+    "Company": "TSC India Ltd. IPO",
+    "Opening Date": "Wed, Jul 23, 2025",
+    "Closing Date": "Fri, Jul 25, 2025",
+    "Listing Date": "Wed, Jul 30, 2025",
+    "Issue Price (Rs.)": "70",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.89",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Expert Global Consultants"
+  },
+  {
+    "Company": "Monarch Surveyors & Engineering Consultants Ltd. IPO",
+    "Opening Date": "Tue, Jul 22, 2025",
+    "Closing Date": "Thu, Jul 24, 2025",
+    "Listing Date": "Tue, Jul 29, 2025",
+    "Issue Price (Rs.)": "250",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "93.75",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Property Share Investment Trust REIT SM REIT",
+    "Opening Date": "Mon, Jul 21, 2025",
+    "Closing Date": "Fri, Jul 25, 2025",
+    "Listing Date": "Mon, Aug 04, 2025",
+    "Issue Price (Rs.)": "10,60,000",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "473.00",
+    "Listing at": "BSE",
+    "Lead Manager": null
+  },
+  {
+    "Company": "Swastika Castal Ltd. IPO",
+    "Opening Date": "Mon, Jul 21, 2025",
+    "Closing Date": "Wed, Jul 23, 2025",
+    "Listing Date": "Mon, Jul 28, 2025",
+    "Issue Price (Rs.)": "65",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "14.07",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Savy Infra & Logistics Ltd. IPO",
+    "Opening Date": "Mon, Jul 21, 2025",
+    "Closing Date": "Wed, Jul 23, 2025",
+    "Listing Date": "Mon, Jul 28, 2025",
+    "Issue Price (Rs.)": "120",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "69.98",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Monika Alcobev Ltd. IPO",
+    "Opening Date": "Wed, Jul 16, 2025",
+    "Closing Date": "Fri, Jul 18, 2025",
+    "Listing Date": "Wed, Jul 23, 2025",
+    "Issue Price (Rs.)": "286",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "165.63",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Marwadi Chandarana Group"
+  },
+  {
+    "Company": "Anthem Biosciences Ltd. IPO",
+    "Opening Date": "Mon, Jul 14, 2025",
+    "Closing Date": "Wed, Jul 16, 2025",
+    "Listing Date": "Mon, Jul 21, 2025",
+    "Issue Price (Rs.)": "570",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "3,395.79",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Spunweb Nonwoven Ltd. IPO",
+    "Opening Date": "Mon, Jul 14, 2025",
+    "Closing Date": "Wed, Jul 16, 2025",
+    "Listing Date": "Mon, Jul 21, 2025",
+    "Issue Price (Rs.)": "96",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "60.98",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Vivro Financial"
+  },
+  {
+    "Company": "Smartworks Coworking Spaces Ltd. IPO",
+    "Opening Date": "Thu, Jul 10, 2025",
+    "Closing Date": "Mon, Jul 14, 2025",
+    "Listing Date": "Thu, Jul 17, 2025",
+    "Issue Price (Rs.)": "407",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "582.93",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Asston Pharmaceuticals Ltd. IPO",
+    "Opening Date": "Wed, Jul 09, 2025",
+    "Closing Date": "Fri, Jul 11, 2025",
+    "Listing Date": "Wed, Jul 16, 2025",
+    "Issue Price (Rs.)": "123",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.56",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Sobhagya Capital Options"
+  },
+  {
+    "Company": "CFF Fluid Control Ltd. FPO",
+    "Opening Date": "Wed, Jul 09, 2025",
+    "Closing Date": "Fri, Jul 11, 2025",
+    "Listing Date": "Wed, Jul 16, 2025",
+    "Issue Price (Rs.)": "585",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "87.75",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Aryaman Financial Services"
+  },
+  {
+    "Company": "GLEN Industries Ltd. IPO",
+    "Opening Date": "Tue, Jul 08, 2025",
+    "Closing Date": "Thu, Jul 10, 2025",
+    "Listing Date": "Tue, Jul 15, 2025",
+    "Issue Price (Rs.)": "97",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "63.02",
+    "Listing at": "BSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Travel Food Services Ltd. IPO",
+    "Opening Date": "Mon, Jul 07, 2025",
+    "Closing Date": "Wed, Jul 09, 2025",
+    "Listing Date": "Mon, Jul 14, 2025",
+    "Issue Price (Rs.)": "1,100",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "2,000.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Kotak Mahindra Capital"
+  },
+  {
+    "Company": "Smarten Power Systems Ltd. IPO",
+    "Opening Date": "Mon, Jul 07, 2025",
+    "Closing Date": "Wed, Jul 09, 2025",
+    "Listing Date": "Mon, Jul 14, 2025",
+    "Issue Price (Rs.)": "100",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "50.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Arihant Capital Markets"
+  },
+  {
+    "Company": "Chemkart India Ltd. IPO",
+    "Opening Date": "Mon, Jul 07, 2025",
+    "Closing Date": "Wed, Jul 09, 2025",
+    "Listing Date": "Mon, Jul 14, 2025",
+    "Issue Price (Rs.)": "248",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "80.08",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Meta Infotech Ltd. IPO",
+    "Opening Date": "Fri, Jul 04, 2025",
+    "Closing Date": "Tue, Jul 08, 2025",
+    "Listing Date": "Fri, Jul 11, 2025",
+    "Issue Price (Rs.)": "161",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "80.18",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Happy Square Outsourcing Services Ltd. IPO",
+    "Opening Date": "Thu, Jul 03, 2025",
+    "Closing Date": "Mon, Jul 07, 2025",
+    "Listing Date": "Thu, Jul 10, 2025",
+    "Issue Price (Rs.)": "76",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "24.25",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Corpwis Advisors"
+  },
+  {
+    "Company": "Cryogenic OGS Ltd. IPO",
+    "Opening Date": "Thu, Jul 03, 2025",
+    "Closing Date": "Mon, Jul 07, 2025",
+    "Listing Date": "Thu, Jul 10, 2025",
+    "Issue Price (Rs.)": "47",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "17.77",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Crizac Ltd. IPO",
+    "Opening Date": "Wed, Jul 02, 2025",
+    "Closing Date": "Fri, Jul 04, 2025",
+    "Listing Date": "Wed, Jul 09, 2025",
+    "Issue Price (Rs.)": "245",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "860.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Equirus Capital"
+  },
+  {
+    "Company": "Vandan Foods Ltd. IPO",
+    "Opening Date": "Mon, Jun 30, 2025",
+    "Closing Date": "Wed, Jul 02, 2025",
+    "Listing Date": "Mon, Jul 07, 2025",
+    "Issue Price (Rs.)": "115",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "30.36",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Nirbhay Capital"
+  },
+  {
+    "Company": "Marc Loire Fashions Ltd. IPO",
+    "Opening Date": "Mon, Jun 30, 2025",
+    "Closing Date": "Wed, Jul 02, 2025",
+    "Listing Date": "Mon, Jul 07, 2025",
+    "Issue Price (Rs.)": "100",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "21.00",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Finshore"
+  },
+  {
+    "Company": "Cedaar Textile Ltd. IPO",
+    "Opening Date": "Mon, Jun 30, 2025",
+    "Closing Date": "Wed, Jul 02, 2025",
+    "Listing Date": "Mon, Jul 07, 2025",
+    "Issue Price (Rs.)": "140",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "60.90",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Fast Track Finsec"
+  },
+  {
+    "Company": "Pushpa Jewellers Ltd. IPO",
+    "Opening Date": "Mon, Jun 30, 2025",
+    "Closing Date": "Wed, Jul 02, 2025",
+    "Listing Date": "Mon, Jul 07, 2025",
+    "Issue Price (Rs.)": "147",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "98.65",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Affinity Global"
+  },
+  {
+    "Company": "Silky Overseas Ltd. IPO",
+    "Opening Date": "Mon, Jun 30, 2025",
+    "Closing Date": "Wed, Jul 02, 2025",
+    "Listing Date": "Mon, Jul 07, 2025",
+    "Issue Price (Rs.)": "161",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "30.68",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Gretex Corporate Services"
+  },
+  {
+    "Company": "Neetu Yoshi Ltd. IPO",
+    "Opening Date": "Fri, Jun 27, 2025",
+    "Closing Date": "Tue, Jul 01, 2025",
+    "Listing Date": "Fri, Jul 04, 2025",
+    "Issue Price (Rs.)": "75",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "77.04",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Adcounty Media India Ltd. IPO",
+    "Opening Date": "Fri, Jun 27, 2025",
+    "Closing Date": "Tue, Jul 01, 2025",
+    "Listing Date": "Fri, Jul 04, 2025",
+    "Issue Price (Rs.)": "85",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "50.69",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "Indogulf Cropsciences Ltd. IPO",
+    "Opening Date": "Thu, Jun 26, 2025",
+    "Closing Date": "Mon, Jun 30, 2025",
+    "Listing Date": "Thu, Jul 03, 2025",
+    "Issue Price (Rs.)": "111",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "200.66",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Systematix Corporate"
+  },
+  {
+    "Company": "Moving Media Entertainment Ltd. IPO",
+    "Opening Date": "Thu, Jun 26, 2025",
+    "Closing Date": "Mon, Jun 30, 2025",
+    "Listing Date": "Thu, Jul 03, 2025",
+    "Issue Price (Rs.)": "70",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "43.40",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Gretex Corporate Services"
+  },
+  {
+    "Company": "Valencia India Ltd. IPO",
+    "Opening Date": "Thu, Jun 26, 2025",
+    "Closing Date": "Mon, Jun 30, 2025",
+    "Listing Date": "Thu, Jul 03, 2025",
+    "Issue Price (Rs.)": "110",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "48.95",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Interactive Financial"
+  },
+  {
+    "Company": "Ace Alpha Tech Ltd. IPO",
+    "Opening Date": "Thu, Jun 26, 2025",
+    "Closing Date": "Mon, Jun 30, 2025",
+    "Listing Date": "Thu, Jul 03, 2025",
+    "Issue Price (Rs.)": "69",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "32.22",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "PRO FX Tech Ltd. IPO",
+    "Opening Date": "Thu, Jun 26, 2025",
+    "Closing Date": "Mon, Jun 30, 2025",
+    "Listing Date": "Thu, Jul 03, 2025",
+    "Issue Price (Rs.)": "87",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "40.30",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Sambhv Steel Tubes Ltd. IPO",
+    "Opening Date": "Wed, Jun 25, 2025",
+    "Closing Date": "Fri, Jun 27, 2025",
+    "Listing Date": "Wed, Jul 02, 2025",
+    "Issue Price (Rs.)": "82",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "540.13",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Nuvama Wealth"
+  },
+  {
+    "Company": "HDB Financial Services Ltd. IPO",
+    "Opening Date": "Wed, Jun 25, 2025",
+    "Closing Date": "Fri, Jun 27, 2025",
+    "Listing Date": "Wed, Jul 02, 2025",
+    "Issue Price (Rs.)": "740",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "12,500.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Bnp Paribas"
+  },
+  {
+    "Company": "Rama Telecom Ltd. IPO",
+    "Opening Date": "Wed, Jun 25, 2025",
+    "Closing Date": "Fri, Jun 27, 2025",
+    "Listing Date": "Wed, Jul 02, 2025",
+    "Issue Price (Rs.)": "68",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.13",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Affinity Global"
+  },
+  {
+    "Company": "Suntech Infra Solutions Ltd. IPO",
+    "Opening Date": "Wed, Jun 25, 2025",
+    "Closing Date": "Fri, Jun 27, 2025",
+    "Listing Date": "Wed, Jul 02, 2025",
+    "Issue Price (Rs.)": "86",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "44.39",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Supertech EV Ltd. IPO",
+    "Opening Date": "Wed, Jun 25, 2025",
+    "Closing Date": "Fri, Jun 27, 2025",
+    "Listing Date": "Wed, Jul 02, 2025",
+    "Issue Price (Rs.)": "92",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "29.90",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Corporate Makers Capital"
+  },
+  {
+    "Company": "Abram Food Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "98",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "13.99",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Corporate Makers Capital"
+  },
+  {
+    "Company": "Globe Civil Projects Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "71",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "119.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "MEFCOM Capital Markets"
+  },
+  {
+    "Company": "Ellenbarrie Industrial Gases Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "400",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "852.53",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Motilal Oswal"
+  },
+  {
+    "Company": "Kalpataru Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "414",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1,590.77",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "Icon Facilitators Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "91",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "19.11",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Khambatta Securities"
+  },
+  {
+    "Company": "Shri Hare-Krishna Sponge Iron Ltd. IPO",
+    "Opening Date": "Tue, Jun 24, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "59",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "29.91",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "AJC Jewel Manufacturers Ltd. IPO",
+    "Opening Date": "Mon, Jun 23, 2025",
+    "Closing Date": "Thu, Jun 26, 2025",
+    "Listing Date": "Tue, Jul 01, 2025",
+    "Issue Price (Rs.)": "95",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "15.39",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Aakaar Medical Technologies Ltd. IPO",
+    "Opening Date": "Fri, Jun 20, 2025",
+    "Closing Date": "Tue, Jun 24, 2025",
+    "Listing Date": "Fri, Jun 27, 2025",
+    "Issue Price (Rs.)": "72",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Indorient Financial"
+  },
+  {
+    "Company": "Safe Enterprises Retail Fixtures Ltd. IPO",
+    "Opening Date": "Fri, Jun 20, 2025",
+    "Closing Date": "Tue, Jun 24, 2025",
+    "Listing Date": "Fri, Jun 27, 2025",
+    "Issue Price (Rs.)": "138",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "169.74",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Mayasheel Ventures Ltd. IPO",
+    "Opening Date": "Fri, Jun 20, 2025",
+    "Closing Date": "Tue, Jun 24, 2025",
+    "Listing Date": "Fri, Jun 27, 2025",
+    "Issue Price (Rs.)": "47",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.28",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "Arisinfra Solutions Ltd. IPO",
+    "Opening Date": "Wed, Jun 18, 2025",
+    "Closing Date": "Fri, Jun 20, 2025",
+    "Listing Date": "Wed, Jun 25, 2025",
+    "Issue Price (Rs.)": "222",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "499.60",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Influx Healthtech Ltd. IPO",
+    "Opening Date": "Wed, Jun 18, 2025",
+    "Closing Date": "Fri, Jun 20, 2025",
+    "Listing Date": "Wed, Jun 25, 2025",
+    "Issue Price (Rs.)": "96",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "58.57",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Rarever Financial Advisors"
+  },
+  {
+    "Company": "Eppeltone Engineers Ltd. IPO",
+    "Opening Date": "Tue, Jun 17, 2025",
+    "Closing Date": "Thu, Jun 19, 2025",
+    "Listing Date": "Tue, Jun 24, 2025",
+    "Issue Price (Rs.)": "128",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "43.96",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Expert Global Consultants"
+  },
+  {
+    "Company": "Patil Automation Ltd. IPO",
+    "Opening Date": "Mon, Jun 16, 2025",
+    "Closing Date": "Wed, Jun 18, 2025",
+    "Listing Date": "Mon, Jun 23, 2025",
+    "Issue Price (Rs.)": "120",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "69.61",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Seren Capital"
+  },
+  {
+    "Company": "Samay Project Services Ltd. IPO",
+    "Opening Date": "Mon, Jun 16, 2025",
+    "Closing Date": "Wed, Jun 18, 2025",
+    "Listing Date": "Mon, Jun 23, 2025",
+    "Issue Price (Rs.)": "34",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "14.69",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Oswal Pumps Ltd. IPO",
+    "Opening Date": "Fri, Jun 13, 2025",
+    "Closing Date": "Tue, Jun 17, 2025",
+    "Listing Date": "Fri, Jun 20, 2025",
+    "Issue Price (Rs.)": "614",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1,387.34",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "IIFL Capital"
+  },
+  {
+    "Company": "Aten Papers & Foam Ltd. IPO",
+    "Opening Date": "Fri, Jun 13, 2025",
+    "Closing Date": "Tue, Jun 17, 2025",
+    "Listing Date": "Fri, Jun 20, 2025",
+    "Issue Price (Rs.)": "96",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "31.68",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Swastika Investmart"
+  },
+  {
+    "Company": "Monolithisch India Ltd. IPO",
+    "Opening Date": "Thu, Jun 12, 2025",
+    "Closing Date": "Mon, Jun 16, 2025",
+    "Listing Date": "Thu, Jun 19, 2025",
+    "Issue Price (Rs.)": "143",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "82.02",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Jainik Power Cables Ltd. IPO",
+    "Opening Date": "Tue, Jun 10, 2025",
+    "Closing Date": "Thu, Jun 12, 2025",
+    "Listing Date": "Tue, Jun 17, 2025",
+    "Issue Price (Rs.)": "110",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "51.30",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Fast Track Finsec"
+  },
+  {
+    "Company": "Sacheerome Ltd. IPO",
+    "Opening Date": "Mon, Jun 09, 2025",
+    "Closing Date": "Wed, Jun 11, 2025",
+    "Listing Date": "Mon, Jun 16, 2025",
+    "Issue Price (Rs.)": "102",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "61.62",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Ganga Bath Fittings Ltd. IPO",
+    "Opening Date": "Wed, Jun 04, 2025",
+    "Closing Date": "Fri, Jun 06, 2025",
+    "Listing Date": "Wed, Jun 11, 2025",
+    "Issue Price (Rs.)": "49",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "32.65",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Jawa Capital"
+  },
+  {
+    "Company": "3B Films Ltd. IPO",
+    "Opening Date": "Fri, May 30, 2025",
+    "Closing Date": "Tue, Jun 03, 2025",
+    "Listing Date": "Fri, Jun 06, 2025",
+    "Issue Price (Rs.)": "50",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "33.75",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Nirbhay Capital"
+  },
+  {
+    "Company": "Scoda Tubes Ltd. IPO",
+    "Opening Date": "Wed, May 28, 2025",
+    "Closing Date": "Fri, May 30, 2025",
+    "Listing Date": "Wed, Jun 04, 2025",
+    "Issue Price (Rs.)": "140",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "220.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Monarch Networth Capital"
+  },
+  {
+    "Company": "N R Vandana Tex Industries Ltd. IPO",
+    "Opening Date": "Wed, May 28, 2025",
+    "Closing Date": "Fri, May 30, 2025",
+    "Listing Date": "Wed, Jun 04, 2025",
+    "Issue Price (Rs.)": "45",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.89",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Marwadi Chandarana Group"
+  },
+  {
+    "Company": "Neptune Petrochemicals Ltd. IPO",
+    "Opening Date": "Wed, May 28, 2025",
+    "Closing Date": "Fri, May 30, 2025",
+    "Listing Date": "Wed, Jun 04, 2025",
+    "Issue Price (Rs.)": "122",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "73.20",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Prostarm Info Systems Ltd. IPO",
+    "Opening Date": "Tue, May 27, 2025",
+    "Closing Date": "Thu, May 29, 2025",
+    "Listing Date": "Tue, Jun 03, 2025",
+    "Issue Price (Rs.)": "105",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "168.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Choice Capital Advisors"
+  },
+  {
+    "Company": "Blue Water Logistics Ltd. IPO",
+    "Opening Date": "Tue, May 27, 2025",
+    "Closing Date": "Thu, May 29, 2025",
+    "Listing Date": "Tue, Jun 03, 2025",
+    "Issue Price (Rs.)": "135",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "40.50",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Astonea Labs Ltd. IPO",
+    "Opening Date": "Tue, May 27, 2025",
+    "Closing Date": "Thu, May 29, 2025",
+    "Listing Date": "Tue, Jun 03, 2025",
+    "Issue Price (Rs.)": "135",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "37.67",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Oneview Corporate Advisors"
+  },
+  {
+    "Company": "Nikita Papers Ltd. IPO",
+    "Opening Date": "Tue, May 27, 2025",
+    "Closing Date": "Thu, May 29, 2025",
+    "Listing Date": "Tue, Jun 03, 2025",
+    "Issue Price (Rs.)": "104",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "67.54",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Fast Track Finsec"
+  },
+  {
+    "Company": "Aegis Vopak Terminals Ltd. IPO",
+    "Opening Date": "Mon, May 26, 2025",
+    "Closing Date": "Wed, May 28, 2025",
+    "Listing Date": "Mon, Jun 02, 2025",
+    "Issue Price (Rs.)": "235",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "2,800.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "Schloss Bangalore Ltd. IPO",
+    "Opening Date": "Mon, May 26, 2025",
+    "Closing Date": "Wed, May 28, 2025",
+    "Listing Date": "Mon, Jun 02, 2025",
+    "Issue Price (Rs.)": "435",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "3,500.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Jm Financial"
+  },
+  {
+    "Company": "Unified Data-Tech Solutions Ltd. IPO",
+    "Opening Date": "Thu, May 22, 2025",
+    "Closing Date": "Mon, May 26, 2025",
+    "Listing Date": "Thu, May 29, 2025",
+    "Issue Price (Rs.)": "273",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "144.47",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Belrise Industries Ltd. IPO",
+    "Opening Date": "Wed, May 21, 2025",
+    "Closing Date": "Fri, May 23, 2025",
+    "Listing Date": "Wed, May 28, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "2,150.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Axis Capital"
+  },
+  {
+    "Company": "Dar Credit & Capital Ltd. IPO",
+    "Opening Date": "Wed, May 21, 2025",
+    "Closing Date": "Fri, May 23, 2025",
+    "Listing Date": "Wed, May 28, 2025",
+    "Issue Price (Rs.)": "60",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.66",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Borana Weaves Ltd. IPO",
+    "Opening Date": "Tue, May 20, 2025",
+    "Closing Date": "Thu, May 22, 2025",
+    "Listing Date": "Tue, May 27, 2025",
+    "Issue Price (Rs.)": "216",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "144.89",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Accretion Pharmaceuticals Ltd. IPO",
+    "Opening Date": "Wed, May 14, 2025",
+    "Closing Date": "Fri, May 16, 2025",
+    "Listing Date": "Wed, May 21, 2025",
+    "Issue Price (Rs.)": "101",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "29.75",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Jawa Capital"
+  },
+  {
+    "Company": "Integrity Infrabuild Developers Ltd. IPO",
+    "Opening Date": "Tue, May 13, 2025",
+    "Closing Date": "Thu, May 15, 2025",
+    "Listing Date": "Tue, May 20, 2025",
+    "Issue Price (Rs.)": "100",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "12.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Aryaman Financial Services"
+  },
+  {
+    "Company": "Virtual Galaxy Infotech Ltd. IPO",
+    "Opening Date": "Fri, May 09, 2025",
+    "Closing Date": "Wed, May 14, 2025",
+    "Listing Date": "Mon, May 19, 2025",
+    "Issue Price (Rs.)": "142",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "93.29",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Manoj Jewellers Ltd. IPO",
+    "Opening Date": "Mon, May 05, 2025",
+    "Closing Date": "Wed, May 07, 2025",
+    "Listing Date": "Mon, May 12, 2025",
+    "Issue Price (Rs.)": "54",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "16.20",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Jawa Capital"
+  },
+  {
+    "Company": "Srigee DLM Ltd. IPO",
+    "Opening Date": "Mon, May 05, 2025",
+    "Closing Date": "Wed, May 07, 2025",
+    "Listing Date": "Mon, May 12, 2025",
+    "Issue Price (Rs.)": "99",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "16.98",
+    "Listing at": "BSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Wagons Learning Ltd. IPO",
+    "Opening Date": "Fri, May 02, 2025",
+    "Closing Date": "Tue, May 06, 2025",
+    "Listing Date": "Yet to list",
+    "Issue Price (Rs.)": null,
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": null,
+    "Listing at": "BSE SME",
+    "Lead Manager": "Khandwala Securities"
+  },
+  {
+    "Company": "Kenrik Industries Ltd. IPO",
+    "Opening Date": "Tue, Apr 29, 2025",
+    "Closing Date": "Tue, May 06, 2025",
+    "Listing Date": "Fri, May 09, 2025",
+    "Issue Price (Rs.)": "25",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "8.75",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Turnaround Corporate"
+  },
+  {
+    "Company": "Arunaya Organics Ltd. IPO",
+    "Opening Date": "Tue, Apr 29, 2025",
+    "Closing Date": "Fri, May 02, 2025",
+    "Listing Date": "Wed, May 07, 2025",
+    "Issue Price (Rs.)": "58",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "33.99",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Iware Supplychain Services Ltd. IPO",
+    "Opening Date": "Mon, Apr 28, 2025",
+    "Closing Date": "Wed, Apr 30, 2025",
+    "Listing Date": "Tue, May 06, 2025",
+    "Issue Price (Rs.)": "95",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.13",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GetFive Advisors"
+  },
+  {
+    "Company": "Ather Energy Ltd. IPO",
+    "Opening Date": "Mon, Apr 28, 2025",
+    "Closing Date": "Wed, Apr 30, 2025",
+    "Listing Date": "Tue, May 06, 2025",
+    "Issue Price (Rs.)": "321",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "2,984.27",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Axis Capital"
+  },
+  {
+    "Company": "Tankup Engineers Ltd. IPO",
+    "Opening Date": "Wed, Apr 23, 2025",
+    "Closing Date": "Fri, Apr 25, 2025",
+    "Listing Date": "Wed, Apr 30, 2025",
+    "Issue Price (Rs.)": "140",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "19.53",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Spinaroo Commercial Ltd. IPO",
+    "Opening Date": "Fri, Mar 28, 2025",
+    "Closing Date": "Thu, Apr 03, 2025",
+    "Listing Date": "Tue, Apr 08, 2025",
+    "Issue Price (Rs.)": "51",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "10.17",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Finshore"
+  },
+  {
+    "Company": "Infonative Solutions Ltd. IPO",
+    "Opening Date": "Fri, Mar 28, 2025",
+    "Closing Date": "Thu, Apr 03, 2025",
+    "Listing Date": "Tue, Apr 08, 2025",
+    "Issue Price (Rs.)": "79",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "24.71",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Share India Capital Services"
+  },
+  {
+    "Company": "Retaggio Industries Ltd. IPO",
+    "Opening Date": "Thu, Mar 27, 2025",
+    "Closing Date": "Wed, Apr 02, 2025",
+    "Listing Date": "Mon, Apr 07, 2025",
+    "Issue Price (Rs.)": "25",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "15.50",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Gretex Corporate Services"
+  },
+  {
+    "Company": "Identixweb Ltd. IPO",
+    "Opening Date": "Wed, Mar 26, 2025",
+    "Closing Date": "Fri, Mar 28, 2025",
+    "Listing Date": "Thu, Apr 03, 2025",
+    "Issue Price (Rs.)": "54",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "16.63",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Shri Ahimsa Naturals Ltd. IPO",
+    "Opening Date": "Tue, Mar 25, 2025",
+    "Closing Date": "Thu, Mar 27, 2025",
+    "Listing Date": "Wed, Apr 02, 2025",
+    "Issue Price (Rs.)": "119",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "73.81",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Srujan Alpha Capital Advisors"
+  },
+  {
+    "Company": "ATC Energies System Ltd. IPO",
+    "Opening Date": "Tue, Mar 25, 2025",
+    "Closing Date": "Thu, Mar 27, 2025",
+    "Listing Date": "Wed, Apr 02, 2025",
+    "Issue Price (Rs.)": "118",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "63.76",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Indorient Financial"
+  },
+  {
+    "Company": "Desco Infratech Ltd. IPO",
+    "Opening Date": "Mon, Mar 24, 2025",
+    "Closing Date": "Wed, Mar 26, 2025",
+    "Listing Date": "Tue, Apr 01, 2025",
+    "Issue Price (Rs.)": "150",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "30.75",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Rapid Fleet Management Services Ltd. IPO",
+    "Opening Date": "Fri, Mar 21, 2025",
+    "Closing Date": "Tue, Mar 25, 2025",
+    "Listing Date": "Fri, Mar 28, 2025",
+    "Issue Price (Rs.)": "192",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "43.87",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Gretex Corporate Services"
+  },
+  {
+    "Company": "Active Infrastructures Ltd. IPO",
+    "Opening Date": "Fri, Mar 21, 2025",
+    "Closing Date": "Tue, Mar 25, 2025",
+    "Listing Date": "Fri, Mar 28, 2025",
+    "Issue Price (Rs.)": "181",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "77.83",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Kreo Capital"
+  },
+  {
+    "Company": "Grand Continent Hotels Ltd. IPO",
+    "Opening Date": "Thu, Mar 20, 2025",
+    "Closing Date": "Mon, Mar 24, 2025",
+    "Listing Date": "Thu, Mar 27, 2025",
+    "Issue Price (Rs.)": "113",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "74.46",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Indorient Financial"
+  },
+  {
+    "Company": "Paradeep Parivahan Ltd. IPO",
+    "Opening Date": "Mon, Mar 17, 2025",
+    "Closing Date": "Wed, Mar 19, 2025",
+    "Listing Date": "Mon, Mar 24, 2025",
+    "Issue Price (Rs.)": "98",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "44.86",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Share India Capital Services"
+  },
+  {
+    "Company": "Divine Hira Jewellers Ltd. IPO",
+    "Opening Date": "Mon, Mar 17, 2025",
+    "Closing Date": "Wed, Mar 19, 2025",
+    "Listing Date": "Mon, Mar 24, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "31.84",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Super Iron Foundry Ltd. IPO",
+    "Opening Date": "Tue, Mar 11, 2025",
+    "Closing Date": "Thu, Mar 13, 2025",
+    "Listing Date": "Wed, Mar 19, 2025",
+    "Issue Price (Rs.)": "108",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "68.05",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "PDP Shipping & Projects Ltd. IPO",
+    "Opening Date": "Mon, Mar 10, 2025",
+    "Closing Date": "Wed, Mar 12, 2025",
+    "Listing Date": "Tue, Mar 18, 2025",
+    "Issue Price (Rs.)": "135",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "12.65",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Sun Capital Advisory"
+  },
+  {
+    "Company": "NAPS Global India Ltd. IPO",
+    "Opening Date": "Tue, Mar 04, 2025",
+    "Closing Date": "Thu, Mar 06, 2025",
+    "Listing Date": "Tue, Mar 11, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "11.88",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Aryaman Financial Services"
+  },
+  {
+    "Company": "Balaji Phosphates Ltd. IPO",
+    "Opening Date": "Fri, Feb 28, 2025",
+    "Closing Date": "Tue, Mar 04, 2025",
+    "Listing Date": "Fri, Mar 07, 2025",
+    "Issue Price (Rs.)": "70",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "50.11",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Arihant Capital Markets"
+  },
+  {
+    "Company": "Shreenath Paper Products Ltd. IPO",
+    "Opening Date": "Tue, Feb 25, 2025",
+    "Closing Date": "Fri, Feb 28, 2025",
+    "Listing Date": "Wed, Mar 05, 2025",
+    "Issue Price (Rs.)": "44",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "23.36",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Galactico Corporate Services"
+  },
+  {
+    "Company": "Nukleus Office Solutions Ltd. IPO",
+    "Opening Date": "Mon, Feb 24, 2025",
+    "Closing Date": "Thu, Feb 27, 2025",
+    "Listing Date": "Tue, Mar 04, 2025",
+    "Issue Price (Rs.)": "234",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "24.92",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Sundae Capital Advisors"
+  },
+  {
+    "Company": "Beezaasan Explotech Ltd. IPO",
+    "Opening Date": "Fri, Feb 21, 2025",
+    "Closing Date": "Tue, Feb 25, 2025",
+    "Listing Date": "Mon, Mar 03, 2025",
+    "Issue Price (Rs.)": "175",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "59.93",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "HP Telecom India Ltd. IPO",
+    "Opening Date": "Thu, Feb 20, 2025",
+    "Closing Date": "Mon, Feb 24, 2025",
+    "Listing Date": "Fri, Feb 28, 2025",
+    "Issue Price (Rs.)": "108",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "34.23",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Interactive Financial"
+  },
+  {
+    "Company": "Swasth Foodtech India Ltd. IPO",
+    "Opening Date": "Thu, Feb 20, 2025",
+    "Closing Date": "Mon, Feb 24, 2025",
+    "Listing Date": "Fri, Feb 28, 2025",
+    "Issue Price (Rs.)": "94",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "14.92",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Quality Power Electrical Equipments Ltd. IPO",
+    "Opening Date": "Fri, Feb 14, 2025",
+    "Closing Date": "Tue, Feb 18, 2025",
+    "Listing Date": "Mon, Feb 24, 2025",
+    "Issue Price (Rs.)": "425",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "858.70",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Pantomath Capital Advisors"
+  },
+  {
+    "Company": "Royal Arc Electrodes Ltd. IPO",
+    "Opening Date": "Fri, Feb 14, 2025",
+    "Closing Date": "Tue, Feb 18, 2025",
+    "Listing Date": "Mon, Feb 24, 2025",
+    "Issue Price (Rs.)": "120",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "36.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Fedex Securities"
+  },
+  {
+    "Company": "Tejas Cargo India Ltd. IPO",
+    "Opening Date": "Fri, Feb 14, 2025",
+    "Closing Date": "Tue, Feb 18, 2025",
+    "Listing Date": "Mon, Feb 24, 2025",
+    "Issue Price (Rs.)": "168",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "105.84",
+    "Listing at": "NSE SME",
+    "Lead Manager": "New Berry Capitals"
+  },
+  {
+    "Company": "L.K.Mehta Polymers Ltd. IPO",
+    "Opening Date": "Thu, Feb 13, 2025",
+    "Closing Date": "Mon, Feb 17, 2025",
+    "Listing Date": "Fri, Feb 21, 2025",
+    "Issue Price (Rs.)": "71",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "7.38",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Swastika Investmart"
+  },
+  {
+    "Company": "Shanmuga Hospital Ltd. IPO",
+    "Opening Date": "Thu, Feb 13, 2025",
+    "Closing Date": "Mon, Feb 17, 2025",
+    "Listing Date": "Fri, Feb 21, 2025",
+    "Issue Price (Rs.)": "54",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "20.62",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Finshore"
+  },
+  {
+    "Company": "P S Raj Steels Ltd. IPO",
+    "Opening Date": "Wed, Feb 12, 2025",
+    "Closing Date": "Fri, Feb 14, 2025",
+    "Listing Date": "Wed, Feb 19, 2025",
+    "Issue Price (Rs.)": "140",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "28.28",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Khambatta Securities"
+  },
+  {
+    "Company": "Hexaware Technologies Ltd. IPO",
+    "Opening Date": "Wed, Feb 12, 2025",
+    "Closing Date": "Fri, Feb 14, 2025",
+    "Listing Date": "Wed, Feb 19, 2025",
+    "Issue Price (Rs.)": "708",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "8,759.41",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Kotak Mahindra Capital"
+  },
+  {
+    "Company": "Voler Car Ltd. IPO",
+    "Opening Date": "Wed, Feb 12, 2025",
+    "Closing Date": "Fri, Feb 14, 2025",
+    "Listing Date": "Wed, Feb 19, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Maxvolt Energy Industries Ltd. IPO",
+    "Opening Date": "Wed, Feb 12, 2025",
+    "Closing Date": "Fri, Feb 14, 2025",
+    "Listing Date": "Wed, Feb 19, 2025",
+    "Issue Price (Rs.)": "180",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "54.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Chandan Healthcare Ltd. IPO",
+    "Opening Date": "Mon, Feb 10, 2025",
+    "Closing Date": "Wed, Feb 12, 2025",
+    "Listing Date": "Mon, Feb 17, 2025",
+    "Issue Price (Rs.)": "159",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "107.36",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Ajax Engineering Ltd. IPO",
+    "Opening Date": "Mon, Feb 10, 2025",
+    "Closing Date": "Wed, Feb 12, 2025",
+    "Listing Date": "Mon, Feb 17, 2025",
+    "Issue Price (Rs.)": "629",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1,269.35",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "ICICI Securities"
+  },
+  {
+    "Company": "Eleganz Interiors Ltd. IPO",
+    "Opening Date": "Fri, Feb 07, 2025",
+    "Closing Date": "Tue, Feb 11, 2025",
+    "Listing Date": "Fri, Feb 14, 2025",
+    "Issue Price (Rs.)": "130",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "78.07",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Vivro Financial"
+  },
+  {
+    "Company": "Readymix Construction Machinery Ltd. IPO",
+    "Opening Date": "Thu, Feb 06, 2025",
+    "Closing Date": "Mon, Feb 10, 2025",
+    "Listing Date": "Thu, Feb 13, 2025",
+    "Issue Price (Rs.)": "123",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "37.66",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Hem Securities"
+  },
+  {
+    "Company": "Solarium Green Energy Ltd. IPO",
+    "Opening Date": "Thu, Feb 06, 2025",
+    "Closing Date": "Mon, Feb 10, 2025",
+    "Listing Date": "Thu, Feb 13, 2025",
+    "Issue Price (Rs.)": "191",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "105.04",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Ken Enterprises Ltd. IPO",
+    "Opening Date": "Wed, Feb 05, 2025",
+    "Closing Date": "Fri, Feb 07, 2025",
+    "Listing Date": "Wed, Feb 12, 2025",
+    "Issue Price (Rs.)": "94",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "83.65",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Corporate Makers Capital"
+  },
+  {
+    "Company": "Amwill Health Care Ltd. IPO",
+    "Opening Date": "Wed, Feb 05, 2025",
+    "Closing Date": "Fri, Feb 07, 2025",
+    "Listing Date": "Wed, Feb 12, 2025",
+    "Issue Price (Rs.)": "111",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "59.98",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Unistone Capital"
+  },
+  {
+    "Company": "Chamunda Electrical Ltd. IPO",
+    "Opening Date": "Tue, Feb 04, 2025",
+    "Closing Date": "Thu, Feb 06, 2025",
+    "Listing Date": "Tue, Feb 11, 2025",
+    "Issue Price (Rs.)": "50",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "14.60",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Malpani Pipes & Fittings Ltd. IPO",
+    "Opening Date": "Wed, Jan 29, 2025",
+    "Closing Date": "Fri, Jan 31, 2025",
+    "Listing Date": "Tue, Feb 04, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.92",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Interactive Financial"
+  },
+  {
+    "Company": "Dr.Agarwal's Health Care Ltd. IPO",
+    "Opening Date": "Wed, Jan 29, 2025",
+    "Closing Date": "Fri, Jan 31, 2025",
+    "Listing Date": "Tue, Feb 04, 2025",
+    "Issue Price (Rs.)": "402",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "3,027.26",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Kotak Mahindra Capital"
+  },
+  {
+    "Company": "GB Logistics Commerce Ltd. IPO",
+    "Opening Date": "Fri, Jan 24, 2025",
+    "Closing Date": "Tue, Jan 28, 2025",
+    "Listing Date": "Fri, Jan 31, 2025",
+    "Issue Price (Rs.)": "102",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.07",
+    "Listing at": "BSE SME",
+    "Lead Manager": "SKI Capital Services"
+  },
+  {
+    "Company": "H.M.Electro Mech Ltd. IPO",
+    "Opening Date": "Fri, Jan 24, 2025",
+    "Closing Date": "Tue, Jan 28, 2025",
+    "Listing Date": "Fri, Jan 31, 2025",
+    "Issue Price (Rs.)": "75",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.74",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "CLN Energy Ltd. IPO",
+    "Opening Date": "Thu, Jan 23, 2025",
+    "Closing Date": "Mon, Jan 27, 2025",
+    "Listing Date": "Thu, Jan 30, 2025",
+    "Issue Price (Rs.)": "250",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "72.30",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Aryaman Financial Services"
+  },
+  {
+    "Company": "Rexpro Enterprises Ltd. IPO",
+    "Opening Date": "Wed, Jan 22, 2025",
+    "Closing Date": "Fri, Jan 24, 2025",
+    "Listing Date": "Wed, Jan 29, 2025",
+    "Issue Price (Rs.)": "145",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "53.65",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Horizon Management"
+  },
+  {
+    "Company": "Denta Water & Infra Solutions Ltd. IPO",
+    "Opening Date": "Wed, Jan 22, 2025",
+    "Closing Date": "Fri, Jan 24, 2025",
+    "Listing Date": "Wed, Jan 29, 2025",
+    "Issue Price (Rs.)": "294",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "220.50",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Smc Capitals"
+  },
+  {
+    "Company": "CapitalNumbers Infotech Ltd. IPO",
+    "Opening Date": "Mon, Jan 20, 2025",
+    "Closing Date": "Wed, Jan 22, 2025",
+    "Listing Date": "Mon, Jan 27, 2025",
+    "Issue Price (Rs.)": "263",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "169.37",
+    "Listing at": "BSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "EMA Partners India Ltd. IPO",
+    "Opening Date": "Fri, Jan 17, 2025",
+    "Closing Date": "Tue, Jan 21, 2025",
+    "Listing Date": "Fri, Jan 24, 2025",
+    "Issue Price (Rs.)": "124",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "76.01",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Indorient Financial"
+  },
+  {
+    "Company": "Landmark Immigration Consultants Ltd. IPO",
+    "Opening Date": "Thu, Jan 16, 2025",
+    "Closing Date": "Mon, Jan 20, 2025",
+    "Listing Date": "Thu, Jan 23, 2025",
+    "Issue Price (Rs.)": "72",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "40.32",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Shreni Shares"
+  },
+  {
+    "Company": "Stallion India Fluorochemicals Ltd. IPO",
+    "Opening Date": "Thu, Jan 16, 2025",
+    "Closing Date": "Mon, Jan 20, 2025",
+    "Listing Date": "Thu, Jan 23, 2025",
+    "Issue Price (Rs.)": "90",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "199.45",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Sarthi Capital Advisors"
+  },
+  {
+    "Company": "Kabra Jewels Ltd. IPO",
+    "Opening Date": "Wed, Jan 15, 2025",
+    "Closing Date": "Fri, Jan 17, 2025",
+    "Listing Date": "Wed, Jan 22, 2025",
+    "Issue Price (Rs.)": "128",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "40.00",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Marwadi Chandarana Group"
+  },
+  {
+    "Company": "Rikhav Securities Ltd. IPO",
+    "Opening Date": "Wed, Jan 15, 2025",
+    "Closing Date": "Fri, Jan 17, 2025",
+    "Listing Date": "Wed, Jan 22, 2025",
+    "Issue Price (Rs.)": "86",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "88.82",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Smart Horizon Capital Advisors"
+  },
+  {
+    "Company": "Laxmi Dental Ltd. IPO",
+    "Opening Date": "Mon, Jan 13, 2025",
+    "Closing Date": "Wed, Jan 15, 2025",
+    "Listing Date": "Mon, Jan 20, 2025",
+    "Issue Price (Rs.)": "428",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "698.06",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Nuvama Wealth"
+  },
+  {
+    "Company": "Barflex Polyfilms Ltd. IPO",
+    "Opening Date": "Fri, Jan 10, 2025",
+    "Closing Date": "Wed, Jan 15, 2025",
+    "Listing Date": "Mon, Jan 20, 2025",
+    "Issue Price (Rs.)": "60",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "39.41",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Almondz Financial"
+  },
+  {
+    "Company": "Sat Kartar Shopping Ltd. IPO",
+    "Opening Date": "Fri, Jan 10, 2025",
+    "Closing Date": "Tue, Jan 14, 2025",
+    "Listing Date": "Fri, Jan 17, 2025",
+    "Issue Price (Rs.)": "81",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "33.80",
+    "Listing at": "NSE SME",
+    "Lead Manager": "Narnolia Financial"
+  },
+  {
+    "Company": "Avax Apparels & Ornaments Ltd. IPO",
+    "Opening Date": "Tue, Jan 07, 2025",
+    "Closing Date": "Thu, Jan 09, 2025",
+    "Listing Date": "Tue, Jan 14, 2025",
+    "Issue Price (Rs.)": "70",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1.92",
+    "Listing at": "BSE SME",
+    "Lead Manager": "SKI Capital Services"
+  },
+  {
+    "Company": "Quadrant Future Tek Ltd. IPO",
+    "Opening Date": "Tue, Jan 07, 2025",
+    "Closing Date": "Thu, Jan 09, 2025",
+    "Listing Date": "Tue, Jan 14, 2025",
+    "Issue Price (Rs.)": "290",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "290.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "Sundae Capital Advisors"
+  },
+  {
+    "Company": "Delta Autocorp Ltd. IPO",
+    "Opening Date": "Tue, Jan 07, 2025",
+    "Closing Date": "Thu, Jan 09, 2025",
+    "Listing Date": "Tue, Jan 14, 2025",
+    "Issue Price (Rs.)": "130",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "54.60",
+    "Listing at": "NSE SME",
+    "Lead Manager": "GYR Capital Advisors"
+  },
+  {
+    "Company": "Capital Infra Trust InvIT",
+    "Opening Date": "Tue, Jan 07, 2025",
+    "Closing Date": "Thu, Jan 09, 2025",
+    "Listing Date": "Fri, Jan 17, 2025",
+    "Issue Price (Rs.)": "99",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "1,578.00",
+    "Listing at": "BSE, NSE",
+    "Lead Manager": "SBI Capital"
+  },
+  {
+    "Company": "B.R.Goyal Infrastructure Ltd. IPO",
+    "Opening Date": "Tue, Jan 07, 2025",
+    "Closing Date": "Thu, Jan 09, 2025",
+    "Listing Date": "Tue, Jan 14, 2025",
+    "Issue Price (Rs.)": "135",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "85.21",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Standard Glass Lining Technology Ltd. IPO",
+    "Opening Date": "Mon, Jan 06, 2025",
+    "Closing Date": "Wed, Jan 08, 2025",
+    "Listing Date": "Mon, Jan 13, 2025",
+    "Issue Price (Rs.)": "140",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "410.05",
+    "Listing at": "NSE, BSE",
+    "Lead Manager": "IIFL Capital"
+  },
+  {
+    "Company": "Indobell Insulations Ltd. IPO",
+    "Opening Date": "Mon, Jan 06, 2025",
+    "Closing Date": "Wed, Jan 08, 2025",
+    "Listing Date": "Mon, Jan 13, 2025",
+    "Issue Price (Rs.)": "46",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "10.14",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Finshore"
+  },
+  {
+    "Company": "Fabtech Technologies Cleanrooms Ltd. IPO",
+    "Opening Date": "Fri, Jan 03, 2025",
+    "Closing Date": "Tue, Jan 07, 2025",
+    "Listing Date": "Fri, Jan 10, 2025",
+    "Issue Price (Rs.)": "85",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "27.74",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Vivro Financial"
+  },
+  {
+    "Company": "Davin Sons Retail Ltd. IPO",
+    "Opening Date": "Thu, Jan 02, 2025",
+    "Closing Date": "Mon, Jan 06, 2025",
+    "Listing Date": "Thu, Jan 09, 2025",
+    "Issue Price (Rs.)": "55",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "8.78",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Navigant Corporate"
+  },
+  {
+    "Company": "Parmeshwar Metal Ltd. IPO",
+    "Opening Date": "Thu, Jan 02, 2025",
+    "Closing Date": "Mon, Jan 06, 2025",
+    "Listing Date": "Thu, Jan 09, 2025",
+    "Issue Price (Rs.)": "61",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "24.74",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Beeline Capital"
+  },
+  {
+    "Company": "Leo Dryfruits & Spices Trading Ltd. IPO",
+    "Opening Date": "Wed, Jan 01, 2025",
+    "Closing Date": "Fri, Jan 03, 2025",
+    "Listing Date": "Wed, Jan 08, 2025",
+    "Issue Price (Rs.)": "52",
+    "Total Issue Amount (Incl.Firm reservations) (Rs.cr.)": "25.12",
+    "Listing at": "BSE SME",
+    "Lead Manager": "Shreni Shares"
+  }
+]
+

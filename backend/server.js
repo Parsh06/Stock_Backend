@@ -22,6 +22,43 @@ app.get("/backend/hello", (req, res) => {
   res.send("Hello from backend!");
 });
 
+// Endpoint to serve IPO data from ipo.json
+app.get("/backend/ipo", (req, res) => {
+  try {
+    console.log("📊 IPO data requested at:", new Date().toISOString());
+    
+    // Send the IPO JSON file
+    const ipoDataPath = path.join(__dirname, "ipo.json");
+    
+    // Check if file exists
+    const fs = require('fs');
+    if (!fs.existsSync(ipoDataPath)) {
+      console.error("❌ IPO data file not found:", ipoDataPath);
+      return res.status(404).json({
+        error: "IPO data not available",
+        message: "IPO data file not found on server"
+      });
+    }
+
+    // Read and parse the JSON file
+    const ipoData = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
+    
+    console.log(`✅ IPO data served successfully: ${ipoData.length} records`);
+    
+    // Add headers for better caching
+    res.setHeader('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
+    res.setHeader('Content-Type', 'application/json');
+    
+    res.status(200).json(ipoData);
+  } catch (error) {
+    console.error("❌ Error serving IPO data:", error);
+    res.status(500).json({
+      error: "Failed to load IPO data",
+      message: "Internal server error while reading IPO data"
+    });
+  }
+});
+
 // Enhanced endpoint to handle order placement and send order confirmation email
 app.post("/backend/placeOrder", async (req, res) => {
   try {
@@ -135,6 +172,7 @@ app.listen(PORT, () => {
   console.log("📋 Available endpoints:");
   console.log(`   GET  /backend/hello`);
   console.log(`   GET  /backend/stocks`);
+  console.log(`   GET  /backend/ipo`);
   console.log(`   POST /backend/placeOrder`);
   console.log("");
   console.log('💡 To test: Run "node test-local.js" in the backend folder');
