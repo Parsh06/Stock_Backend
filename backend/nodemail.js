@@ -232,11 +232,11 @@ const sendOrderConfirmation = async (form) => {
 
     // Contact info in top right with better positioning
     doc.fontSize(9).fillColor('white').font('Helvetica');
-    doc.text('Phone: +91-9920326521', doc.page.width - 160, 42, { width: 140, align: 'right' });
-    doc.text('Email: mayurinvestments2011', doc.page.width - 160, 55, { width: 140, align: 'right' });
-    doc.text("Web: https://stock-62eb3.web.app/", doc.page.width - 160, 68, {
-      width: 140,
-      align: "right",
+    doc.text('Phone: +91-9920326521', doc.page.width - 200, 42, { width: 180, align: 'left' });
+    doc.text('Email: mayurinvestments2011', doc.page.width - 200, 55, { width: 180, align: 'left' });
+    doc.text("Web: https://mayurinvestments.web.app/", doc.page.width - 200, 68, {
+      width: 180,
+      align: "left",
     });
 
     // Reset and position for content
@@ -258,9 +258,16 @@ const sendOrderConfirmation = async (form) => {
     doc.fillColor('white').fontSize(16).font('Helvetica-Bold');
     doc.text(`${actionIcon} ORDER CONFIRMATION`, 40, refBarY + 8, { width: 300 });
 
-    doc.fontSize(11).font('Helvetica');
-    doc.text(`Ref: ${orderRef}`, doc.page.width - 200, refBarY + 8, { width: 160, align: 'right' });
-    doc.text(`Generated: ${new Date().toLocaleString('en-IN')}`, doc.page.width - 200, refBarY + 23, { width: 160, align: 'right' });
+    doc.fontSize(10).font('Helvetica');
+    doc.text(`Ref: ${orderRef}`, doc.page.width - 180, refBarY + 6, { width: 140, align: 'left' });
+    doc.text(`Generated: ${new Date().toLocaleString('en-IN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })}`, doc.page.width - 180, refBarY + 20, { width: 140, align: 'left' });
 
     doc.y = refBarY + 60;
 
@@ -726,7 +733,7 @@ const sendOrderConfirmation = async (form) => {
 
     // Use client's name in the 'from' field for personalization
     const senderName = sanitizedForm.userName
-      ? `${sanitizedForm.userName} via Mayur P. Jain Stock Broker`
+      ? `${sanitizedForm.userName} `
       : "Mayur P. Jain - Stock Broker";
 
     // Generate unique order ID based on timestamp and user details
@@ -1460,7 +1467,7 @@ const createEmailTemplate = (form) => {
           <div class="footer-info">
             📧 This email was generated on ${currentDateTime} | Order processed successfully<br>
             <strong>MAYUR P. JAIN</strong> | Share & Stock Broker<br>
-            📧 Email: ${process.env.EMAIL_USER} | 📞 Contact: +91-XXXXXXXXXX
+            📧 Email: mayurinvestments2011@gmail.com | 📞 Contact: +91-9920326521
           </div>
           <div class="footer-disclaimer">
             ⚠️ This is a system-generated email. Please do not reply to this message.<br>
@@ -1522,8 +1529,8 @@ ${form.remarks ? `• Remarks: ${form.remarks}` : ''}
 
 📞 CONTACT INFORMATION:
 MAYUR P. JAIN - Share & Stock Broker
-Email: ${process.env.EMAIL_USER}
-Contact: +91-XXXXXXXXXX
+Email: mayurinvestments2011@gmail.com
+Contact: +91-9920326521
 
 📍 OFFICE ADDRESSES:
 C/O. BHAIDAS MAGANLAL & CO.

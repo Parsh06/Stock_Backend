@@ -1,30 +1,84 @@
+# Deployment platforms
 .vercel
+.netlify
 
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Environment variables
+# Environment variables (CRITICAL - Never commit these!)
 .env
+.env.*
 .env.local
+.env.development
 .env.development.local
+.env.test
 .env.test.local
+.env.production
 .env.production.local
+.env.staging
+
+# Configuration files that may contain sensitive data
+config.json
+config.js
+config/
+*.config.js
+security_name.json
+firebase-adminsdk-*.json
+
+# API Keys and Secrets
+secrets/
+keys/
+*.key
+*.pem
+*.p12
+*.pfx
+apikeys.txt
+credentials.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+database.json
 
 # Logs
-logs
+logs/
 *.log
+log/
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
 coverage/
+*.lcov
+.nyc_output
+
+# Build directories
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Cache directories
+.cache/
+.npm
+.eslintcache
+*.tsbuildinfo
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
 
 # OS generated files
 .DS_Store
@@ -34,9 +88,40 @@ coverage/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
-# IDE files
+# IDE and Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-project
+*.sublime-workspace
+.atom/
+.brackets.json
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing
+.jest/
+jest.config.js
+.coverage/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Email templates and generated PDFs (if they contain sensitive info)
+generated-pdfs/
+email-attachments/
+
+# SSL certificates
+*.crt
+*.cer
+*.ca-bundle
