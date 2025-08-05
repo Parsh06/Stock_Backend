@@ -12,50 +12,228 @@ app.use(cors());
 // Parse incoming JSON requests
 app.use(express.json());
 
-// Serve the JSON file containing security names
-app.get("/backend/stocks", (req, res) => {
-  res.sendFile(path.join(__dirname, "security_name.json"));
-});
-
 // Simple endpoint to verify backend is running
 app.get("/backend/hello", (req, res) => {
   res.send("Hello from backend!");
 });
 
-// Endpoint to serve IPO data from ipo.json
-app.get("/backend/ipo", (req, res) => {
+// Endpoint to run Python script for IPO and Security data scraping
+app.post("/backend/ipo_security", async (req, res) => {
   try {
-    console.log("📊 IPO data requested at:", new Date().toISOString());
-    
-    // Send the IPO JSON file
-    const ipoDataPath = path.join(__dirname, "ipo.json");
-    
-    // Check if file exists
-    const fs = require('fs');
-    if (!fs.existsSync(ipoDataPath)) {
-      console.error("❌ IPO data file not found:", ipoDataPath);
-      return res.status(404).json({
-        error: "IPO data not available",
-        message: "IPO data file not found on server"
+    console.log(
+      "🐍 IPO Security scraper requested at:",
+      new Date().toISOString()
+    );
+
+    // Validate environment variables for Python script
+    const requiredEnvVars = [
+      "FIREBASE_PROJECT_ID",
+      "FIREBASE_PRIVATE_KEY",
+      "FIREBASE_CLIENT_EMAIL",
+    ];
+
+    const missingVars = requiredEnvVars.filter(
+      (varName) => !process.env[varName]
+    );
+    if (missingVars.length > 0) {
+      console.error("❌ Missing required environment variables:", missingVars);
+      return res.status(503).json({
+        error: "Service configuration incomplete",
+        message: "Required environment variables not configured",
+        missingVars: missingVars,
+        timestamp: new Date().toISOString(),
       });
     }
 
-    // Read and parse the JSON file
-    const ipoData = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
-    
-    console.log(`✅ IPO data served successfully: ${ipoData.length} records`);
-    
-    // Add headers for better caching
-    res.setHeader('Cache-Control', 'public, max-age=300'); // Cache for 5 minutes
-    res.setHeader('Content-Type', 'application/json');
-    
-    res.status(200).json(ipoData);
-  } catch (error) {
-    console.error("❌ Error serving IPO data:", error);
-    res.status(500).json({
-      error: "Failed to load IPO data",
-      message: "Internal server error while reading IPO data"
+    // Check if Python is available
+    const { spawn } = require("child_process");
+
+    console.log("🚀 Starting Python IPO scraper script...");
+
+    // Set timeout for the entire operation (10 minutes)
+    const SCRIPT_TIMEOUT = 10 * 60 * 1000; // 10 minutes in milliseconds
+
+    const startTime = Date.now();
+
+    // Run Python script
+    const pythonScript = path.join(__dirname, "ipo_scraper_simple.py");
+
+    // Check if Python script exists
+    const fs = require("fs");
+    if (!fs.existsSync(pythonScript)) {
+      console.error("❌ Python script not found:", pythonScript);
+      return res.status(500).json({
+        error: "Script not found",
+        message: "IPO scraper script is missing from server",
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    // Try different Python commands
+    const pythonCommands = ["python", "python3", "py"];
+    let pythonProcess = null;
+    let processStarted = false;
+
+    for (const pythonCmd of pythonCommands) {
+      try {
+        pythonProcess = spawn(pythonCmd, [pythonScript], {
+          cwd: __dirname,
+          env: {
+            ...process.env,
+            // Ensure environment variables are passed to Python
+            FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
+            FIREBASE_PRIVATE_KEY: process.env.FIREBASE_PRIVATE_KEY,
+            FIREBASE_PRIVATE_KEY_ID: process.env.FIREBASE_PRIVATE_KEY_ID,
+            FIREBASE_CLIENT_EMAIL: process.env.FIREBASE_CLIENT_EMAIL,
+            FIREBASE_CLIENT_ID: process.env.FIREBASE_CLIENT_ID,
+          },
+        });
+
+        console.log(`✅ Python process started with command: ${pythonCmd}`);
+        processStarted = true;
+        break;
+      } catch (error) {
+        console.log(`⚠️  Failed to start with ${pythonCmd}: ${error.message}`);
+        continue;
+      }
+    }
+
+    if (!processStarted || !pythonProcess) {
+      console.error("❌ Could not start Python process with any command");
+      return res.status(500).json({
+        error: "Python runtime not available",
+        message:
+          "Could not execute Python script. Please ensure Python is installed.",
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    let stdout = "";
+    let stderr = "";
+    let isCompleted = false;
+
+    // Set up timeout
+    const timeoutId = setTimeout(() => {
+      if (!isCompleted) {
+        console.error("❌ Python script timeout after 10 minutes");
+        pythonProcess.kill("SIGTERM");
+        if (!res.headersSent) {
+          res.status(408).json({
+            error: "Script timeout",
+            message: "The scraping operation took too long and was terminated",
+            timeout: "10 minutes",
+            timestamp: new Date().toISOString(),
+          });
+        }
+      }
+    }, SCRIPT_TIMEOUT);
+
+    // Collect output
+    pythonProcess.stdout.on("data", (data) => {
+      const output = data.toString();
+      stdout += output;
+      console.log(`🐍 Python: ${output.trim()}`);
     });
+
+    pythonProcess.stderr.on("data", (data) => {
+      const error = data.toString();
+      stderr += error;
+      console.error(`🐍 Python Error: ${error.trim()}`);
+    });
+
+    // Handle process completion
+    pythonProcess.on("close", (code) => {
+      clearTimeout(timeoutId);
+      isCompleted = true;
+
+      const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+      console.log(
+        `🐍 Python script completed in ${duration}s with exit code: ${code}`
+      );
+
+      if (res.headersSent) {
+        console.log("⚠️  Response already sent, skipping duplicate response");
+        return;
+      }
+
+      try {
+        if (code === 0) {
+          // Try to parse the result from stdout
+          let scriptResult = null;
+          try {
+            // Look for JSON in the last part of stdout
+            const lines = stdout.trim().split("\n");
+            const lastLine = lines[lines.length - 1];
+
+            if (lastLine.startsWith("{")) {
+              scriptResult = JSON.parse(lastLine);
+            } else {
+              // Fallback: create a basic result
+              scriptResult = {
+                success: true,
+                message: "Script completed successfully",
+                output: stdout.trim(),
+              };
+            }
+          } catch (parseError) {
+            console.warn("⚠️  Could not parse script result, using default");
+            scriptResult = {
+              success: true,
+              message: "Script completed successfully",
+              output: stdout.trim(),
+            };
+          }
+
+          console.log("✅ IPO Security scraper completed successfully");
+          res.status(200).json({
+            success: true,
+            message: "IPO and Security data scraping completed successfully",
+            duration: `${duration}s`,
+            scriptResult: scriptResult,
+            timestamp: new Date().toISOString(),
+          });
+        } else {
+          console.error("❌ Python script failed with code:", code);
+          res.status(500).json({
+            error: "Script execution failed",
+            message: "The Python scraper script encountered an error",
+            exitCode: code,
+            duration: `${duration}s`,
+            stderr: stderr.trim(),
+            timestamp: new Date().toISOString(),
+          });
+        }
+      } catch (responseError) {
+        console.error("❌ Error sending response:", responseError);
+      }
+    });
+
+    pythonProcess.on("error", (error) => {
+      clearTimeout(timeoutId);
+      isCompleted = true;
+
+      console.error("❌ Python process error:", error);
+
+      if (!res.headersSent) {
+        res.status(500).json({
+          error: "Script execution error",
+          message: "Failed to execute Python scraper script",
+          details: error.message,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
+  } catch (error) {
+    console.error("❌ Error in ipo_security endpoint:", error);
+
+    if (!res.headersSent) {
+      res.status(500).json({
+        error: "Internal server error",
+        message: "Failed to initialize scraping process",
+        details: error.message,
+        timestamp: new Date().toISOString(),
+      });
+    }
   }
 });
 
@@ -168,12 +346,14 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
   console.log(`📧 Email configured: ${process.env.EMAIL_USER ? "Yes" : "No"}`);
-  console.log(`🔗 API Base URL: http://localhost:${PORT}`);
+  console.log(
+    `� Firebase configured: ${process.env.FIREBASE_PROJECT_ID ? "Yes" : "No"}`
+  );
+  console.log(`�🔗 API Base URL: http://localhost:${PORT}`);
   console.log("📋 Available endpoints:");
   console.log(`   GET  /backend/hello`);
-  console.log(`   GET  /backend/stocks`);
-  console.log(`   GET  /backend/ipo`);
   console.log(`   POST /backend/placeOrder`);
+  console.log(`   POST /backend/ipo_security (Python scraper)`);
   console.log("");
   console.log('💡 To test: Run "node test-local.js" in the backend folder');
 });

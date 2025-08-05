@@ -41,6 +41,7 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+.env.*
 
 # Next.js build output
 .next/
@@ -48,6 +49,43 @@ jspm_packages/
 # Nuxt.js build / generate output
 .nuxt
 dist
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Scraped data files (these will be regenerated)
+IPO.csv
+ipo.json
+SecurityList.csv
+SecurityList.json
+
+# Chrome driver downloads
+chromedriver*
 
 # Gatsby files
 .cache/

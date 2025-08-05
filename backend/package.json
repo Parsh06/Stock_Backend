@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "echo Backend has no build process"
+    "build": "echo Backend has no build process",
+    "install-python-deps": "pip install selenium pandas firebase-admin webdriver-manager python-dotenv"
   },
   "dependencies": {
     "axios": "^1.7.7",
