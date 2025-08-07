@@ -4,7 +4,17 @@ const cors = require("cors");
 const path = require("path");
 const { sendOrderConfirmation } = require("./nodemail"); // Import the sendOrderConfirmation function
 
+// MongoDB setup
+const connectDB = require("./models/database");
+const SecurityList = require("./models/SecurityList");
+const IpoList = require("./models/IpoList");
+
 const app = express();
+
+// Connect to MongoDB (non-blocking with better error handling)
+connectDB().catch((error) => {
+  console.error('❌ MongoDB connection failed, but server will continue:', error.message);
+});
 
 // Enable CORS for all routes
 app.use(cors());
@@ -14,7 +24,168 @@ app.use(express.json());
 
 // Simple endpoint to verify backend is running
 app.get("/backend/hello", (req, res) => {
-  res.send("Hello from backend!");
+  res.json({ 
+    message: "Hello from backend!",
+    mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+    timestamp: new Date().toISOString()
+  });
+});
+
+// GET endpoint to fetch all stocks/securities
+app.get("/backend/stock", async (req, res) => {
+  try {
+    console.log("📊 Stock Security Names requested at:", new Date().toISOString());
+    
+    // Check if MongoDB is connected
+    const mongoose = require('mongoose');
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({
+        error: "Database not connected",
+        message: "MongoDB connection is not available",
+        timestamp: new Date().toISOString()
+      });
+    }
+    
+    // Fetch only Security Names from Securities collection
+    const securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 }).sort({ Security_Name: 1 });
+    
+    // Extract just the security names as array
+    const securityNames = securities.map(item => item.Security_Name).filter(name => name);
+    
+    console.log(`✅ Found ${securityNames.length} security names`);
+    
+    res.status(200).json({
+      success: true,
+      count: securityNames.length,
+      data: securityNames,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error("❌ Error fetching security names:", error);
+    res.status(500).json({
+      error: "Failed to fetch security names",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
+
+// GET endpoint to fetch all IPO data
+app.get("/backend/ipo", async (req, res) => {
+  try {
+    console.log("📈 IPO list requested at:", new Date().toISOString());
+    
+    // Check if MongoDB is connected
+    const mongoose = require('mongoose');
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({
+        error: "Database not connected",
+        message: "MongoDB connection is not available",
+        timestamp: new Date().toISOString()
+      });
+    }
+    
+    // Fetch all IPOs from MongoDB, sorted by latest first
+    const ipos = await IpoList.find({}).sort({ uploaded_at: -1 });
+    
+    console.log(`✅ Found ${ipos.length} IPO records`);
+    
+    res.status(200).json({
+      success: true,
+      count: ipos.length,
+      data: ipos,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error("❌ Error fetching IPO list:", error);
+    res.status(500).json({
+      error: "Failed to fetch IPO list",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
+
+// Test endpoint for MongoDB connection
+app.post("/backend/test_mongodb", async (req, res) => {
+  try {
+    console.log("🧪 MongoDB test requested at:", new Date().toISOString());
+
+    const pythonScript = path.join(__dirname, "test_mongodb.py");
+    const pythonCommands = ["python", "python3", "py"];
+
+    let pythonProcess = null;
+    let processStarted = false;
+    let output = "";
+    let errorOutput = "";
+
+    for (const pythonCmd of pythonCommands) {
+      try {
+        pythonProcess = spawn(pythonCmd, [pythonScript], {
+          cwd: __dirname,
+          env: {
+            ...process.env,
+            MONGODB_URI: process.env.MONGODB_URI,
+          },
+        });
+
+        console.log(`✅ Python test process started with command: ${pythonCmd}`);
+        processStarted = true;
+        break;
+      } catch (error) {
+        console.log(`⚠️  Failed to start test with ${pythonCmd}: ${error.message}`);
+        continue;
+      }
+    }
+
+    if (!processStarted) {
+      return res.status(500).json({
+        success: false,
+        message: "Could not start Python test process",
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    pythonProcess.stdout.on("data", (data) => {
+      output += data.toString();
+    });
+
+    pythonProcess.stderr.on("data", (data) => {
+      errorOutput += data.toString();
+    });
+
+    pythonProcess.on("close", (code) => {
+      console.log(`🧪 MongoDB test completed with code: ${code}`);
+      
+      if (code === 0) {
+        res.json({
+          success: true,
+          message: "MongoDB test completed successfully",
+          output: output,
+          code: code,
+          timestamp: new Date().toISOString(),
+        });
+      } else {
+        res.status(500).json({
+          success: false,
+          message: "MongoDB test failed",
+          output: output,
+          error: errorOutput,
+          code: code,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
+
+  } catch (error) {
+    console.error("❌ MongoDB test error:", error);
+    res.status(500).json({
+      success: false,
+      message: "MongoDB test failed",
+      error: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // Endpoint to run Python script for IPO and Security data scraping
@@ -27,9 +198,7 @@ app.post("/backend/ipo_security", async (req, res) => {
 
     // Validate environment variables for Python script
     const requiredEnvVars = [
-      "FIREBASE_PROJECT_ID",
-      "FIREBASE_PRIVATE_KEY",
-      "FIREBASE_CLIENT_EMAIL",
+      "MONGODB_URI"
     ];
 
     const missingVars = requiredEnvVars.filter(
@@ -55,8 +224,8 @@ app.post("/backend/ipo_security", async (req, res) => {
 
     const startTime = Date.now();
 
-    // Run Python script
-    const pythonScript = path.join(__dirname, "ipo_scraper_simple.py");
+    // Run Python script - Updated to use final scraper
+    const pythonScript = path.join(__dirname, "ipo_scraper_final.py");
 
     // Check if Python script exists
     const fs = require("fs");
@@ -81,11 +250,7 @@ app.post("/backend/ipo_security", async (req, res) => {
           env: {
             ...process.env,
             // Ensure environment variables are passed to Python
-            FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
-            FIREBASE_PRIVATE_KEY: process.env.FIREBASE_PRIVATE_KEY,
-            FIREBASE_PRIVATE_KEY_ID: process.env.FIREBASE_PRIVATE_KEY_ID,
-            FIREBASE_CLIENT_EMAIL: process.env.FIREBASE_CLIENT_EMAIL,
-            FIREBASE_CLIENT_ID: process.env.FIREBASE_CLIENT_ID,
+            MONGODB_URI: process.env.MONGODB_URI,
           },
         });
 
@@ -346,14 +511,14 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
   console.log(`📧 Email configured: ${process.env.EMAIL_USER ? "Yes" : "No"}`);
-  console.log(
-    `� Firebase configured: ${process.env.FIREBASE_PROJECT_ID ? "Yes" : "No"}`
-  );
-  console.log(`�🔗 API Base URL: http://localhost:${PORT}`);
+  console.log(`🗄️  MongoDB configured: ${process.env.MONGODB_URI ? "Yes" : "No"}`);
+  console.log(`🔗 API Base URL: http://localhost:${PORT}`);
   console.log("📋 Available endpoints:");
   console.log(`   GET  /backend/hello`);
+  console.log(`   GET  /backend/stock (Get all securities)`);
+  console.log(`   GET  /backend/ipo (Get all IPO data)`);
   console.log(`   POST /backend/placeOrder`);
-  console.log(`   POST /backend/ipo_security (Python scraper)`);
+  console.log(`   POST /backend/ipo_security (Python scraper - MongoDB)`);
   console.log("");
-  console.log('💡 To test: Run "node test-local.js" in the backend folder');
+  console.log('💡 To test: Use Postman or curl to test the endpoints');
 });
