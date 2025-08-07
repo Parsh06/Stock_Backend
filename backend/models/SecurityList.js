@@ -7,7 +7,6 @@ const securityListSchema = new mongoose.Schema(
     Security_Code: {
       type: String,
       required: true,
-      index: true,
     },
     Security_Id: {
       type: String,
@@ -16,7 +15,6 @@ const securityListSchema = new mongoose.Schema(
     Security_Name: {
       type: String,
       required: true,
-      index: true,
     },
     Status: {
       type: String,
@@ -34,7 +32,6 @@ const securityListSchema = new mongoose.Schema(
     ISIN_No: {
       type: String,
       default: null,
-      index: true,
     },
     Industry: {
       type: String,
@@ -64,7 +61,7 @@ const securityListSchema = new mongoose.Schema(
   }
 );
 
-// Create indexes for better performance
+// Create indexes for better performance (only here, not in field definitions)
 securityListSchema.index({ Security_Code: 1 });
 securityListSchema.index({ Security_Name: 1 });
 securityListSchema.index({ Status: 1 });

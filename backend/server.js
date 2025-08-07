@@ -11,10 +11,25 @@ const IpoList = require("./models/IpoList");
 
 const app = express();
 
-// Connect to MongoDB (non-blocking with better error handling)
-connectDB().catch((error) => {
-  console.error('❌ MongoDB connection failed, but server will continue:', error.message);
-});
+// Store database connection status
+let dbConnectionReady = false;
+
+// Connect to MongoDB (async with proper error handling)
+async function initializeDatabase() {
+  try {
+    await connectDB();
+    dbConnectionReady = true;
+    console.log('✅ Database connection ready');
+  } catch (error) {
+    console.error('❌ Database initialization failed:', error.message);
+    dbConnectionReady = false;
+    // Retry connection after 5 seconds
+    setTimeout(initializeDatabase, 5000);
+  }
+}
+
+// Initialize database connection
+initializeDatabase();
 
 // Enable CORS for all routes
 app.use(cors());
@@ -22,13 +37,64 @@ app.use(cors());
 // Parse incoming JSON requests
 app.use(express.json());
 
-// Simple endpoint to verify backend is running
+// Health check endpoint
 app.get("/backend/hello", (req, res) => {
   res.json({ 
     message: "Hello from backend!",
-    mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+    mongodb: dbConnectionReady ? "connected" : "connecting",
+    mongodbUri: process.env.MONGODB_URI ? "configured" : "not configured",
     timestamp: new Date().toISOString()
   });
+});
+
+// Detailed health check endpoint
+app.get("/backend/health", async (req, res) => {
+  try {
+    const mongoose = require('mongoose');
+    const connectionState = mongoose.connection.readyState;
+    const stateNames = {
+      0: 'disconnected',
+      1: 'connected',
+      2: 'connecting',
+      3: 'disconnecting'
+    };
+
+    const health = {
+      status: connectionState === 1 ? 'healthy' : 'unhealthy',
+      timestamp: new Date().toISOString(),
+      database: {
+        ready: dbConnectionReady,
+        state: stateNames[connectionState] || 'unknown',
+        stateCode: connectionState
+      },
+      environment: {
+        mongodbUri: process.env.MONGODB_URI ? 'configured' : 'missing',
+        nodeEnv: process.env.NODE_ENV || 'development'
+      }
+    };
+
+    // Try to count documents if connected
+    if (connectionState === 1) {
+      try {
+        const securityCount = await SecurityList.countDocuments();
+        const ipoCount = await IpoList.countDocuments();
+        health.collections = {
+          securities: securityCount,
+          ipos: ipoCount
+        };
+      } catch (countError) {
+        health.collections = { error: countError.message };
+      }
+    }
+
+    res.status(connectionState === 1 ? 200 : 503).json(health);
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // GET endpoint to fetch all stocks/securities
@@ -36,18 +102,25 @@ app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
     
-    // Check if MongoDB is connected
-    const mongoose = require('mongoose');
-    if (mongoose.connection.readyState !== 1) {
-      return res.status(503).json({
-        error: "Database not connected",
-        message: "MongoDB connection is not available",
-        timestamp: new Date().toISOString()
-      });
+    // Check if database connection is ready
+    if (!dbConnectionReady) {
+      console.log("⚠️ Database not ready, checking connection...");
+      const mongoose = require('mongoose');
+      if (mongoose.connection.readyState !== 1) {
+        return res.status(503).json({
+          error: "Database not connected",
+          message: "MongoDB connection is not available. Please try again in a moment.",
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        dbConnectionReady = true;
+      }
     }
     
     // Fetch only Security Names from Securities collection
-    const securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 }).sort({ Security_Name: 1 });
+    const securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 })
+      .sort({ Security_Name: 1 })
+      .lean(); // Use lean() for better performance
     
     // Extract just the security names as array
     const securityNames = securities.map(item => item.Security_Name).filter(name => name);
@@ -75,18 +148,25 @@ app.get("/backend/ipo", async (req, res) => {
   try {
     console.log("📈 IPO list requested at:", new Date().toISOString());
     
-    // Check if MongoDB is connected
-    const mongoose = require('mongoose');
-    if (mongoose.connection.readyState !== 1) {
-      return res.status(503).json({
-        error: "Database not connected",
-        message: "MongoDB connection is not available",
-        timestamp: new Date().toISOString()
-      });
+    // Check if database connection is ready
+    if (!dbConnectionReady) {
+      console.log("⚠️ Database not ready, checking connection...");
+      const mongoose = require('mongoose');
+      if (mongoose.connection.readyState !== 1) {
+        return res.status(503).json({
+          error: "Database not connected",
+          message: "MongoDB connection is not available. Please try again in a moment.",
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        dbConnectionReady = true;
+      }
     }
     
     // Fetch all IPOs from MongoDB, sorted by latest first
-    const ipos = await IpoList.find({}).sort({ uploaded_at: -1 });
+    const ipos = await IpoList.find({})
+      .sort({ uploaded_at: -1 })
+      .lean(); // Use lean() for better performance
     
     console.log(`✅ Found ${ipos.length} IPO records`);
     
@@ -111,70 +191,48 @@ app.post("/backend/test_mongodb", async (req, res) => {
   try {
     console.log("🧪 MongoDB test requested at:", new Date().toISOString());
 
-    const pythonScript = path.join(__dirname, "test_mongodb.py");
-    const pythonCommands = ["python", "python3", "py"];
-
-    let pythonProcess = null;
-    let processStarted = false;
-    let output = "";
-    let errorOutput = "";
-
-    for (const pythonCmd of pythonCommands) {
-      try {
-        pythonProcess = spawn(pythonCmd, [pythonScript], {
-          cwd: __dirname,
-          env: {
-            ...process.env,
-            MONGODB_URI: process.env.MONGODB_URI,
-          },
-        });
-
-        console.log(`✅ Python test process started with command: ${pythonCmd}`);
-        processStarted = true;
-        break;
-      } catch (error) {
-        console.log(`⚠️  Failed to start test with ${pythonCmd}: ${error.message}`);
-        continue;
-      }
-    }
-
-    if (!processStarted) {
-      return res.status(500).json({
+    if (!dbConnectionReady) {
+      return res.status(503).json({
         success: false,
-        message: "Could not start Python test process",
-        timestamp: new Date().toISOString(),
+        message: "Database connection not ready",
+        timestamp: new Date().toISOString()
       });
     }
 
-    pythonProcess.stdout.on("data", (data) => {
-      output += data.toString();
-    });
+    // Test MongoDB connection and collections
+    const mongoose = require('mongoose');
+    const connectionState = mongoose.connection.readyState;
+    const states = {
+      0: 'disconnected',
+      1: 'connected',
+      2: 'connecting',
+      3: 'disconnecting'
+    };
 
-    pythonProcess.stderr.on("data", (data) => {
-      errorOutput += data.toString();
-    });
-
-    pythonProcess.on("close", (code) => {
-      console.log(`🧪 MongoDB test completed with code: ${code}`);
-      
-      if (code === 0) {
-        res.json({
-          success: true,
-          message: "MongoDB test completed successfully",
-          output: output,
-          code: code,
-          timestamp: new Date().toISOString(),
-        });
-      } else {
-        res.status(500).json({
-          success: false,
-          message: "MongoDB test failed",
-          output: output,
-          error: errorOutput,
-          code: code,
-          timestamp: new Date().toISOString(),
-        });
-      }
+    // Get collection stats
+    const securityCount = await SecurityList.countDocuments();
+    const ipoCount = await IpoList.countDocuments();
+    
+    // Get database info
+    const dbName = mongoose.connection.name;
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    
+    console.log("✅ MongoDB test completed successfully");
+    
+    res.json({
+      success: true,
+      message: "MongoDB test completed successfully",
+      connection: {
+        state: states[connectionState] || 'unknown',
+        database: dbName,
+        collections: collections.map(col => col.name),
+        collectionsCount: collections.length
+      },
+      data: {
+        securities: securityCount,
+        ipos: ipoCount
+      },
+      timestamp: new Date().toISOString(),
     });
 
   } catch (error) {
@@ -188,22 +246,29 @@ app.post("/backend/test_mongodb", async (req, res) => {
   }
 });
 
-// Endpoint to run Python script for IPO and Security data scraping
+// Endpoint for IPO and Security data scraping (Vercel-compatible)
 app.post("/backend/ipo_security", async (req, res) => {
   try {
-    console.log(
-      "🐍 IPO Security scraper requested at:",
-      new Date().toISOString()
-    );
+    console.log("� IPO Security data update requested at:", new Date().toISOString());
 
-    // Validate environment variables for Python script
-    const requiredEnvVars = [
-      "MONGODB_URI"
-    ];
+    // Check if database connection is ready
+    if (!dbConnectionReady) {
+      const mongoose = require('mongoose');
+      if (mongoose.connection.readyState !== 1) {
+        return res.status(503).json({
+          error: "Database not connected",
+          message: "MongoDB connection is not available. Please try again in a moment.",
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        dbConnectionReady = true;
+      }
+    }
 
-    const missingVars = requiredEnvVars.filter(
-      (varName) => !process.env[varName]
-    );
+    // Validate environment variables
+    const requiredEnvVars = ["MONGODB_URI"];
+    const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
+    
     if (missingVars.length > 0) {
       console.error("❌ Missing required environment variables:", missingVars);
       return res.status(503).json({
@@ -214,191 +279,167 @@ app.post("/backend/ipo_security", async (req, res) => {
       });
     }
 
-    // Check if Python is available
-    const { spawn } = require("child_process");
+    // Since Python is not available on Vercel, we'll provide an alternative approach
+    console.log("⚠️ Python runtime not available on Vercel serverless environment");
+    console.log("💡 Alternative: Use manual data upload or local script execution");
 
-    console.log("🚀 Starting Python IPO scraper script...");
+    // Check current data status
+    const securityCount = await SecurityList.countDocuments();
+    const ipoCount = await IpoList.countDocuments();
 
-    // Set timeout for the entire operation (10 minutes)
-    const SCRIPT_TIMEOUT = 10 * 60 * 1000; // 10 minutes in milliseconds
+    const lastSecurityUpdate = await SecurityList.findOne({}, { uploaded_at: 1 }).sort({ uploaded_at: -1 });
+    const lastIpoUpdate = await IpoList.findOne({}, { uploaded_at: 1 }).sort({ uploaded_at: -1 });
 
-    const startTime = Date.now();
-
-    // Run Python script - Updated to use final scraper
-    const pythonScript = path.join(__dirname, "ipo_scraper_final.py");
-
-    // Check if Python script exists
-    const fs = require("fs");
-    if (!fs.existsSync(pythonScript)) {
-      console.error("❌ Python script not found:", pythonScript);
-      return res.status(500).json({
-        error: "Script not found",
-        message: "IPO scraper script is missing from server",
-        timestamp: new Date().toISOString(),
-      });
-    }
-
-    // Try different Python commands
-    const pythonCommands = ["python", "python3", "py"];
-    let pythonProcess = null;
-    let processStarted = false;
-
-    for (const pythonCmd of pythonCommands) {
-      try {
-        pythonProcess = spawn(pythonCmd, [pythonScript], {
-          cwd: __dirname,
-          env: {
-            ...process.env,
-            // Ensure environment variables are passed to Python
-            MONGODB_URI: process.env.MONGODB_URI,
-          },
-        });
-
-        console.log(`✅ Python process started with command: ${pythonCmd}`);
-        processStarted = true;
-        break;
-      } catch (error) {
-        console.log(`⚠️  Failed to start with ${pythonCmd}: ${error.message}`);
-        continue;
-      }
-    }
-
-    if (!processStarted || !pythonProcess) {
-      console.error("❌ Could not start Python process with any command");
-      return res.status(500).json({
-        error: "Python runtime not available",
-        message:
-          "Could not execute Python script. Please ensure Python is installed.",
-        timestamp: new Date().toISOString(),
-      });
-    }
-
-    let stdout = "";
-    let stderr = "";
-    let isCompleted = false;
-
-    // Set up timeout
-    const timeoutId = setTimeout(() => {
-      if (!isCompleted) {
-        console.error("❌ Python script timeout after 10 minutes");
-        pythonProcess.kill("SIGTERM");
-        if (!res.headersSent) {
-          res.status(408).json({
-            error: "Script timeout",
-            message: "The scraping operation took too long and was terminated",
-            timeout: "10 minutes",
-            timestamp: new Date().toISOString(),
-          });
+    res.status(200).json({
+      success: true,
+      message: "Data scraping service status",
+      note: "Python-based scraping is not available on Vercel serverless environment",
+      alternatives: [
+        "Run the Python scraper locally and upload data via API",
+        "Use the manual data upload endpoints",
+        "Schedule scraping on a server with Python support"
+      ],
+      currentData: {
+        securities: {
+          count: securityCount,
+          lastUpdate: lastSecurityUpdate?.uploaded_at || null
+        },
+        ipos: {
+          count: ipoCount,
+          lastUpdate: lastIpoUpdate?.uploaded_at || null
         }
-      }
-    }, SCRIPT_TIMEOUT);
-
-    // Collect output
-    pythonProcess.stdout.on("data", (data) => {
-      const output = data.toString();
-      stdout += output;
-      console.log(`🐍 Python: ${output.trim()}`);
+      },
+      instructions: {
+        localScript: "Run 'python ipo_scraper_final.py' locally to update data",
+        manualUpload: "Use POST /backend/upload_securities and POST /backend/upload_ipos for manual data upload"
+      },
+      timestamp: new Date().toISOString()
     });
 
-    pythonProcess.stderr.on("data", (data) => {
-      const error = data.toString();
-      stderr += error;
-      console.error(`🐍 Python Error: ${error.trim()}`);
-    });
-
-    // Handle process completion
-    pythonProcess.on("close", (code) => {
-      clearTimeout(timeoutId);
-      isCompleted = true;
-
-      const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-      console.log(
-        `🐍 Python script completed in ${duration}s with exit code: ${code}`
-      );
-
-      if (res.headersSent) {
-        console.log("⚠️  Response already sent, skipping duplicate response");
-        return;
-      }
-
-      try {
-        if (code === 0) {
-          // Try to parse the result from stdout
-          let scriptResult = null;
-          try {
-            // Look for JSON in the last part of stdout
-            const lines = stdout.trim().split("\n");
-            const lastLine = lines[lines.length - 1];
-
-            if (lastLine.startsWith("{")) {
-              scriptResult = JSON.parse(lastLine);
-            } else {
-              // Fallback: create a basic result
-              scriptResult = {
-                success: true,
-                message: "Script completed successfully",
-                output: stdout.trim(),
-              };
-            }
-          } catch (parseError) {
-            console.warn("⚠️  Could not parse script result, using default");
-            scriptResult = {
-              success: true,
-              message: "Script completed successfully",
-              output: stdout.trim(),
-            };
-          }
-
-          console.log("✅ IPO Security scraper completed successfully");
-          res.status(200).json({
-            success: true,
-            message: "IPO and Security data scraping completed successfully",
-            duration: `${duration}s`,
-            scriptResult: scriptResult,
-            timestamp: new Date().toISOString(),
-          });
-        } else {
-          console.error("❌ Python script failed with code:", code);
-          res.status(500).json({
-            error: "Script execution failed",
-            message: "The Python scraper script encountered an error",
-            exitCode: code,
-            duration: `${duration}s`,
-            stderr: stderr.trim(),
-            timestamp: new Date().toISOString(),
-          });
-        }
-      } catch (responseError) {
-        console.error("❌ Error sending response:", responseError);
-      }
-    });
-
-    pythonProcess.on("error", (error) => {
-      clearTimeout(timeoutId);
-      isCompleted = true;
-
-      console.error("❌ Python process error:", error);
-
-      if (!res.headersSent) {
-        res.status(500).json({
-          error: "Script execution error",
-          message: "Failed to execute Python scraper script",
-          details: error.message,
-          timestamp: new Date().toISOString(),
-        });
-      }
-    });
   } catch (error) {
     console.error("❌ Error in ipo_security endpoint:", error);
+    res.status(500).json({
+      error: "Service error",
+      message: "Failed to check data scraping service status",
+      details: error.message,
+      timestamp: new Date().toISOString(),
+    });
+  }
+});
 
-    if (!res.headersSent) {
-      res.status(500).json({
-        error: "Internal server error",
-        message: "Failed to initialize scraping process",
-        details: error.message,
-        timestamp: new Date().toISOString(),
+// Manual data upload endpoints for Vercel compatibility
+
+// Upload Securities data manually
+app.post("/backend/upload_securities", async (req, res) => {
+  try {
+    console.log("📊 Manual securities upload requested at:", new Date().toISOString());
+    
+    if (!dbConnectionReady) {
+      return res.status(503).json({
+        error: "Database not connected",
+        message: "MongoDB connection is not available.",
+        timestamp: new Date().toISOString()
       });
     }
+
+    const { securities } = req.body;
+    
+    if (!securities || !Array.isArray(securities) || securities.length === 0) {
+      return res.status(400).json({
+        error: "Invalid data",
+        message: "Securities array is required and must not be empty",
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    // Clear existing securities
+    await SecurityList.deleteMany({});
+    console.log("🗑️ Cleared existing securities data");
+
+    // Add metadata to each record
+    const securitiesWithMetadata = securities.map((security, index) => ({
+      ...security,
+      uploaded_at: new Date(),
+      data_type: "BSE_Security",
+      record_id: index + 1
+    }));
+
+    // Insert new securities data
+    const result = await SecurityList.insertMany(securitiesWithMetadata);
+    
+    console.log(`✅ Uploaded ${result.length} securities to MongoDB`);
+    
+    res.status(200).json({
+      success: true,
+      message: "Securities data uploaded successfully",
+      count: result.length,
+      timestamp: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error("❌ Error uploading securities:", error);
+    res.status(500).json({
+      error: "Upload failed",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
+
+// Upload IPO data manually
+app.post("/backend/upload_ipos", async (req, res) => {
+  try {
+    console.log("📈 Manual IPO upload requested at:", new Date().toISOString());
+    
+    if (!dbConnectionReady) {
+      return res.status(503).json({
+        error: "Database not connected",
+        message: "MongoDB connection is not available.",
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    const { ipos } = req.body;
+    
+    if (!ipos || !Array.isArray(ipos) || ipos.length === 0) {
+      return res.status(400).json({
+        error: "Invalid data",
+        message: "IPOs array is required and must not be empty",
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    // Clear existing IPOs
+    await IpoList.deleteMany({});
+    console.log("🗑️ Cleared existing IPO data");
+
+    // Add metadata to each record
+    const iposWithMetadata = ipos.map((ipo, index) => ({
+      ...ipo,
+      uploaded_at: new Date(),
+      data_type: "IPO_Data",
+      record_id: index + 1
+    }));
+
+    // Insert new IPO data
+    const result = await IpoList.insertMany(iposWithMetadata);
+    
+    console.log(`✅ Uploaded ${result.length} IPOs to MongoDB`);
+    
+    res.status(200).json({
+      success: true,
+      message: "IPO data uploaded successfully",
+      count: result.length,
+      timestamp: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error("❌ Error uploading IPOs:", error);
+    res.status(500).json({
+      error: "Upload failed",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
   }
 });
 
@@ -517,8 +558,12 @@ app.listen(PORT, () => {
   console.log(`   GET  /backend/hello`);
   console.log(`   GET  /backend/stock (Get all securities)`);
   console.log(`   GET  /backend/ipo (Get all IPO data)`);
+  console.log(`   POST /backend/test_mongodb (Test MongoDB connection)`);
+  console.log(`   POST /backend/upload_securities (Manual securities upload)`);
+  console.log(`   POST /backend/upload_ipos (Manual IPO upload)`);
+  console.log(`   POST /backend/ipo_security (Check scraping service status)`);
   console.log(`   POST /backend/placeOrder`);
-  console.log(`   POST /backend/ipo_security (Python scraper - MongoDB)`);
   console.log("");
-  console.log('💡 To test: Use Postman or curl to test the endpoints');
+  console.log('💡 Note: Python scraping not available on Vercel');
+  console.log('💡 Use manual upload endpoints or run Python scripts locally');
 });

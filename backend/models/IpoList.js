@@ -7,7 +7,6 @@ const ipoListSchema = new mongoose.Schema(
     Company_Name: {
       type: String,
       required: true,
-      index: true,
     },
     Exchange: {
       type: String,
@@ -52,12 +51,10 @@ const ipoListSchema = new mongoose.Schema(
     Status: {
       type: String,
       default: null,
-      index: true,
     },
     ISIN: {
       type: String,
       default: null,
-      index: true,
     },
     // Additional flexible fields for any extra data
     GMP: {
@@ -92,10 +89,13 @@ const ipoListSchema = new mongoose.Schema(
   }
 );
 
-// Create indexes for better performance
+// Create indexes for better performance (only here, not in field definitions)
 ipoListSchema.index({ Company_Name: 1 });
 ipoListSchema.index({ Status: 1 });
 ipoListSchema.index({ ISIN: 1 });
+ipoListSchema.index({ Issue_Type: 1 });
+
+module.exports = mongoose.model("IpoList", ipoListSchema);
 ipoListSchema.index({ Issue_Type: 1 });
 
 module.exports = mongoose.model("IpoList", ipoListSchema);
