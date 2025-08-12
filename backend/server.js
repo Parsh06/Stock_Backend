@@ -105,6 +105,12 @@ app.get("/backend/hello", (req, res) => {
 app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
+    console.log("🔍 Environment check:", {
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoUriPrefix: process.env.MONGODB_URI ? process.env.MONGODB_URI.substring(0, 20) + '...' : 'none',
+      isVercel: !!process.env.VERCEL,
+      nodeEnv: process.env.NODE_ENV
+    });
     
     // Check if model is loaded
     if (!SecurityList) {
@@ -128,13 +134,37 @@ app.get("/backend/stock", async (req, res) => {
     
     console.log("🔍 Environment check - MongoDB URI configured");
     
-    // Ensure database connection
-    const connected = await ensureConnection();
+    // Force connection establishment with multiple attempts
+    let connectionAttempts = 3;
+    let connected = false;
+    
+    while (connectionAttempts > 0 && !connected) {
+      try {
+        console.log(`🔄 Connection attempt ${4 - connectionAttempts}/3...`);
+        
+        // Force connect
+        await connectDB();
+        connected = await ensureConnection();
+        
+        if (connected) {
+          console.log("✅ Connection successful!");
+          break;
+        }
+      } catch (connError) {
+        console.error(`❌ Connection attempt failed:`, connError.message);
+      }
+      
+      connectionAttempts--;
+      if (connectionAttempts > 0) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+    }
+    
     if (!connected) {
-      console.error("❌ Failed to establish database connection");
+      console.error("❌ Failed to establish database connection after all attempts");
       return res.status(503).json({
         error: "Database connection failed",
-        message: "Unable to connect to MongoDB database",
+        message: "Unable to connect to MongoDB database after multiple attempts",
         timestamp: new Date().toISOString()
       });
     }
@@ -143,7 +173,7 @@ app.get("/backend/stock", async (req, res) => {
     
     // Fetch securities with timeout
     const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Query timeout')), 10000)
+      setTimeout(() => reject(new Error('Query timeout after 10 seconds')), 10000)
     );
     
     const queryPromise = SecurityList.find({}, { Security_Name: 1, _id: 0 })
