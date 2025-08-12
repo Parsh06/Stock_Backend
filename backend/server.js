@@ -11,25 +11,10 @@ const IpoList = require("./models/IpoList");
 
 const app = express();
 
-// Global connection status for serverless optimization
-let isConnected = false;
-
-// Initialize MongoDB connection for serverless (non-blocking)
-const initializeDB = async () => {
-  try {
-    if (!isConnected) {
-      await connectDB();
-      isConnected = true;
-      console.log('✅ Database initialized successfully');
-    }
-  } catch (error) {
-    console.error('❌ Database initialization failed:', error.message);
-    isConnected = false;
-  }
-};
-
-// Initialize database connection
-initializeDB();
+// Initialize MongoDB connection (non-blocking for serverless)
+connectDB().catch(error => {
+  console.error('❌ Initial MongoDB connection failed:', error.message);
+});
 
 // Enable CORS for all routes with specific configuration
 app.use(cors({
@@ -68,12 +53,6 @@ app.get("/backend/hello", (req, res) => {
 app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
-    console.log("🔍 Environment check:", {
-      hasMongoUri: !!process.env.MONGODB_URI,
-      mongoUriPrefix: process.env.MONGODB_URI ? process.env.MONGODB_URI.substring(0, 20) + '...' : 'none',
-      isVercel: !!process.env.VERCEL,
-      nodeEnv: process.env.NODE_ENV
-    });
     
     // Check if MONGODB_URI exists
     if (!process.env.MONGODB_URI) {
@@ -85,52 +64,36 @@ app.get("/backend/stock", async (req, res) => {
       });
     }
     
-    // Force connection attempt for serverless environment
-    let connectionRetries = 3;
-    let connected = false;
-    let lastError = null;
+    console.log("🔍 Environment check - MongoDB URI configured");
     
-    while (connectionRetries > 0 && !connected) {
-      try {
-        console.log(`🔄 Attempting database connection (${4 - connectionRetries}/3)...`);
-        connected = await ensureConnection();
-        if (!connected) {
-          console.log("🔄 First connection attempt failed, trying direct connect...");
-          await connectDB();
-          connected = await ensureConnection();
-        }
-        if (connected) {
-          console.log("✅ Connection successful!");
-          break;
-        }
-      } catch (connError) {
-        lastError = connError;
-        console.error(`❌ Connection attempt failed:`, connError.message);
-      }
-      connectionRetries--;
-      if (connectionRetries > 0) {
-        console.log("⏳ Waiting before retry...");
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
-      }
-    }
-    
+    // Ensure database connection
+    const connected = await ensureConnection();
     if (!connected) {
-      console.error("❌ All connection attempts failed");
+      console.error("❌ Failed to establish database connection");
       return res.status(503).json({
         error: "Database connection failed",
-        message: "Unable to establish MongoDB connection after multiple attempts",
-        lastError: lastError ? lastError.message : "Unknown error",
+        message: "Unable to connect to MongoDB database",
         timestamp: new Date().toISOString()
       });
     }
     
     console.log("✅ Database connection verified, fetching securities...");
     
-    // Fetch only Security Names from Securities collection
-    const securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 }).sort({ Security_Name: 1 });
+    // Fetch securities with timeout
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Query timeout')), 10000)
+    );
     
-    // Extract just the security names as array
-    const securityNames = securities.map(item => item.Security_Name).filter(name => name);
+    const queryPromise = SecurityList.find({}, { Security_Name: 1, _id: 0 })
+      .sort({ Security_Name: 1 })
+      .lean();
+    
+    const securities = await Promise.race([queryPromise, timeoutPromise]);
+    
+    // Extract security names
+    const securityNames = securities
+      .map(item => item.Security_Name)
+      .filter(name => name && typeof name === 'string');
     
     console.log(`✅ Found ${securityNames.length} security names`);
     
@@ -140,12 +103,12 @@ app.get("/backend/stock", async (req, res) => {
       data: securityNames,
       timestamp: new Date().toISOString()
     });
+    
   } catch (error) {
     console.error("❌ Error fetching security names:", error);
     res.status(500).json({
       error: "Failed to fetch security names",
       message: error.message,
-      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined,
       timestamp: new Date().toISOString()
     });
   }
