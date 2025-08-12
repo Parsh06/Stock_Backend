@@ -53,56 +53,16 @@ app.use(cors({
 app.use(express.json());
 
 // Simple endpoint to verify backend is running
-app.get("/backend/hello", async (req, res) => {
-  try {
-    // Test database connection
-    let dbStatus = {
-      hasMongoUri: !!process.env.MONGODB_URI,
-      mongoUriLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
-      mongoState: require('mongoose').connection.readyState,
-      stateDescription: getConnectionStateDescription(require('mongoose').connection.readyState)
-    };
-
-    // Try to connect
-    try {
-      const isConnected = await ensureConnection();
-      dbStatus.connectionTest = isConnected ? 'SUCCESS' : 'FAILED';
-      dbStatus.connected = isConnected;
-    } catch (error) {
-      dbStatus.connectionTest = 'ERROR';
-      dbStatus.error = error.message;
-      dbStatus.connected = false;
-    }
-    
-    res.json({ 
-      message: "Hello from backend!",
-      mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-      dbStatus: dbStatus,
-      environment: process.env.NODE_ENV || 'development',
-      vercel: !!process.env.VERCEL,
-      timestamp: new Date().toISOString()
-    });
-  } catch (error) {
-    res.json({ 
-      message: "Hello from backend!",
-      mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-      dbConnected: false,
-      error: error.message,
-      timestamp: new Date().toISOString()
-    });
-  }
+app.get("/backend/hello", (req, res) => {
+  res.json({ 
+    message: "Hello from backend!",
+    mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+    mongoLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
+    environment: process.env.NODE_ENV || 'development',
+    vercel: !!process.env.VERCEL,
+    timestamp: new Date().toISOString()
+  });
 });
-
-// Helper function to describe connection states
-function getConnectionStateDescription(state) {
-  const states = {
-    0: 'disconnected',
-    1: 'connected',
-    2: 'connecting',
-    3: 'disconnecting'
-  };
-  return states[state] || 'unknown';
-}
 
 // GET endpoint to fetch all stocks/securities
 app.get("/backend/stock", async (req, res) => {
