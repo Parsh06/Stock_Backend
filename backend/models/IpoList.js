@@ -1,13 +1,47 @@
 const mongoose = require("mongoose");
 
-// IPO List Schema
+// IPO List Schema - Updated to match actual MongoDB data structure
 const ipoListSchema = new mongoose.Schema(
   {
-    // IPO data fields from Chittorgarh
-    Company_Name: {
+    // Primary IPO data fields (from Python scraper)
+    Company: {
       type: String,
       required: true,
       index: true,
+    },
+    Opening_Date: {
+      type: String,
+      default: null,
+    },
+    Closing_Date: {
+      type: String,
+      default: null,
+    },
+    Listing_Date: {
+      type: String,
+      default: null,
+    },
+    Issue_Price_Rs: {
+      type: String,
+      default: null,
+    },
+    Total_Issue_Amount_InclFirm_reservations_Rscr: {
+      type: String,
+      default: null,
+    },
+    Listing_at: {
+      type: String,
+      default: null,
+    },
+    Lead_Manager: {
+      type: String,
+      default: null,
+    },
+
+    // Alternative field names for compatibility
+    Company_Name: {
+      type: String,
+      default: null,
     },
     Exchange: {
       type: String,
@@ -42,10 +76,6 @@ const ipoListSchema = new mongoose.Schema(
       default: null,
     },
     Issue_Type: {
-      type: String,
-      default: null,
-    },
-    Listing_Date: {
       type: String,
       default: null,
     },
@@ -89,11 +119,12 @@ const ipoListSchema = new mongoose.Schema(
   {
     timestamps: true,
     collection: "Ipo", // Updated to match MongoDB collection name
+    strict: false, // Allow additional fields not defined in schema
   }
 );
 
 // Create indexes for better performance
-ipoListSchema.index({ Company_Name: 1 });
+ipoListSchema.index({ Company: 1 });
 ipoListSchema.index({ Status: 1 });
 ipoListSchema.index({ ISIN: 1 });
 ipoListSchema.index({ Issue_Type: 1 });

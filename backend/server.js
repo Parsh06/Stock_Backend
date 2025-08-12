@@ -16,8 +16,23 @@ connectDB().catch((error) => {
   console.error('❌ MongoDB connection failed, but server will continue:', error.message);
 });
 
-// Enable CORS for all routes
-app.use(cors());
+// Enable CORS for all routes with specific configuration
+app.use(cors({
+  origin: [
+    'http://localhost:3000', 
+    'http://localhost:5173', 
+    'http://localhost:5174', 
+    'http://localhost:8080',
+    'http://127.0.0.1:3000',
+    'http://127.0.0.1:5173',
+    'http://127.0.0.1:5174',
+    'http://127.0.0.1:8080',
+    'https://stock-backend-mu.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
+}));
 
 // Parse incoming JSON requests
 app.use(express.json());
@@ -90,12 +105,41 @@ app.get("/backend/ipo", async (req, res) => {
     
     console.log(`✅ Found ${ipos.length} IPO records`);
     
+    // Transform the data to match frontend expectations
+    const transformedIpos = ipos.map((ipo) => {
+      const ipoObj = ipo.toObject();
+      
+      return {
+        _id: ipoObj._id,
+        id: ipoObj._id,
+        Company: ipoObj.Company || 'Company TBA',
+        'Opening Date': ipoObj.Opening_Date || ipoObj.Open_Date || null,
+        'Closing Date': ipoObj.Closing_Date || ipoObj.Close_Date || null,
+        'Listing Date': ipoObj.Listing_Date || null,
+        'Issue Price (Rs.)': ipoObj.Issue_Price_Rs || ipoObj.Price_Band || null,
+        'Total Issue Amount (Incl.Firm reservations) (Rs.cr.)': ipoObj.Total_Issue_Amount_InclFirm_reservations_Rscr || ipoObj.Issue_Size || '0.00',
+        'Listing at': ipoObj.Listing_at || ipoObj.Exchange || 'Exchange TBA',
+        'Lead Manager': ipoObj.Lead_Manager || 'Manager TBA',
+        data_type: ipoObj.data_type || 'IPO',
+        record_id: ipoObj.record_id || 0,
+        uploaded_at: ipoObj.uploaded_at,
+        // Additional fields for frontend
+        status: ipoObj.Status || null,
+        isin: ipoObj.ISIN || null,
+        gmp: ipoObj.GMP || null,
+        minInvestment: ipoObj.Min_Investment || null,
+        lotSize: ipoObj.Lot_Size || null,
+        issueType: ipoObj.Issue_Type || null
+      };
+    });
+    
     res.status(200).json({
       success: true,
-      count: ipos.length,
-      data: ipos,
+      count: transformedIpos.length,
+      data: transformedIpos,
       timestamp: new Date().toISOString()
     });
+    
   } catch (error) {
     console.error("❌ Error fetching IPO list:", error);
     res.status(500).json({
@@ -507,8 +551,9 @@ app.use((req, res, next) => {
 
 // Start the server
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
   console.log(`📧 Email configured: ${process.env.EMAIL_USER ? "Yes" : "No"}`);
   console.log(`🗄️  MongoDB configured: ${process.env.MONGODB_URI ? "Yes" : "No"}`);
@@ -521,4 +566,25 @@ app.listen(PORT, () => {
   console.log(`   POST /backend/ipo_security (Python scraper - MongoDB)`);
   console.log("");
   console.log('💡 To test: Use Postman or curl to test the endpoints');
+  console.log('🎯 Server initialization complete. Ready to handle requests!');
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`❌ Port ${PORT} is already in use. Please kill other processes or use a different port.`);
+    process.exit(1);
+  } else {
+    console.error('❌ Server error:', err);
+  }
 });
+
+// Graceful shutdown handling
+process.on('SIGINT', () => {
+  console.log('\n🛑 Received SIGINT. Graceful shutdown...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('\n🛑 Received SIGTERM. Graceful shutdown...');
+  process.exit(0);
+});
+
+console.log('🎯 Server initialization complete. Ready to handle requests!');
