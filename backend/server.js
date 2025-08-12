@@ -56,13 +56,30 @@ app.use(express.json());
 app.get("/backend/hello", async (req, res) => {
   try {
     // Test database connection
-    const isConnected = await ensureConnection();
+    let dbStatus = {
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoUriLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
+      mongoState: require('mongoose').connection.readyState,
+      stateDescription: getConnectionStateDescription(require('mongoose').connection.readyState)
+    };
+
+    // Try to connect
+    try {
+      const isConnected = await ensureConnection();
+      dbStatus.connectionTest = isConnected ? 'SUCCESS' : 'FAILED';
+      dbStatus.connected = isConnected;
+    } catch (error) {
+      dbStatus.connectionTest = 'ERROR';
+      dbStatus.error = error.message;
+      dbStatus.connected = false;
+    }
     
     res.json({ 
       message: "Hello from backend!",
       mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-      dbConnected: isConnected,
-      mongoState: require('mongoose').connection.readyState,
+      dbStatus: dbStatus,
+      environment: process.env.NODE_ENV || 'development',
+      vercel: !!process.env.VERCEL,
       timestamp: new Date().toISOString()
     });
   } catch (error) {
@@ -76,29 +93,63 @@ app.get("/backend/hello", async (req, res) => {
   }
 });
 
+// Helper function to describe connection states
+function getConnectionStateDescription(state) {
+  const states = {
+    0: 'disconnected',
+    1: 'connected',
+    2: 'connecting',
+    3: 'disconnecting'
+  };
+  return states[state] || 'unknown';
+}
+
 // GET endpoint to fetch all stocks/securities
 app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
+    console.log("🔍 Environment check:", {
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoUriPrefix: process.env.MONGODB_URI ? process.env.MONGODB_URI.substring(0, 20) + '...' : 'none',
+      isVercel: !!process.env.VERCEL,
+      nodeEnv: process.env.NODE_ENV
+    });
+    
+    // Check if MONGODB_URI exists
+    if (!process.env.MONGODB_URI) {
+      console.error("❌ MONGODB_URI environment variable not found");
+      return res.status(503).json({
+        error: "Configuration error",
+        message: "MONGODB_URI environment variable is not configured",
+        timestamp: new Date().toISOString()
+      });
+    }
     
     // Force connection attempt for serverless environment
     let connectionRetries = 3;
     let connected = false;
+    let lastError = null;
     
     while (connectionRetries > 0 && !connected) {
       try {
         console.log(`🔄 Attempting database connection (${4 - connectionRetries}/3)...`);
         connected = await ensureConnection();
         if (!connected) {
+          console.log("🔄 First connection attempt failed, trying direct connect...");
           await connectDB();
           connected = await ensureConnection();
         }
-        if (connected) break;
+        if (connected) {
+          console.log("✅ Connection successful!");
+          break;
+        }
       } catch (connError) {
+        lastError = connError;
         console.error(`❌ Connection attempt failed:`, connError.message);
       }
       connectionRetries--;
       if (connectionRetries > 0) {
+        console.log("⏳ Waiting before retry...");
         await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
       }
     }
@@ -108,6 +159,7 @@ app.get("/backend/stock", async (req, res) => {
       return res.status(503).json({
         error: "Database connection failed",
         message: "Unable to establish MongoDB connection after multiple attempts",
+        lastError: lastError ? lastError.message : "Unknown error",
         timestamp: new Date().toISOString()
       });
     }
@@ -133,6 +185,7 @@ app.get("/backend/stock", async (req, res) => {
     res.status(500).json({
       error: "Failed to fetch security names",
       message: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined,
       timestamp: new Date().toISOString()
     });
   }
