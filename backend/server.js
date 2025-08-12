@@ -6,8 +6,22 @@ const { sendOrderConfirmation } = require("./nodemail"); // Import the sendOrder
 
 // MongoDB setup with serverless optimization
 const { connectDB, ensureConnection } = require("./models/database");
-const SecurityList = require("./models/SecurityList");
-const IpoList = require("./models/IpoList");
+
+let SecurityList, IpoList;
+
+try {
+  SecurityList = require("./models/SecurityList");
+  console.log("✅ SecurityList model loaded successfully");
+} catch (error) {
+  console.error("❌ Failed to load SecurityList model:", error.message);
+}
+
+try {
+  IpoList = require("./models/IpoList");
+  console.log("✅ IpoList model loaded successfully");
+} catch (error) {
+  console.error("❌ Failed to load IpoList model:", error.message);
+}
 
 const app = express();
 
@@ -53,6 +67,16 @@ app.get("/backend/hello", (req, res) => {
 app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
+    
+    // Check if model is loaded
+    if (!SecurityList) {
+      console.error("❌ SecurityList model not loaded");
+      return res.status(503).json({
+        error: "Model not loaded",
+        message: "SecurityList model failed to load",
+        timestamp: new Date().toISOString()
+      });
+    }
     
     // Check if MONGODB_URI exists
     if (!process.env.MONGODB_URI) {
@@ -118,6 +142,16 @@ app.get("/backend/stock", async (req, res) => {
 app.get("/backend/ipo", async (req, res) => {
   try {
     console.log("📈 IPO list requested at:", new Date().toISOString());
+    
+    // Check if model is loaded
+    if (!IpoList) {
+      console.error("❌ IpoList model not loaded");
+      return res.status(503).json({
+        error: "Model not loaded",
+        message: "IpoList model failed to load",
+        timestamp: new Date().toISOString()
+      });
+    }
     
     // Ensure MongoDB connection is available (serverless-friendly)
     const isConnected = await ensureConnection();
