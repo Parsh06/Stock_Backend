@@ -11,12 +11,19 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
       "src": "/backend/(.*)",
       "dest": "/backend/server.js"
     }
   ],
   "functions": {
     "backend/server.js": {
+      "maxDuration": 30
+    },
+    "api/*.js": {
       "maxDuration": 30
     }
   },
