@@ -90,15 +90,34 @@ app.use(cors({
 app.use(express.json());
 
 // Simple endpoint to verify backend is running
-app.get("/backend/hello", (req, res) => {
-  res.json({ 
-    message: "Hello from backend!",
-    mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-    mongoLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
-    environment: process.env.NODE_ENV || 'development',
-    vercel: !!process.env.VERCEL,
-    timestamp: new Date().toISOString()
-  });
+app.get("/backend/hello", async (req, res) => {
+  try {
+    // Test direct MongoDB connection
+    let mongoTest = "not tested";
+    try {
+      const connected = await ensureConnection();
+      mongoTest = connected ? "connected successfully" : "connection failed";
+    } catch (connError) {
+      mongoTest = "error: " + connError.message;
+    }
+    
+    res.json({ 
+      message: "Hello from backend!",
+      mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+      mongoLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
+      environment: process.env.NODE_ENV || 'development',
+      vercel: !!process.env.VERCEL,
+      mongooseState: mongoose.connection.readyState,
+      connectionTest: mongoTest,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: "Hello endpoint failed",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // GET endpoint to fetch all stocks/securities
