@@ -11,10 +11,25 @@ const IpoList = require("./models/IpoList");
 
 const app = express();
 
+// Global connection status for serverless optimization
+let isConnected = false;
+
 // Initialize MongoDB connection for serverless (non-blocking)
-connectDB().catch((error) => {
-  console.error('❌ Initial MongoDB connection failed, will retry per request:', error.message);
-});
+const initializeDB = async () => {
+  try {
+    if (!isConnected) {
+      await connectDB();
+      isConnected = true;
+      console.log('✅ Database initialized successfully');
+    }
+  } catch (error) {
+    console.error('❌ Database initialization failed:', error.message);
+    isConnected = false;
+  }
+};
+
+// Initialize database connection
+initializeDB();
 
 // Enable CORS for all routes with specific configuration
 app.use(cors({
@@ -38,12 +53,27 @@ app.use(cors({
 app.use(express.json());
 
 // Simple endpoint to verify backend is running
-app.get("/backend/hello", (req, res) => {
-  res.json({ 
-    message: "Hello from backend!",
-    mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-    timestamp: new Date().toISOString()
-  });
+app.get("/backend/hello", async (req, res) => {
+  try {
+    // Test database connection
+    const isConnected = await ensureConnection();
+    
+    res.json({ 
+      message: "Hello from backend!",
+      mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+      dbConnected: isConnected,
+      mongoState: require('mongoose').connection.readyState,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.json({ 
+      message: "Hello from backend!",
+      mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
+      dbConnected: false,
+      error: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // GET endpoint to fetch all stocks/securities
@@ -51,13 +81,33 @@ app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
     
-    // Ensure MongoDB connection is available (serverless-friendly)
-    const isConnected = await ensureConnection();
-    if (!isConnected) {
-      console.error("❌ Failed to establish database connection");
+    // Force connection attempt for serverless environment
+    let connectionRetries = 3;
+    let connected = false;
+    
+    while (connectionRetries > 0 && !connected) {
+      try {
+        console.log(`🔄 Attempting database connection (${4 - connectionRetries}/3)...`);
+        connected = await ensureConnection();
+        if (!connected) {
+          await connectDB();
+          connected = await ensureConnection();
+        }
+        if (connected) break;
+      } catch (connError) {
+        console.error(`❌ Connection attempt failed:`, connError.message);
+      }
+      connectionRetries--;
+      if (connectionRetries > 0) {
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
+      }
+    }
+    
+    if (!connected) {
+      console.error("❌ All connection attempts failed");
       return res.status(503).json({
         error: "Database connection failed",
-        message: "Unable to connect to MongoDB database",
+        message: "Unable to establish MongoDB connection after multiple attempts",
         timestamp: new Date().toISOString()
       });
     }
