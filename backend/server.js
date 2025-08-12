@@ -2,22 +2,60 @@ require("dotenv").config(); // Load environment variables from .env file
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const mongoose = require("mongoose");
 const { sendOrderConfirmation } = require("./nodemail"); // Import the sendOrderConfirmation function
 
 // MongoDB setup with serverless optimization
 const { connectDB, ensureConnection } = require("./models/database");
 
+// Define models inline for serverless compatibility
+const securityListSchema = new mongoose.Schema({
+  Security_Code: { type: String, required: true, index: true },
+  Security_Id: { type: String, required: true },
+  Security_Name: { type: String, required: true, index: true },
+  Status: { type: String, required: true, default: "Active" },
+  Group: { type: String, default: null },
+  Face_Value: { type: Number, default: null },
+  ISIN_No: { type: String, index: true }
+}, {
+  timestamps: true,
+  collection: "Securities"
+});
+
+const ipoListSchema = new mongoose.Schema({
+  Company: { type: String, required: true },
+  Opening_Date: { type: String },
+  Open_Date: { type: String },
+  Closing_Date: { type: String },
+  Close_Date: { type: String },
+  Listing_Date: { type: String },
+  Issue_Price_Rs: { type: String },
+  Price_Band: { type: String },
+  Total_Issue_Amount_InclFirm_reservations_Rscr: { type: String },
+  Issue_Size: { type: String },
+  Listing_at: { type: String },
+  Exchange: { type: String },
+  Lead_Manager: { type: String },
+  data_type: { type: String, default: "IPO" },
+  record_id: { type: Number, default: 0 },
+  uploaded_at: { type: Date, default: Date.now }
+}, {
+  timestamps: true,
+  collection: "IPOList"
+});
+
 let SecurityList, IpoList;
 
+// Initialize models with error handling
 try {
-  SecurityList = require("./models/SecurityList");
+  SecurityList = mongoose.models.SecurityList || mongoose.model("SecurityList", securityListSchema);
   console.log("✅ SecurityList model loaded successfully");
 } catch (error) {
   console.error("❌ Failed to load SecurityList model:", error.message);
 }
 
 try {
-  IpoList = require("./models/IpoList");
+  IpoList = mongoose.models.IpoList || mongoose.model("IpoList", ipoListSchema);
   console.log("✅ IpoList model loaded successfully");
 } catch (error) {
   console.error("❌ Failed to load IpoList model:", error.message);
