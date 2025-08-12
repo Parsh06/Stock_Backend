@@ -4,16 +4,16 @@ const cors = require("cors");
 const path = require("path");
 const { sendOrderConfirmation } = require("./nodemail"); // Import the sendOrderConfirmation function
 
-// MongoDB setup
-const connectDB = require("./models/database");
+// MongoDB setup with serverless optimization
+const { connectDB, ensureConnection } = require("./models/database");
 const SecurityList = require("./models/SecurityList");
 const IpoList = require("./models/IpoList");
 
 const app = express();
 
-// Connect to MongoDB (non-blocking with better error handling)
+// Initialize MongoDB connection for serverless (non-blocking)
 connectDB().catch((error) => {
-  console.error('❌ MongoDB connection failed, but server will continue:', error.message);
+  console.error('❌ Initial MongoDB connection failed, will retry per request:', error.message);
 });
 
 // Enable CORS for all routes with specific configuration
@@ -51,15 +51,18 @@ app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
     
-    // Check if MongoDB is connected
-    const mongoose = require('mongoose');
-    if (mongoose.connection.readyState !== 1) {
+    // Ensure MongoDB connection is available (serverless-friendly)
+    const isConnected = await ensureConnection();
+    if (!isConnected) {
+      console.error("❌ Failed to establish database connection");
       return res.status(503).json({
-        error: "Database not connected",
-        message: "MongoDB connection is not available",
+        error: "Database connection failed",
+        message: "Unable to connect to MongoDB database",
         timestamp: new Date().toISOString()
       });
     }
+    
+    console.log("✅ Database connection verified, fetching securities...");
     
     // Fetch only Security Names from Securities collection
     const securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 }).sort({ Security_Name: 1 });
@@ -90,15 +93,18 @@ app.get("/backend/ipo", async (req, res) => {
   try {
     console.log("📈 IPO list requested at:", new Date().toISOString());
     
-    // Check if MongoDB is connected
-    const mongoose = require('mongoose');
-    if (mongoose.connection.readyState !== 1) {
+    // Ensure MongoDB connection is available (serverless-friendly)
+    const isConnected = await ensureConnection();
+    if (!isConnected) {
+      console.error("❌ Failed to establish database connection");
       return res.status(503).json({
-        error: "Database not connected",
-        message: "MongoDB connection is not available",
+        error: "Database connection failed",
+        message: "Unable to connect to MongoDB database",
         timestamp: new Date().toISOString()
       });
     }
+    
+    console.log("✅ Database connection verified, fetching IPOs...");
     
     // Fetch all IPOs from MongoDB, sorted by latest first
     const ipos = await IpoList.find({}).sort({ uploaded_at: -1 });
