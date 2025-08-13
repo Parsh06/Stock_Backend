@@ -128,11 +128,6 @@ app.get("/backend/hello", async (req, res) => {
 app.get("/backend/stock", async (req, res) => {
   try {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
-    console.log("🔍 Environment check:", {
-      hasMongoUri: !!process.env.MONGODB_URI,
-      isVercel: !!process.env.VERCEL,
-      nodeEnv: process.env.NODE_ENV
-    });
     
     // Check if model is loaded
     if (!SecurityList) {
@@ -148,61 +143,48 @@ app.get("/backend/stock", async (req, res) => {
     if (!process.env.MONGODB_URI) {
       console.error("❌ MONGODB_URI environment variable not found");
       return res.status(503).json({
-        error: "Configuration error",
+        error: "Configuration error", 
         message: "MONGODB_URI environment variable is not configured",
         timestamp: new Date().toISOString()
       });
     }
     
-    console.log("🔍 MongoDB URI configured, attempting connection...");
+    console.log("� Attempting MongoDB connection...");
     
-    // Aggressive connection establishment
-    let connected = false;
-    let lastError = null;
+    // Simple connection attempt with timeout
+    const connectTimeout = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Connection timeout')), 8000)
+    );
     
-    for (let attempt = 1; attempt <= 3; attempt++) {
-      try {
-        console.log(`🔄 Connection attempt ${attempt}/3...`);
-        await connectDB();
-        connected = await ensureConnection();
-        
-        if (connected) {
-          console.log("✅ Connection successful!");
-          break;
-        }
-        
-        console.log(`❌ Attempt ${attempt} failed, retrying...`);
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      } catch (connError) {
-        lastError = connError;
-        console.error(`❌ Connection attempt ${attempt} error:`, connError.message);
-        if (attempt === 3) break;
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-    }
+    const connectPromise = (async () => {
+      await connectDB();
+      return await ensureConnection();
+    })();
+    
+    const connected = await Promise.race([connectPromise, connectTimeout]);
     
     if (!connected) {
-      console.error("❌ All connection attempts failed");
+      console.error("❌ Database connection failed");
       return res.status(503).json({
         error: "Database connection failed",
-        message: "Unable to connect to MongoDB after 3 attempts",
-        lastError: lastError ? lastError.message : "Unknown connection error",
+        message: "Unable to connect to MongoDB database",
         timestamp: new Date().toISOString()
       });
     }
     
     console.log("✅ Database connected, fetching securities...");
     
-    // Fetch securities with timeout
-    const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Query timeout after 15 seconds')), 15000)
+    // Quick query with timeout
+    const queryTimeout = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Query timeout')), 12000)
     );
     
     const queryPromise = SecurityList.find({}, { Security_Name: 1, _id: 0 })
       .sort({ Security_Name: 1 })
-      .lean();
+      .lean()
+      .limit(5000); // Limit results for performance
     
-    const securities = await Promise.race([queryPromise, timeoutPromise]);
+    const securities = await Promise.race([queryPromise, queryTimeout]);
     
     // Extract security names
     const securityNames = securities
@@ -219,7 +201,7 @@ app.get("/backend/stock", async (req, res) => {
     });
     
   } catch (error) {
-    console.error("❌ Error fetching security names:", error);
+    console.error("❌ Error in stock endpoint:", error);
     res.status(500).json({
       error: "Failed to fetch security names",
       message: error.message,
