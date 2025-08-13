@@ -92,26 +92,30 @@ app.use(express.json());
 // Simple endpoint to verify backend is running
 app.get("/backend/hello", async (req, res) => {
   try {
-    // Test direct MongoDB connection
-    let mongoTest = "not tested";
-    try {
-      const connected = await ensureConnection();
-      mongoTest = connected ? "connected successfully" : "connection failed";
-    } catch (connError) {
-      mongoTest = "error: " + connError.message;
-    }
+    console.log("👋 Hello endpoint accessed at:", new Date().toISOString());
     
-    res.json({ 
+    // Basic response first
+    const response = {
       message: "Hello from backend!",
       mongodb: process.env.MONGODB_URI ? "configured" : "not configured",
-      mongoLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
-      environment: process.env.NODE_ENV || 'development',
-      vercel: !!process.env.VERCEL,
-      mongooseState: mongoose.connection.readyState,
-      connectionTest: mongoTest,
       timestamp: new Date().toISOString()
-    });
+    };
+    
+    // Try connection test only if requested
+    if (req.query.test === 'connection') {
+      try {
+        const connected = await ensureConnection();
+        response.connectionTest = connected ? "connected successfully" : "connection failed";
+        response.mongooseState = mongoose.connection.readyState;
+      } catch (connError) {
+        response.connectionTest = "error: " + connError.message;
+        response.mongooseState = mongoose.connection.readyState;
+      }
+    }
+    
+    res.status(200).json(response);
   } catch (error) {
+    console.error("❌ Hello endpoint error:", error);
     res.status(500).json({
       error: "Hello endpoint failed",
       message: error.message,
