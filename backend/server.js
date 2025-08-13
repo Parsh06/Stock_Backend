@@ -127,11 +127,11 @@ app.get("/backend/hello", async (req, res) => {
 // GET endpoint to fetch all stocks/securities
 app.get("/backend/stock", async (req, res) => {
   try {
-    console.log("📊 Stock Security Names requested at:", new Date().toISOString());
+    console.log("Stock Security Names requested at:", new Date().toISOString());
     
     // Check if model is loaded
     if (!SecurityList) {
-      console.error("❌ SecurityList model not loaded");
+      console.error("SecurityList model not loaded");
       return res.status(503).json({
         error: "Model not loaded",
         message: "SecurityList model failed to load",
@@ -141,7 +141,7 @@ app.get("/backend/stock", async (req, res) => {
     
     // Check if MONGODB_URI exists
     if (!process.env.MONGODB_URI) {
-      console.error("❌ MONGODB_URI environment variable not found");
+      console.error("MONGODB_URI environment variable not found");
       return res.status(503).json({
         error: "Configuration error", 
         message: "MONGODB_URI environment variable is not configured",
@@ -151,47 +151,48 @@ app.get("/backend/stock", async (req, res) => {
     
     console.log("Attempting MongoDB connection...");
     
-    // Simple connection attempt with timeout
-    const connectTimeout = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Connection timeout')), 8000)
-    );
-    
-    const connectPromise = (async () => {
+    // Direct connection without complex Promise.race
+    let connected = false;
+    try {
       await connectDB();
-      return await ensureConnection();
-    })();
-    
-    const connected = await Promise.race([connectPromise, connectTimeout]);
+      connected = await ensureConnection();
+    } catch (connError) {
+      console.error("Connection failed:", connError.message);
+    }
     
     if (!connected) {
-      console.error("❌ Database connection failed");
+      console.error("Database connection failed");
       return res.status(503).json({
-        error: "Database connection failed",
-        message: "Unable to connect to MongoDB database",
+        error: "Database not connected",
+        message: "MongoDB connection is not available",
         timestamp: new Date().toISOString()
       });
     }
     
-    console.log("✅ Database connected, fetching securities...");
+    console.log("Database connected, fetching securities...");
     
-    // Quick query with timeout
-    const queryTimeout = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Query timeout')), 12000)
-    );
-    
-    const queryPromise = SecurityList.find({}, { Security_Name: 1, _id: 0 })
-      .sort({ Security_Name: 1 })
-      .lean()
-      .limit(5000); // Limit results for performance
-    
-    const securities = await Promise.race([queryPromise, queryTimeout]);
+    // Simple query
+    let securities = [];
+    try {
+      securities = await SecurityList.find({}, { Security_Name: 1, _id: 0 })
+        .sort({ Security_Name: 1 })
+        .limit(3000)
+        .lean();
+    } catch (queryError) {
+      console.error("Query failed:", queryError.message);
+      return res.status(500).json({
+        error: "Database query failed",
+        message: queryError.message,
+        timestamp: new Date().toISOString()
+      });
+    }
     
     // Extract security names
     const securityNames = securities
       .map(item => item.Security_Name)
       .filter(name => name && typeof name === 'string');
     
-    console.log(`✅ Found ${securityNames.length} security names`);
+    console.log(`Found ${securityNames.length} security names`);
     
     res.status(200).json({
       success: true,
@@ -201,9 +202,9 @@ app.get("/backend/stock", async (req, res) => {
     });
     
   } catch (error) {
-    console.error("❌ Error in stock endpoint:", error);
+    console.error("Stock endpoint error:", error.message);
     res.status(500).json({
-      error: "Failed to fetch security names",
+      error: "Internal server error",
       message: error.message,
       timestamp: new Date().toISOString()
     });
