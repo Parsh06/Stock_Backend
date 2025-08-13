@@ -104,12 +104,18 @@ app.get("/backend/hello", async (req, res) => {
     // Try connection test only if requested
     if (req.query.test === 'connection') {
       try {
+        console.log("Testing MongoDB connection...");
+        await connectDB();
         const connected = await ensureConnection();
         response.connectionTest = connected ? "connected successfully" : "connection failed";
         response.mongooseState = mongoose.connection.readyState;
+        response.connectionHost = mongoose.connection.host || "no host";
+        response.connectionName = mongoose.connection.name || "no database";
       } catch (connError) {
         response.connectionTest = "error: " + connError.message;
         response.mongooseState = mongoose.connection.readyState;
+        response.errorType = connError.name || "Unknown";
+        response.errorCode = connError.code || "No code";
       }
     }
     
@@ -118,6 +124,64 @@ app.get("/backend/hello", async (req, res) => {
     console.error("❌ Hello endpoint error:", error);
     res.status(500).json({
       error: "Hello endpoint failed",
+      message: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
+});
+
+// Debug endpoint to check Vercel IP and connection details
+app.get("/backend/debug", async (req, res) => {
+  try {
+    const response = {
+      message: "Debug information",
+      server: {
+        platform: process.platform,
+        nodeVersion: process.version,
+        vercelRegion: process.env.VERCEL_REGION || "unknown",
+        isVercel: !!process.env.VERCEL
+      },
+      mongodb: {
+        uri: process.env.MONGODB_URI ? "SET (length: " + process.env.MONGODB_URI.length + ")" : "NOT_SET",
+        connectionState: mongoose.connection.readyState,
+        host: mongoose.connection.host || "not connected",
+        name: mongoose.connection.name || "no database"
+      },
+      headers: {
+        userAgent: req.headers['user-agent'],
+        xForwardedFor: req.headers['x-forwarded-for'],
+        xRealIP: req.headers['x-real-ip'],
+        cfConnectingIP: req.headers['cf-connecting-ip']
+      },
+      timestamp: new Date().toISOString()
+    };
+
+    // Try to get connection details if requested
+    if (req.query.testConnection === 'true') {
+      try {
+        console.log("Debug: Testing MongoDB connection...");
+        await connectDB();
+        const connected = await ensureConnection();
+        response.connectionTest = {
+          result: connected ? "success" : "failed",
+          state: mongoose.connection.readyState,
+          host: mongoose.connection.host,
+          database: mongoose.connection.name
+        };
+      } catch (error) {
+        response.connectionTest = {
+          result: "error",
+          message: error.message,
+          code: error.code,
+          name: error.name
+        };
+      }
+    }
+
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json({
+      error: "Debug endpoint failed",
       message: error.message,
       timestamp: new Date().toISOString()
     });
