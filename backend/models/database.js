@@ -22,15 +22,13 @@ const connectDB = async () => {
       await mongoose.disconnect();
     }
 
-    // Connect with Vercel-optimized settings
+    // Connect with modern MongoDB connection options
     const db = await mongoose.connect(process.env.MONGODB_URI, {
       bufferCommands: false,
-      bufferMaxEntries: 0,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       maxPoolSize: 1,
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 30000,
+      connectTimeoutMS: 10000,
     });
 
     isConnected = true;
