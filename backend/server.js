@@ -130,7 +130,6 @@ app.get("/backend/stock", async (req, res) => {
     console.log("📊 Stock Security Names requested at:", new Date().toISOString());
     console.log("🔍 Environment check:", {
       hasMongoUri: !!process.env.MONGODB_URI,
-      mongoUriPrefix: process.env.MONGODB_URI ? process.env.MONGODB_URI.substring(0, 20) + '...' : 'none',
       isVercel: !!process.env.VERCEL,
       nodeEnv: process.env.NODE_ENV
     });
@@ -155,17 +154,15 @@ app.get("/backend/stock", async (req, res) => {
       });
     }
     
-    console.log("🔍 Environment check - MongoDB URI configured");
+    console.log("🔍 MongoDB URI configured, attempting connection...");
     
-    // Force connection establishment with multiple attempts
-    let connectionAttempts = 3;
+    // Aggressive connection establishment
     let connected = false;
+    let lastError = null;
     
-    while (connectionAttempts > 0 && !connected) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
       try {
-        console.log(`🔄 Connection attempt ${4 - connectionAttempts}/3...`);
-        
-        // Force connect
+        console.log(`🔄 Connection attempt ${attempt}/3...`);
         await connectDB();
         connected = await ensureConnection();
         
@@ -173,30 +170,32 @@ app.get("/backend/stock", async (req, res) => {
           console.log("✅ Connection successful!");
           break;
         }
+        
+        console.log(`❌ Attempt ${attempt} failed, retrying...`);
+        await new Promise(resolve => setTimeout(resolve, 1000));
       } catch (connError) {
-        console.error(`❌ Connection attempt failed:`, connError.message);
-      }
-      
-      connectionAttempts--;
-      if (connectionAttempts > 0) {
+        lastError = connError;
+        console.error(`❌ Connection attempt ${attempt} error:`, connError.message);
+        if (attempt === 3) break;
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
     }
     
     if (!connected) {
-      console.error("❌ Failed to establish database connection after all attempts");
+      console.error("❌ All connection attempts failed");
       return res.status(503).json({
         error: "Database connection failed",
-        message: "Unable to connect to MongoDB database after multiple attempts",
+        message: "Unable to connect to MongoDB after 3 attempts",
+        lastError: lastError ? lastError.message : "Unknown connection error",
         timestamp: new Date().toISOString()
       });
     }
     
-    console.log("✅ Database connection verified, fetching securities...");
+    console.log("✅ Database connected, fetching securities...");
     
     // Fetch securities with timeout
     const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Query timeout after 10 seconds')), 10000)
+      setTimeout(() => reject(new Error('Query timeout after 15 seconds')), 15000)
     );
     
     const queryPromise = SecurityList.find({}, { Security_Name: 1, _id: 0 })
