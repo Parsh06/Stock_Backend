@@ -149,7 +149,7 @@ app.get("/backend/stock", async (req, res) => {
       });
     }
     
-    console.log("� Attempting MongoDB connection...");
+    console.log("Attempting MongoDB connection...");
     
     // Simple connection attempt with timeout
     const connectTimeout = new Promise((_, reject) => 
