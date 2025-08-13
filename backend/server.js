@@ -706,32 +706,37 @@ app.use((req, res, next) => {
 // Serve static files if needed (e.g. frontend build)
 // app.use(express.static(path.join(__dirname, 'build')));
 
-// Start the server
+// Start the server only in development (not in Vercel serverless)
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
-  console.log(`📧 Email configured: ${process.env.EMAIL_USER ? "Yes" : "No"}`);
-  console.log(`🗄️  MongoDB configured: ${process.env.MONGODB_URI ? "Yes" : "No"}`);
-  console.log(`🔗 API Base URL: http://localhost:${PORT}`);
-  console.log("📋 Available endpoints:");
-  console.log(`   GET  /backend/hello`);
-  console.log(`   GET  /backend/stock (Get all securities)`);
-  console.log(`   GET  /backend/ipo (Get all IPO data)`);
-  console.log(`   POST /backend/placeOrder`);
-  console.log(`   POST /backend/ipo_security (Python scraper - MongoDB)`);
-  console.log("");
-  console.log('💡 To test: Use Postman or curl to test the endpoints');
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
+    console.log(`📧 Email configured: ${process.env.EMAIL_USER ? "Yes" : "No"}`);
+    console.log(`🗄️  MongoDB configured: ${process.env.MONGODB_URI ? "Yes" : "No"}`);
+    console.log(`🔗 API Base URL: http://localhost:${PORT}`);
+    console.log("📋 Available endpoints:");
+    console.log(`   GET  /backend/hello`);
+    console.log(`   GET  /backend/stock (Get all securities)`);
+    console.log(`   GET  /backend/ipo (Get all IPO data)`);
+    console.log(`   POST /backend/placeOrder`);
+    console.log(`   POST /backend/ipo_security (Python scraper - MongoDB)`);
+    console.log("");
+    console.log('💡 To test: Use Postman or curl to test the endpoints');
+    console.log('🎯 Server initialization complete. Ready to handle requests!');
+  }).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`❌ Port ${PORT} is already in use. Please kill other processes or use a different port.`);
+      process.exit(1);
+    } else {
+      console.error('❌ Server error:', err);
+    }
+  });
+} else {
+  console.log('🌐 Running in serverless mode (Vercel)');
   console.log('🎯 Server initialization complete. Ready to handle requests!');
-}).on('error', (err) => {
-  if (err.code === 'EADDRINUSE') {
-    console.error(`❌ Port ${PORT} is already in use. Please kill other processes or use a different port.`);
-    process.exit(1);
-  } else {
-    console.error('❌ Server error:', err);
-  }
-});
+}
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
@@ -745,3 +750,6 @@ process.on('SIGTERM', () => {
 });
 
 console.log('🎯 Server initialization complete. Ready to handle requests!');
+
+// Export the app for Vercel serverless deployment
+module.exports = app;
