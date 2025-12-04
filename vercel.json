@@ -4,9 +4,17 @@
     {
       "src": "backend/server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/scraper.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
+    {
+      "src": "/api/scraper",
+      "dest": "/api/scraper.py"
+    },
     {
       "src": "/backend/(.*)",
       "dest": "/backend/server.js"

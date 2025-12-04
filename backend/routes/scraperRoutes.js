@@ -3,10 +3,15 @@ const router = express.Router();
 const path = require('path');
 const { spawn } = require('child_process');
 const fs = require('fs');
+const https = require('https');
+const http = require('http');
+const axios = require('axios');
 
 /**
  * GET /backend/scraper
  * Run Python scraper and return output
+ * On Vercel: Uses Python serverless function
+ * On local: Spawns Python process directly
  */
 router.get('/scraper', async (req, res) => {
   try {
@@ -15,6 +20,72 @@ router.get('/scraper', async (req, res) => {
       new Date().toISOString()
     );
 
+    // Check if we're on Vercel
+    const isVercel = process.env.VERCEL === '1' || process.env.VERCEL_ENV;
+    
+    if (isVercel) {
+      console.log("🌐 Detected Vercel environment - using Python serverless function");
+      
+      // On Vercel, call the Python serverless function
+      const vercelUrl = process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : 'https://stock-backend-mu.vercel.app';
+      
+      const pythonFunctionUrl = `${vercelUrl}/api/scraper`;
+      
+      console.log(`📡 Calling Python function at: ${pythonFunctionUrl}`);
+      
+      try {
+        const response = await axios.get(pythonFunctionUrl, {
+          timeout: 60000, // 60 seconds timeout
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        
+        const data = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
+        
+        if (response.status === 200) {
+          return res.status(200).json({
+            success: true,
+            message: "Scraper executed successfully via Python serverless function",
+            ...data,
+            timestamp: new Date().toISOString(),
+          });
+        } else {
+          return res.status(response.status).json({
+            success: false,
+            error: data.error || "Scraper execution failed",
+            message: data.message || "Unknown error",
+            timestamp: new Date().toISOString(),
+          });
+        }
+      } catch (axiosError) {
+        console.error("❌ Error calling Python function:", axiosError.message);
+        
+        // Handle timeout specifically
+        if (axiosError.code === 'ECONNABORTED' || axiosError.message.includes('timeout')) {
+          return res.status(408).json({
+            success: false,
+            error: "Scraper timeout",
+            message: "The scraper execution exceeded the timeout limit",
+            note: "Vercel functions have timeout limits (10s free tier, 60s pro tier). The scraper may need more time.",
+            timestamp: new Date().toISOString(),
+          });
+        }
+        
+        return res.status(500).json({
+          success: false,
+          error: "Failed to call Python serverless function",
+          message: axiosError.message,
+          note: "The scraper may have timed out due to Vercel's function timeout limits (10s free, 60s pro)",
+          timestamp: new Date().toISOString(),
+        });
+      }
+    }
+
+    // Local development: spawn Python process directly
+    console.log("💻 Local environment detected - spawning Python process");
     console.log("🚀 Starting Python scraper script...");
 
     // Set timeout for the entire operation (10 minutes)

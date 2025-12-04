@@ -1,8 +1,8 @@
 {
     "metadata": {
         "data_type": "BSE_Security_Names",
-        "created_at": "2025-12-04T18:38:39.968328",
-        "total_records": 9969,
+        "created_at": "2025-12-04T20:18:18.505877",
+        "total_records": 9927,
         "source_file": "Equity.csv",
         "generated_by": "ipo_scraper_final.py"
     },
@@ -68,7 +68,7 @@
             "Security Name": "Assam Company India Ltd"
         },
         {
-            "Security Name": "Assambrook Ltd-$"
+            "Security Name": "Assambrook Ltd"
         },
         {
             "Security Name": "Atash Industries Ltd"
@@ -86,13 +86,13 @@
             "Security Name": "Autoriders Finance Ltd"
         },
         {
-            "Security Name": "Bajaj Electricals Ltd-$"
+            "Security Name": "Bajaj Electricals Ltd"
         },
         {
             "Security Name": "Bajaj Hindusthan Sugar Ltd"
         },
         {
-            "Security Name": "Force Motors Ltd-$"
+            "Security Name": "Force Motors Ltd"
         },
         {
             "Security Name": "Bajaj Finance Ltd"
@@ -110,7 +110,7 @@
             "Security Name": "Balrampur Chini Mills Ltd"
         },
         {
-            "Security Name": "Banco Products (India) Ltd-$"
+            "Security Name": "Banco Products (India) Ltd"
         },
         {
             "Security Name": "Aditya Birla Real Estate Ltd"
@@ -149,7 +149,7 @@
             "Security Name": "Bhagawati Gas Ltd"
         },
         {
-            "Security Name": "Bhansali Engineering Polymers Ltd-$"
+            "Security Name": "Bhansali Engineering Polymers Ltd"
         },
         {
             "Security Name": "Bharat Zinc Ltd"
@@ -218,7 +218,7 @@
             "Security Name": "Cable Corporation of India Ltd"
         },
         {
-            "Security Name": "Oriental Aromatics Ltd-$"
+            "Security Name": "Oriental Aromatics Ltd"
         },
         {
             "Security Name": "Carrier Aircon Ltd"
@@ -338,7 +338,7 @@
             "Security Name": "Dhampur Sugar Mills Ltd"
         },
         {
-            "Security Name": "Diamines & Chemicals Ltd-$"
+            "Security Name": "Diamines & Chemicals Ltd"
         },
         {
             "Security Name": "Digital GlobalSoft Ltd"
@@ -347,7 +347,7 @@
             "Security Name": "Ambuja Cement Rajasthan Ltd"
         },
         {
-            "Security Name": "Elantas Beck India Ltd-$"
+            "Security Name": "Elantas Beck India Ltd"
         },
         {
             "Security Name": "Dr Reddys Laboratories Ltd"
@@ -413,7 +413,7 @@
             "Security Name": "First Leasing Company of India Ltd"
         },
         {
-            "Security Name": "John Cockerill India Ltd-$"
+            "Security Name": "John Cockerill India Ltd"
         },
         {
             "Security Name": "Uflex Ltd"
@@ -596,10 +596,10 @@
             "Security Name": "Integrated Financial Services Ltd"
         },
         {
-            "Security Name": "International Travel House Ltd-$"
+            "Security Name": "International Travel House Ltd"
         },
         {
-            "Security Name": "Ion Exchange India Ltd-$"
+            "Security Name": "Ion Exchange India Ltd"
         },
         {
             "Security Name": "Sundrop Brands Ltd"
@@ -677,7 +677,7 @@
             "Security Name": "Kinetic Engineering Ltd"
         },
         {
-            "Security Name": "Kirloskar Brothers Ltd-$"
+            "Security Name": "Kirloskar Brothers Ltd"
         },
         {
             "Security Name": "Kirloskar Pneumatic Company Ltd"
@@ -719,7 +719,7 @@
             "Security Name": "LML Ltd"
         },
         {
-            "Security Name": "Lok Housing & Constructions Ltd-$"
+            "Security Name": "Lok Housing & Constructions Ltd"
         },
         {
             "Security Name": "Lupin Ltd"
@@ -740,7 +740,7 @@
             "Security Name": "Hybrid Financial Services Ltd"
         },
         {
-            "Security Name": "Mafatlal Industries Ltd-$"
+            "Security Name": "Mafatlal Industries Ltd"
         },
         {
             "Security Name": "Maharashtra Seamless Ltd"
@@ -749,7 +749,7 @@
             "Security Name": "Maharashtra Scooters Ltd"
         },
         {
-            "Security Name": "Majestic Auto Ltd-$"
+            "Security Name": "Majestic Auto Ltd"
         },
         {
             "Security Name": "Manali Petrochemicals Ltd"
@@ -968,7 +968,7 @@
             "Security Name": "PPOWER-"
         },
         {
-            "Security Name": "Punjab Communications Ltd-$"
+            "Security Name": "Punjab Communications Ltd"
         },
         {
             "Security Name": "Punjab Wireless Systems Ltd"
@@ -1043,7 +1043,7 @@
             "Security Name": "Salora International Ltd"
         },
         {
-            "Security Name": "Samtel India Ltd-$"
+            "Security Name": "Samtel India Ltd"
         },
         {
             "Security Name": "Samtel Color Ltd"
@@ -1157,7 +1157,7 @@
             "Security Name": "Thomas Cook (India) Ltd"
         },
         {
-            "Security Name": "Timex Group India Ltd-$"
+            "Security Name": "Timex Group India Ltd"
         },
         {
             "Security Name": "TISCSPN-B"
@@ -1181,7 +1181,7 @@
             "Security Name": "TPI India Ltd"
         },
         {
-            "Security Name": "Transchem Ltd-$"
+            "Security Name": "Transchem Ltd"
         },
         {
             "Security Name": "TVS Electronics Ltd"
@@ -1196,7 +1196,7 @@
             "Security Name": "UTL Industries Ltd"
         },
         {
-            "Security Name": "Uniflex Cables Ltd-$"
+            "Security Name": "Uniflex Cables Ltd"
         },
         {
             "Security Name": "Uniplas India Ltd"
@@ -1553,7 +1553,7 @@
             "Security Name": "Oscar Investments Ltd"
         },
         {
-            "Security Name": "Maestros Mediline Systems Ltd-$"
+            "Security Name": "Maestros Mediline Systems Ltd"
         },
         {
             "Security Name": "Bhagyodaya Infrastructure Development Ltd"
@@ -1565,7 +1565,7 @@
             "Security Name": "Sagar Investments Ltd"
         },
         {
-            "Security Name": "Lords Mark Industries Ltd"
+            "Security Name": "Lords Mark India Ltd"
         },
         {
             "Security Name": "Shree Rani Sati Investment & Finance Ltd"
@@ -1583,13 +1583,13 @@
             "Security Name": "Tata Investment Corporation Ltd"
         },
         {
-            "Security Name": "Jayabharat Credit Ltd-$"
+            "Security Name": "Jayabharat Credit Ltd"
         },
         {
             "Security Name": "Prismx Global Ventures Ltd"
         },
         {
-            "Security Name": "Killick Nixon Ltd-$"
+            "Security Name": "Killick Nixon Ltd"
         },
         {
             "Security Name": "Kirti Investments Ltd"
@@ -1646,7 +1646,7 @@
             "Security Name": "Greaves Cotton Ltd"
         },
         {
-            "Security Name": "Mafatlal Dyes & Chemicals Ltd-$"
+            "Security Name": "Mafatlal Dyes & Chemicals Ltd"
         },
         {
             "Security Name": "Boston Education & Software Tech. Ltd"
@@ -1703,7 +1703,7 @@
             "Security Name": "Chowgule Steamships Ltd"
         },
         {
-            "Security Name": "Global Offshore Services Ltd-$"
+            "Security Name": "Global Offshore Services Ltd"
         },
         {
             "Security Name": "Mackinnon Mackenzie & Company Ltd"
@@ -1730,7 +1730,7 @@
             "Security Name": "Janpriya Cement Ltd"
         },
         {
-            "Security Name": "Sagar Cements Ltd-$"
+            "Security Name": "Sagar Cements Ltd"
         },
         {
             "Security Name": "Bagalkot Udyog Ltd"
@@ -1739,7 +1739,7 @@
             "Security Name": "Hemadri Cements Ltd"
         },
         {
-            "Security Name": "Deccan Cements Ltd-$"
+            "Security Name": "Deccan Cements Ltd"
         },
         {
             "Security Name": "Kalyanpur Cements Ltd"
@@ -1754,13 +1754,13 @@
             "Security Name": "OCL India Ltd"
         },
         {
-            "Security Name": "NCL Industries Ltd-$"
+            "Security Name": "NCL Industries Ltd"
         },
         {
             "Security Name": "Saurashtra Cement Ltd"
         },
         {
-            "Security Name": "Shree Digvijay Cement Company Ltd-$"
+            "Security Name": "Shree Digvijay Cement Company Ltd"
         },
         {
             "Security Name": "Someshwara Cements & Chemicals Ltd"
@@ -1787,13 +1787,13 @@
             "Security Name": "Orissa Industries Ltd"
         },
         {
-            "Security Name": "Raasi Refractories Ltd-$"
+            "Security Name": "Raasi Refractories Ltd"
         },
         {
             "Security Name": "Shree Vallabh Glass Works Ltd"
         },
         {
-            "Security Name": "Triveni Glass Ltd-$"
+            "Security Name": "Triveni Glass Ltd"
         },
         {
             "Security Name": "Nilachal Refractories Ltd"
@@ -1811,7 +1811,7 @@
             "Security Name": "Aurangabad Paper Mills Ltd"
         },
         {
-            "Security Name": "Balkrishna Industries Ltd-$"
+            "Security Name": "Balkrishna Industries Ltd"
         },
         {
             "Security Name": "Coastal Papers Ltd"
@@ -1913,7 +1913,7 @@
             "Security Name": "Gandhidham Spinning & Manufacturing Company Ltd"
         },
         {
-            "Security Name": "Forbes & Company Ltd-$"
+            "Security Name": "Forbes & Company Ltd"
         },
         {
             "Security Name": "HP Cotton Textile Mills Ltd"
@@ -1925,7 +1925,7 @@
             "Security Name": "United Interactive Ltd"
         },
         {
-            "Security Name": "Jamshri Realty Ltd-$"
+            "Security Name": "Jamshri Realty Ltd"
         },
         {
             "Security Name": "KC Textiles Ltd"
@@ -1943,7 +1943,7 @@
             "Security Name": "LD Textile Industries Ltd"
         },
         {
-            "Security Name": "Lakshmi Mills Company Ltd-$"
+            "Security Name": "Lakshmi Mills Company Ltd"
         },
         {
             "Security Name": "Vardhman Textiles Ltd"
@@ -1958,7 +1958,7 @@
             "Security Name": "Matushree Textiles Ltd"
         },
         {
-            "Security Name": "Modern India Ltd-$"
+            "Security Name": "Modern India Ltd"
         },
         {
             "Security Name": "Peninsula Land Ltd"
@@ -1979,7 +1979,7 @@
             "Security Name": "Raja Bahadur International Ltd"
         },
         {
-            "Security Name": "Reliance Chemotex Industries Ltd-$"
+            "Security Name": "Reliance Chemotex Industries Ltd"
         },
         {
             "Security Name": "Ruby Mills Ltd"
@@ -2084,7 +2084,7 @@
             "Security Name": "Healthy Investments Ltd"
         },
         {
-            "Security Name": "Sahara One Media & Entertainment Ltd-$"
+            "Security Name": "Sahara One Media & Entertainment Ltd"
         },
         {
             "Security Name": "Solitaire Investments Company Ltd"
@@ -2102,7 +2102,7 @@
             "Security Name": "ZHARYCONDM"
         },
         {
-            "Security Name": "Banswara Syntex Ltd-$"
+            "Security Name": "Banswara Syntex Ltd"
         },
         {
             "Security Name": "Ambika Silk Mills Company Ltd"
@@ -2138,13 +2138,13 @@
             "Security Name": "Shree Synthetics Ltd"
         },
         {
-            "Security Name": "Shri Dinesh Mills Ltd-$"
+            "Security Name": "Shri Dinesh Mills Ltd"
         },
         {
             "Security Name": "SRF Ltd"
         },
         {
-            "Security Name": "Siyaram Silk Mills Ltd-$"
+            "Security Name": "Siyaram Silk Mills Ltd"
         },
         {
             "Security Name": "Swadeshi Polytex Ltd"
@@ -2159,7 +2159,7 @@
             "Security Name": "Fomento Resorts & Hotels Ltd"
         },
         {
-            "Security Name": "Shree Rajasthan Syntex Ltd-$"
+            "Security Name": "Shree Rajasthan Syntex Ltd"
         },
         {
             "Security Name": "HAMCO Steels & Alloys Ltd"
@@ -2204,7 +2204,7 @@
             "Security Name": "Baroda Electric Meters Ltd"
         },
         {
-            "Security Name": "Bharat Bijlee Ltd-$"
+            "Security Name": "Bharat Bijlee Ltd"
         },
         {
             "Security Name": "CTR Manufacturing Industries Ltd"
@@ -2222,7 +2222,7 @@
             "Security Name": "Elpro International Ltd"
         },
         {
-            "Security Name": "Emco Ltd-$"
+            "Security Name": "Emco Ltd"
         },
         {
             "Security Name": "GEE Ltd"
@@ -2246,7 +2246,7 @@
             "Security Name": "JEM Industries Ltd"
         },
         {
-            "Security Name": "Jyoti Ltd-$"
+            "Security Name": "Jyoti Ltd"
         },
         {
             "Security Name": "JSL Industries Ltd"
@@ -2261,7 +2261,7 @@
             "Security Name": "Indokem Ltd"
         },
         {
-            "Security Name": "Panasonic Energy India Company Ltd-$"
+            "Security Name": "Panasonic Energy India Company Ltd"
         },
         {
             "Security Name": "Meltron Semiconductors Ltd"
@@ -2273,7 +2273,7 @@
             "Security Name": "OTIS Elevator Company (India) Ltd"
         },
         {
-            "Security Name": "Permanent Magnets Ltd-$"
+            "Security Name": "Permanent Magnets Ltd"
         },
         {
             "Security Name": "High Energy Batteries India Ltd"
@@ -2291,7 +2291,7 @@
             "Security Name": "Universal Cables Ltd"
         },
         {
-            "Security Name": "W. S. Industries (India) Ltd-$"
+            "Security Name": "W. S. Industries (India) Ltd"
         },
         {
             "Security Name": "Willard India Ltd"
@@ -2444,7 +2444,7 @@
             "Security Name": "Uni Abex Alloy Products Ltd"
         },
         {
-            "Security Name": "Sarda Energy & Minerals Ltd-$"
+            "Security Name": "Sarda Energy & Minerals Ltd"
         },
         {
             "Security Name": "Somani Iron & Steels Ltd"
@@ -2453,7 +2453,7 @@
             "Security Name": "Bihar Foundry & Castings Ltd"
         },
         {
-            "Security Name": "Anil Special Steel Industries Ltd-$"
+            "Security Name": "Anil Special Steel Industries Ltd"
         },
         {
             "Security Name": "BWL Ltd"
@@ -2549,10 +2549,10 @@
             "Security Name": "PRS Steels Ltd"
         },
         {
-            "Security Name": "Orissa Sponge Iron & Steel Ltd-$"
+            "Security Name": "Orissa Sponge Iron & Steel Ltd"
         },
         {
-            "Security Name": "Orient Ceratech Ltd-$"
+            "Security Name": "Orient Ceratech Ltd"
         },
         {
             "Security Name": "National Standard (India) Ltd"
@@ -2564,13 +2564,13 @@
             "Security Name": "Rathi Alloys & Steel Ltd"
         },
         {
-            "Security Name": "Rathi Ispat Ltd-$"
+            "Security Name": "Rathi Ispat Ltd"
         },
         {
-            "Security Name": "Rathi Steel & Power Ltd-$"
+            "Security Name": "Rathi Steel & Power Ltd"
         },
         {
-            "Security Name": "Duncan Engineering Ltd-$"
+            "Security Name": "Duncan Engineering Ltd"
         },
         {
             "Security Name": "Sandur Manganese & Iron Ores Ltd"
@@ -2588,10 +2588,10 @@
             "Security Name": "Stovec Industries Ltd"
         },
         {
-            "Security Name": "Stewarts & Lloyds of India Ltd-$"
+            "Security Name": "Stewarts & Lloyds of India Ltd"
         },
         {
-            "Security Name": "Tayo Rolls Ltd-$"
+            "Security Name": "Tayo Rolls Ltd"
         },
         {
             "Security Name": "Tinplate Company of India Ltd"
@@ -2621,10 +2621,10 @@
             "Security Name": "Automobile Products of India Ltd"
         },
         {
-            "Security Name": "Automobile Corporation of Goa Ltd-$"
+            "Security Name": "Automobile Corporation of Goa Ltd"
         },
         {
-            "Security Name": "Clutch Auto Ltd-$"
+            "Security Name": "Clutch Auto Ltd"
         },
         {
             "Security Name": "Setco Automotive Ltd"
@@ -2642,7 +2642,7 @@
             "Security Name": "Talbros Automotive Components Ltd"
         },
         {
-            "Security Name": "ZF Steering Gear India Ltd-$"
+            "Security Name": "ZF Steering Gear India Ltd"
         },
         {
             "Security Name": "Bosch Chassis Systems India Ltd"
@@ -2672,7 +2672,7 @@
             "Security Name": "Veljan Denison Ltd"
         },
         {
-            "Security Name": "Dynamatic Technologies Ltd-$"
+            "Security Name": "Dynamatic Technologies Ltd"
         },
         {
             "Security Name": "G. G. Dandekar Properties Ltd"
@@ -2708,7 +2708,7 @@
             "Security Name": "Lynx Machinery & Commercials Ltd"
         },
         {
-            "Security Name": "Manugraph India Ltd-$"
+            "Security Name": "Manugraph India Ltd"
         },
         {
             "Security Name": "Loyal Engineering Ltd"
@@ -2729,7 +2729,7 @@
             "Security Name": "Bosch Rexroth India Ltd"
         },
         {
-            "Security Name": "Semac Construction Ltd-$"
+            "Security Name": "Semac Construction Ltd"
         },
         {
             "Security Name": "Simtools Ltd"
@@ -2753,7 +2753,7 @@
             "Security Name": "Star Machinery Manufacturing Ltd"
         },
         {
-            "Security Name": "Birla Machining & Toolings Ltd-$"
+            "Security Name": "Birla Machining & Toolings Ltd"
         },
         {
             "Security Name": "PS IT Infrastructure & Services Ltd"
@@ -2843,7 +2843,7 @@
             "Security Name": "Remi Process Plant & Machinery Ltd"
         },
         {
-            "Security Name": "ABC Bearings Ltd-$"
+            "Security Name": "ABC Bearings Ltd"
         },
         {
             "Security Name": "Asian Bearing Ltd"
@@ -2852,7 +2852,7 @@
             "Security Name": "CPEC Ltd"
         },
         {
-            "Security Name": "Bimetal Bearings Ltd-$"
+            "Security Name": "Bimetal Bearings Ltd"
         },
         {
             "Security Name": "Chicago Pneumatic India Ltd"
@@ -2876,16 +2876,16 @@
             "Security Name": "Deccan Bearings Ltd"
         },
         {
-            "Security Name": "Grauer & Weil India Ltd-$"
+            "Security Name": "Grauer & Weil India Ltd"
         },
         {
-            "Security Name": "Gajra Bevel Gears Ltd-$"
+            "Security Name": "Gajra Bevel Gears Ltd"
         },
         {
             "Security Name": "Him Teknoforge Ltd"
         },
         {
-            "Security Name": "Gabriel India Ltd-$"
+            "Security Name": "Gabriel India Ltd"
         },
         {
             "Security Name": "Hercules Investments Ltd"
@@ -2948,7 +2948,7 @@
             "Security Name": "Mangal Credit and Fincorp Ltd"
         },
         {
-            "Security Name": "TRF Ltd-$"
+            "Security Name": "TRF Ltd"
         },
         {
             "Security Name": "WPIL Ltd"
@@ -2957,13 +2957,13 @@
             "Security Name": "Alfa Laval (India) Ltd"
         },
         {
-            "Security Name": "Kennametal India Ltd-$"
+            "Security Name": "Kennametal India Ltd"
         },
         {
             "Security Name": "Hindustan Hardy Ltd"
         },
         {
-            "Security Name": "Exedy India Ltd-$"
+            "Security Name": "Exedy India Ltd"
         },
         {
             "Security Name": "Vishal Malleables Ltd"
@@ -2975,7 +2975,7 @@
             "Security Name": "Triton Valves Ltd"
         },
         {
-            "Security Name": "Hinduja Foundries Ltd-$"
+            "Security Name": "Hinduja Foundries Ltd"
         },
         {
             "Security Name": "Ajanta Tubes Ltd"
@@ -3011,7 +3011,7 @@
             "Security Name": "Arshiya Ltd"
         },
         {
-            "Security Name": "Grindwell Norton Ltd-$"
+            "Security Name": "Grindwell Norton Ltd"
         },
         {
             "Security Name": "Lakshmi Precision Screws Ltd"
@@ -3107,7 +3107,7 @@
             "Security Name": "Nashville Investment & Trading Company Ltd"
         },
         {
-            "Security Name": "Hiran Orgochem Ltd-$"
+            "Security Name": "Hiran Orgochem Ltd"
         },
         {
             "Security Name": "Sampada Chemicals Ltd"
@@ -3128,7 +3128,7 @@
             "Security Name": "Kanani Industries Ltd"
         },
         {
-            "Security Name": "Galaxy Cloud Kitchens Ltd-$"
+            "Security Name": "Galaxy Cloud Kitchens Ltd"
         },
         {
             "Security Name": "Sarvamangal Mercantile Company Ltd"
@@ -3155,7 +3155,7 @@
             "Security Name": "Adarsh Chemicals & Fertilizers Ltd"
         },
         {
-            "Security Name": "Rhodia Specialty Chemicals India Ltd-$"
+            "Security Name": "Rhodia Specialty Chemicals India Ltd"
         },
         {
             "Security Name": "Alembic Ltd"
@@ -3170,7 +3170,7 @@
             "Security Name": "Anuh Pharma Ltd"
         },
         {
-            "Security Name": "Modison Ltd-$"
+            "Security Name": "Modison Ltd"
         },
         {
             "Security Name": "Arlabs Ltd"
@@ -3215,7 +3215,7 @@
             "Security Name": "Coromandel International Ltd"
         },
         {
-            "Security Name": "Deepak Nitrite Ltd-$"
+            "Security Name": "Deepak Nitrite Ltd"
         },
         {
             "Security Name": "DMCC Speciality Chemicals Ltd"
@@ -3239,7 +3239,7 @@
             "Security Name": "Hico Products Ltd"
         },
         {
-            "Security Name": "GOCL Corporation Ltd-$"
+            "Security Name": "GOCL Corporation Ltd"
         },
         {
             "Security Name": "IDI Ltd"
@@ -3269,7 +3269,7 @@
             "Security Name": "Kemp & Company Ltd"
         },
         {
-            "Security Name": "Nitta Gelatin India Ltd-$"
+            "Security Name": "Nitta Gelatin India Ltd"
         },
         {
             "Security Name": "Keytuo Chemicals Ltd"
@@ -3284,7 +3284,7 @@
             "Security Name": "Siemens Healthcare Diagnostics Ltd"
         },
         {
-            "Security Name": "AG Ventures Ltd-$"
+            "Security Name": "AG Ventures Ltd"
         },
         {
             "Security Name": "PB Global Ltd"
@@ -3305,7 +3305,7 @@
             "Security Name": "Sunrise Asian Ltd"
         },
         {
-            "Security Name": "Punjab Chemicals & Crop Protection Ltd-$"
+            "Security Name": "Punjab Chemicals & Crop Protection Ltd"
         },
         {
             "Security Name": "ZR2 Bioenergy Ltd"
@@ -3329,10 +3329,10 @@
             "Security Name": "Tecil Chemicals & Hydro Power Ltd"
         },
         {
-            "Security Name": "Ultramarine & Pigments Ltd-$"
+            "Security Name": "Ultramarine & Pigments Ltd"
         },
         {
-            "Security Name": "Transpek Industry Ltd-$"
+            "Security Name": "Transpek Industry Ltd"
         },
         {
             "Security Name": "Unichem Laboratories Ltd"
@@ -3347,7 +3347,7 @@
             "Security Name": "Zandu Realty Ltd"
         },
         {
-            "Security Name": "Mysore Petro Chemicals Ltd-$"
+            "Security Name": "Mysore Petro Chemicals Ltd"
         },
         {
             "Security Name": "Hind Lever Chemicals Ltd"
@@ -3359,10 +3359,10 @@
             "Security Name": "Paushak Ltd"
         },
         {
-            "Security Name": "Alkyl Amines Chemicals Ltd-$"
+            "Security Name": "Alkyl Amines Chemicals Ltd"
         },
         {
-            "Security Name": "Fulford India Ltd-$"
+            "Security Name": "Fulford India Ltd"
         },
         {
             "Security Name": "Tuticorin Alkali Chemicals And Fertilizers Ltd"
@@ -3389,7 +3389,7 @@
             "Security Name": "Primo Chemicals Ltd"
         },
         {
-            "Security Name": "TANFAC Industries Ltd-$"
+            "Security Name": "TANFAC Industries Ltd"
         },
         {
             "Security Name": "Gujarat Petrosynthese Ltd"
@@ -3434,7 +3434,7 @@
             "Security Name": "Jaysynth Dyestuff India Ltd"
         },
         {
-            "Security Name": "Makers Laboratories Ltd-$"
+            "Security Name": "Makers Laboratories Ltd"
         },
         {
             "Security Name": "Gujarat Binil Chemicals Ltd"
@@ -3485,7 +3485,7 @@
             "Security Name": "Bluechip Tex Industries Ltd"
         },
         {
-            "Security Name": "Twilight Litaka Pharma Ltd-$"
+            "Security Name": "Twilight Litaka Pharma Ltd"
         },
         {
             "Security Name": "Gwalior Polypipes Ltd"
@@ -3494,7 +3494,7 @@
             "Security Name": "Regent Chemicals Ltd"
         },
         {
-            "Security Name": "Noble Explochem Ltd-$"
+            "Security Name": "Noble Explochem Ltd"
         },
         {
             "Security Name": "Hindustan Agro Chemicals Ltd"
@@ -3524,13 +3524,13 @@
             "Security Name": "Jagatjit Industries Ltd"
         },
         {
-            "Security Name": "Kesar Enterprises Ltd-$"
+            "Security Name": "Kesar Enterprises Ltd"
         },
         {
             "Security Name": "Kothari Sugars & Chemicals Ltd"
         },
         {
-            "Security Name": "Tilaknagar Industries Ltd-$"
+            "Security Name": "Tilaknagar Industries Ltd"
         },
         {
             "Security Name": "Oudh Sugar Mills Ltd"
@@ -3566,7 +3566,7 @@
             "Security Name": "CHAMPGN"
         },
         {
-            "Security Name": "Khoday India Ltd-$"
+            "Security Name": "Khoday India Ltd"
         },
         {
             "Security Name": "IFB Agro Industries Ltd"
@@ -3575,7 +3575,7 @@
             "Security Name": "Dharani Sugars & Chemicals Ltd"
         },
         {
-            "Security Name": "Simbhaoli Sugars Ltd-$"
+            "Security Name": "Simbhaoli Sugars Ltd"
         },
         {
             "Security Name": "MACAGRO"
@@ -3632,7 +3632,7 @@
             "Security Name": "Girdharilal Sugar & Allied Industries Ltd"
         },
         {
-            "Security Name": "Riga Sugar Company Ltd-$"
+            "Security Name": "Riga Sugar Company Ltd"
         },
         {
             "Security Name": "Som Distilleries & Breweries Ltd"
@@ -3650,10 +3650,10 @@
             "Security Name": "Rainbow Breweries Ltd"
         },
         {
-            "Security Name": "Mount Shivalik Industries Ltd-$"
+            "Security Name": "Mount Shivalik Industries Ltd"
         },
         {
-            "Security Name": "Amrit Corp Ltd-$"
+            "Security Name": "Amrit Corp Ltd"
         },
         {
             "Security Name": "Associated Alcohols & Breweries Ltd"
@@ -3749,7 +3749,7 @@
             "Security Name": "Harshvardhan Chemicals & Minerals Ltd"
         },
         {
-            "Security Name": "TTK Healthcare Ltd-$"
+            "Security Name": "TTK Healthcare Ltd"
         },
         {
             "Security Name": "MJ Pharmaceuticals Ltd"
@@ -3809,7 +3809,7 @@
             "Security Name": "Turnkey International Ltd"
         },
         {
-            "Security Name": "Ansal Housing Ltd-$"
+            "Security Name": "Ansal Housing Ltd"
         },
         {
             "Security Name": "Premier Industries India Ltd"
@@ -3824,7 +3824,7 @@
             "Security Name": "Kothari Orient Finance Ltd"
         },
         {
-            "Security Name": "Addi Industries Ltd-$"
+            "Security Name": "Addi Industries Ltd"
         },
         {
             "Security Name": "Pioneer Investcorp Ltd"
@@ -3848,7 +3848,7 @@
             "Security Name": "Unitech Ltd"
         },
         {
-            "Security Name": "VIP Industries Ltd-$"
+            "Security Name": "VIP Industries Ltd"
         },
         {
             "Security Name": "Numech Emballage Ltd"
@@ -3914,7 +3914,7 @@
             "Security Name": "Highland Industries Ltd"
         },
         {
-            "Security Name": "Jog Engineering Ltd-$"
+            "Security Name": "Jog Engineering Ltd"
         },
         {
             "Security Name": "Bajaj Steel Industries Ltd"
@@ -3983,10 +3983,10 @@
             "Security Name": "Ledo Tea Company Ltd"
         },
         {
-            "Security Name": "Hawkins Cookers Ltd-$"
+            "Security Name": "Hawkins Cookers Ltd"
         },
         {
-            "Security Name": "Warren Tea Ltd-$"
+            "Security Name": "Warren Tea Ltd"
         },
         {
             "Security Name": "Cochin Malabar Estates & Industries Ltd"
@@ -4082,7 +4082,7 @@
             "Security Name": "Blue Circle Services Ltd"
         },
         {
-            "Security Name": "Panasonic Carbon India Company Ltd-$"
+            "Security Name": "Panasonic Carbon India Company Ltd"
         },
         {
             "Security Name": "Finkurve Financial Services Ltd"
@@ -4103,7 +4103,7 @@
             "Security Name": "Sulabh Engineers & Services Ltd"
         },
         {
-            "Security Name": "Spanco Ltd-$"
+            "Security Name": "Spanco Ltd"
         },
         {
             "Security Name": "SPL Technochem Ltd"
@@ -4130,7 +4130,7 @@
             "Security Name": "Satra Properties India Ltd"
         },
         {
-            "Security Name": "Sterling International Enterprises Ltd-$"
+            "Security Name": "Sterling International Enterprises Ltd"
         },
         {
             "Security Name": "Daga Leasing & Finance Ltd"
@@ -4238,13 +4238,13 @@
             "Security Name": "Dunlop India Ltd"
         },
         {
-            "Security Name": "Govind Rubber Ltd-$"
+            "Security Name": "Govind Rubber Ltd"
         },
         {
             "Security Name": "GRP Ltd"
         },
         {
-            "Security Name": "Indag Rubber Ltd-$"
+            "Security Name": "Indag Rubber Ltd"
         },
         {
             "Security Name": "Kerala Rubber & Reclaims Ltd"
@@ -4253,10 +4253,10 @@
             "Security Name": "MM Rubber Company Ltd"
         },
         {
-            "Security Name": "PTL Enterprises Ltd-$"
+            "Security Name": "PTL Enterprises Ltd"
         },
         {
-            "Security Name": "TVS Srichakra Ltd-$"
+            "Security Name": "TVS Srichakra Ltd"
         },
         {
             "Security Name": "Swastik Rubber Products Ltd"
@@ -4307,7 +4307,7 @@
             "Security Name": "Berger Paints India Ltd"
         },
         {
-            "Security Name": "Caprihans India Ltd-$"
+            "Security Name": "Caprihans India Ltd"
         },
         {
             "Security Name": "Graphite India Ltd"
@@ -4331,7 +4331,7 @@
             "Security Name": "Empire Industries Ltd"
         },
         {
-            "Security Name": "Falcon Tyres Ltd-$"
+            "Security Name": "Falcon Tyres Ltd"
         },
         {
             "Security Name": "Eastern International Hotels Ltd"
@@ -4352,7 +4352,7 @@
             "Security Name": "Garware Marine Industries Ltd"
         },
         {
-            "Security Name": "Goa Carbon Ltd-$"
+            "Security Name": "Goa Carbon Ltd"
         },
         {
             "Security Name": "Govind Poy Oxygen Ltd"
@@ -4451,7 +4451,7 @@
             "Security Name": "Shah Construction Company Ltd"
         },
         {
-            "Security Name": "Shalimar Paints Ltd-$"
+            "Security Name": "Shalimar Paints Ltd"
         },
         {
             "Security Name": "Sinnar Bidi Udyog Ltd"
@@ -4562,7 +4562,7 @@
             "Security Name": "Easy Fincorp Ltd"
         },
         {
-            "Security Name": "Aeroflex Enterprises Ltd-$"
+            "Security Name": "Aeroflex Enterprises Ltd"
         },
         {
             "Security Name": "Teletek India Ltd"
@@ -4595,7 +4595,7 @@
             "Security Name": "Valuemart Retail Solutions Ltd"
         },
         {
-            "Security Name": "Quadrant Televentures Ltd-$"
+            "Security Name": "Quadrant Televentures Ltd"
         },
         {
             "Security Name": "First Custodian Fund India Ltd"
@@ -4847,7 +4847,7 @@
             "Security Name": "Integrated Enterprises India Ltd"
         },
         {
-            "Security Name": "Vakrangee Ltd-$"
+            "Security Name": "Vakrangee Ltd"
         },
         {
             "Security Name": "Insta Finance Ltd"
@@ -5591,7 +5591,7 @@
             "Security Name": "Tashi India Ltd"
         },
         {
-            "Security Name": "Aroni Commercials Ltd-$"
+            "Security Name": "Aroni Commercials Ltd"
         },
         {
             "Security Name": "Autoriders International Ltd"
@@ -5867,7 +5867,7 @@
             "Security Name": "Vinayak Vanijya Ltd"
         },
         {
-            "Security Name": "Donear Industries Ltd-$"
+            "Security Name": "Donear Industries Ltd"
         },
         {
             "Security Name": "Priyanka Udyog Ltd"
@@ -5876,7 +5876,7 @@
             "Security Name": "Neptune Exports Ltd"
         },
         {
-            "Security Name": "Super Sales India Ltd-$"
+            "Security Name": "Super Sales India Ltd"
         },
         {
             "Security Name": "Sequent Scientific Ltd"
@@ -5927,7 +5927,7 @@
             "Security Name": "Okara Leasing & Investment Ltd"
         },
         {
-            "Security Name": "Neelkanth Ltd-$"
+            "Security Name": "Neelkanth Ltd"
         },
         {
             "Security Name": "Bharat Parenterals Ltd"
@@ -5939,7 +5939,7 @@
             "Security Name": "Aditya Lime Industries Ltd"
         },
         {
-            "Security Name": "Avanti Feeds Ltd-$"
+            "Security Name": "Avanti Feeds Ltd"
         },
         {
             "Security Name": "Ritesh Exports Ltd"
@@ -5984,7 +5984,7 @@
             "Security Name": "Ashari Properties & Finances Ltd"
         },
         {
-            "Security Name": "Haria Exports Ltd-$"
+            "Security Name": "Haria Exports Ltd"
         },
         {
             "Security Name": "Rupangi Impex Ltd"
@@ -6047,7 +6047,7 @@
             "Security Name": "Andhra Sinter Ltd"
         },
         {
-            "Security Name": "Chrome Silicon Ltd-$"
+            "Security Name": "Chrome Silicon Ltd"
         },
         {
             "Security Name": "Tata Steel Long Products Ltd"
@@ -6092,7 +6092,7 @@
             "Security Name": "Shivalik Bimetal Controls Ltd"
         },
         {
-            "Security Name": "Gandhi Special Tubes Ltd-$"
+            "Security Name": "Gandhi Special Tubes Ltd"
         },
         {
             "Security Name": "Amforge Industries Ltd"
@@ -6101,7 +6101,7 @@
             "Security Name": "Onix Solar Energy Ltd"
         },
         {
-            "Security Name": "Oricon Enterprises Ltd-$"
+            "Security Name": "Oricon Enterprises Ltd"
         },
         {
             "Security Name": "Shree Narmada Aluminium Industries Ltd"
@@ -6170,7 +6170,7 @@
             "Security Name": "Shri Ishar Alloy Steels Ltd"
         },
         {
-            "Security Name": "Pennar Industries Ltd-$"
+            "Security Name": "Pennar Industries Ltd"
         },
         {
             "Security Name": "Indian Charge Chrome Ltd"
@@ -6194,13 +6194,13 @@
             "Security Name": "Orissa Extrusions Ltd"
         },
         {
-            "Security Name": "Steel Strips Wheels Ltd-$"
+            "Security Name": "Steel Strips Wheels Ltd"
         },
         {
             "Security Name": "Mukesh Steels Ltd"
         },
         {
-            "Security Name": "Man Industries (India) Ltd-$"
+            "Security Name": "Man Industries (India) Ltd"
         },
         {
             "Security Name": "Hindustan Ferro & Industries Ltd"
@@ -6227,7 +6227,7 @@
             "Security Name": "Jalan Ispat Castings Ltd"
         },
         {
-            "Security Name": "Modern Steels Ltd-$"
+            "Security Name": "Modern Steels Ltd"
         },
         {
             "Security Name": "Terrascope Ventures Ltd"
@@ -6236,7 +6236,7 @@
             "Security Name": "Synthiko Foils Ltd"
         },
         {
-            "Security Name": "Golkonda Aluminium Extrusions Ltd-$"
+            "Security Name": "Golkonda Aluminium Extrusions Ltd"
         },
         {
             "Security Name": "Atma Steels Ltd"
@@ -6257,7 +6257,7 @@
             "Security Name": "Dhatu Sanskar Ltd"
         },
         {
-            "Security Name": "Bhuwalka Steel Industries Ltd-$"
+            "Security Name": "Bhuwalka Steel Industries Ltd"
         },
         {
             "Security Name": "Metalyst Forgings Ltd"
@@ -6278,7 +6278,7 @@
             "Security Name": "SKS Ltd"
         },
         {
-            "Security Name": "Cochin Minerals & Rutiles Ltd-$"
+            "Security Name": "Cochin Minerals & Rutiles Ltd"
         },
         {
             "Security Name": "Marmagoa Steel Ltd"
@@ -6320,7 +6320,7 @@
             "Security Name": "Nova Steel (India) Ltd"
         },
         {
-            "Security Name": "Vallabh Steels Ltd-$"
+            "Security Name": "Vallabh Steels Ltd"
         },
         {
             "Security Name": "Orde Industries Ltd"
@@ -6398,7 +6398,7 @@
             "Security Name": "Asian Alloys Ltd"
         },
         {
-            "Security Name": "Mahalaxmi Seamless Ltd-$"
+            "Security Name": "Mahalaxmi Seamless Ltd"
         },
         {
             "Security Name": "Samana Steels Ltd"
@@ -6473,7 +6473,7 @@
             "Security Name": "Steelcast Ltd"
         },
         {
-            "Security Name": "Pitti Engineering Ltd-$"
+            "Security Name": "Pitti Engineering Ltd"
         },
         {
             "Security Name": "Punjab Iron & Steel Company Ltd"
@@ -6491,7 +6491,7 @@
             "Security Name": "Pradeep Metals Ltd"
         },
         {
-            "Security Name": "Vardhman Industries Ltd-$"
+            "Security Name": "Vardhman Industries Ltd"
         },
         {
             "Security Name": "Gujarat Natural Resources Ltd"
@@ -6515,7 +6515,7 @@
             "Security Name": "Spearhead Metals & Alloys Ltd"
         },
         {
-            "Security Name": "Real Strips Ltd-$"
+            "Security Name": "Real Strips Ltd"
         },
         {
             "Security Name": "Viraj Alloys Ltd"
@@ -6593,7 +6593,7 @@
             "Security Name": "Krishna Ferro Products Ltd"
         },
         {
-            "Security Name": "Tulsyan NEC Ltd-$"
+            "Security Name": "Tulsyan NEC Ltd"
         },
         {
             "Security Name": "Rajesh Malleables Ltd"
@@ -6635,7 +6635,7 @@
             "Security Name": "NLC India Ltd"
         },
         {
-            "Security Name": "Multi Arc India Ltd-$"
+            "Security Name": "Multi Arc India Ltd"
         },
         {
             "Security Name": "Spectra Industries Ltd"
@@ -6668,7 +6668,7 @@
             "Security Name": "Mardia Steel Ltd"
         },
         {
-            "Security Name": "Shilp Gravures Ltd-$"
+            "Security Name": "Shilp Gravures Ltd"
         },
         {
             "Security Name": "Kitti Steels Ltd"
@@ -6686,7 +6686,7 @@
             "Security Name": "MFS Intercorp Ltd"
         },
         {
-            "Security Name": "HG Industries Ltd-$"
+            "Security Name": "HG Industries Ltd"
         },
         {
             "Security Name": "CV Steels Ltd"
@@ -6695,7 +6695,7 @@
             "Security Name": "Ranjeev Alloys Ltd"
         },
         {
-            "Security Name": "Aro Granite Industries Ltd-$"
+            "Security Name": "Aro Granite Industries Ltd"
         },
         {
             "Security Name": "JG Foundry Ltd"
@@ -6719,7 +6719,7 @@
             "Security Name": "Rajkamal Synthetics Ltd"
         },
         {
-            "Security Name": "Deepak Spinners Ltd-$"
+            "Security Name": "Deepak Spinners Ltd"
         },
         {
             "Security Name": "Sharda Textile Mills (India) Ltd"
@@ -6728,7 +6728,7 @@
             "Security Name": "JBF Industries Ltd"
         },
         {
-            "Security Name": "Loyal Textile Mills Ltd-$"
+            "Security Name": "Loyal Textile Mills Ltd"
         },
         {
             "Security Name": "AKC Synthetics Ltd"
@@ -6758,7 +6758,7 @@
             "Security Name": "Krimpex Synthetics Ltd"
         },
         {
-            "Security Name": "PBM Polytex Ltd-$"
+            "Security Name": "PBM Polytex Ltd"
         },
         {
             "Security Name": "Fusion Polymers Ltd"
@@ -6785,13 +6785,13 @@
             "Security Name": "Aryan Finefab Ltd"
         },
         {
-            "Security Name": "Suryalata Spinning Mills Ltd-$"
+            "Security Name": "Suryalata Spinning Mills Ltd"
         },
         {
-            "Security Name": "Suryavanshi Spinning Mills Ltd-$"
+            "Security Name": "Suryavanshi Spinning Mills Ltd"
         },
         {
-            "Security Name": "T T Ltd-$"
+            "Security Name": "T T Ltd"
         },
         {
             "Security Name": "Uniworth Ltd"
@@ -6866,7 +6866,7 @@
             "Security Name": "Shamken Cotsyn Ltd"
         },
         {
-            "Security Name": "Sumeet Industries Ltd-$"
+            "Security Name": "Sumeet Industries Ltd"
         },
         {
             "Security Name": "Mikado Textiles Industries Ltd"
@@ -6938,10 +6938,10 @@
             "Security Name": "Ankit Yarns Ltd"
         },
         {
-            "Security Name": "Seasons Textiles Ltd-$"
+            "Security Name": "Seasons Textiles Ltd"
         },
         {
-            "Security Name": "Zenith Fibres Ltd-$"
+            "Security Name": "Zenith Fibres Ltd"
         },
         {
             "Security Name": "Subhakti Textiles Ltd"
@@ -6983,7 +6983,7 @@
             "Security Name": "Integral Knit Co. Ltd"
         },
         {
-            "Security Name": "Pioneer Embroideries Ltd-$"
+            "Security Name": "Pioneer Embroideries Ltd"
         },
         {
             "Security Name": "Vippy Spinpro Ltd"
@@ -7013,7 +7013,7 @@
             "Security Name": "Jattashankar Industries Ltd"
         },
         {
-            "Security Name": "Kamadgiri Fashion Ltd-$"
+            "Security Name": "Kamadgiri Fashion Ltd"
         },
         {
             "Security Name": "Omnitex Industries India Ltd"
@@ -7022,7 +7022,7 @@
             "Security Name": "Patspin India Ltd"
         },
         {
-            "Security Name": "Nachmo Knitex Ltd-$"
+            "Security Name": "Nachmo Knitex Ltd"
         },
         {
             "Security Name": "One Global Service Provider Ltd"
@@ -7130,7 +7130,7 @@
             "Security Name": "Toor Spinners Ltd"
         },
         {
-            "Security Name": "Sarup Industries Ltd-$"
+            "Security Name": "Sarup Industries Ltd"
         },
         {
             "Security Name": "Oxford Industries Ltd"
@@ -7199,13 +7199,13 @@
             "Security Name": "Essjay Synthetics Ltd"
         },
         {
-            "Security Name": "Winsome Textile Industries Ltd-$"
+            "Security Name": "Winsome Textile Industries Ltd"
         },
         {
             "Security Name": "Filaments India Ltd"
         },
         {
-            "Security Name": "Fairdeal Filaments Ltd-$"
+            "Security Name": "Fairdeal Filaments Ltd"
         },
         {
             "Security Name": "Akai Impex Ltd"
@@ -7232,7 +7232,7 @@
             "Security Name": "India Polyspin Ltd"
         },
         {
-            "Security Name": "Mangalam Ventures Ltd-$"
+            "Security Name": "Mangalam Ventures Ltd"
         },
         {
             "Security Name": "Shree Shyam Fabrics Ltd"
@@ -7283,7 +7283,7 @@
             "Security Name": "Gujarat Refractories Ltd"
         },
         {
-            "Security Name": "Anant Raj Ltd-$"
+            "Security Name": "Anant Raj Ltd"
         },
         {
             "Security Name": "Madhusudan Industries Ltd"
@@ -7352,10 +7352,10 @@
             "Security Name": "Haryana Sheet Glass Ltd"
         },
         {
-            "Security Name": "Hindusthan National Glass & Industries Ltd-$"
+            "Security Name": "Hindusthan National Glass & Industries Ltd"
         },
         {
-            "Security Name": "Haldyn Glass Ltd-$"
+            "Security Name": "Haldyn Glass Ltd"
         },
         {
             "Security Name": "Hindustan Ceramics Ltd"
@@ -7376,10 +7376,10 @@
             "Security Name": "Best Board Ltd"
         },
         {
-            "Security Name": "Shreyans Industries Ltd-$"
+            "Security Name": "Shreyans Industries Ltd"
         },
         {
-            "Security Name": "Agio Paper & Industries Ltd-$"
+            "Security Name": "Agio Paper & Industries Ltd"
         },
         {
             "Security Name": "Star Paper Mills Ltd"
@@ -7388,7 +7388,7 @@
             "Security Name": "Shree Ambeshwar Paper Mills Ltd"
         },
         {
-            "Security Name": "Pakka Ltd-$"
+            "Security Name": "Pakka Ltd"
         },
         {
             "Security Name": "Tahmar Enterprises Ltd"
@@ -7499,7 +7499,7 @@
             "Security Name": "BK Duplex Board Ltd"
         },
         {
-            "Security Name": "Birla Power Solutions Ltd-$"
+            "Security Name": "Birla Power Solutions Ltd"
         },
         {
             "Security Name": "Pioneer Auto Lamps Ltd"
@@ -7529,7 +7529,7 @@
             "Security Name": "RPG Cables Ltd"
         },
         {
-            "Security Name": "Salzer Electronics Ltd-$"
+            "Security Name": "Salzer Electronics Ltd"
         },
         {
             "Security Name": "Jetking Infotrain Ltd"
@@ -7544,7 +7544,7 @@
             "Security Name": "Weston Components Ltd"
         },
         {
-            "Security Name": "Aplab Ltd-$"
+            "Security Name": "Aplab Ltd"
         },
         {
             "Security Name": "PCS Technology Ltd"
@@ -7622,7 +7622,7 @@
             "Security Name": "AKG Accoustics (India) Ltd"
         },
         {
-            "Security Name": "Digispice Technologies Ltd-$"
+            "Security Name": "Digispice Technologies Ltd"
         },
         {
             "Security Name": "Yokogawa India Ltd"
@@ -7634,10 +7634,10 @@
             "Security Name": "B S Refrigerators Ltd"
         },
         {
-            "Security Name": "Sujana Universal Industries Ltd-$"
+            "Security Name": "Sujana Universal Industries Ltd"
         },
         {
-            "Security Name": "Trend Electronics Ltd-$"
+            "Security Name": "Trend Electronics Ltd"
         },
         {
             "Security Name": "PAE Ltd"
@@ -7679,7 +7679,7 @@
             "Security Name": "Namtech Electronic Devices Ltd"
         },
         {
-            "Security Name": "HBL Engineering Ltd-$"
+            "Security Name": "HBL Engineering Ltd"
         },
         {
             "Security Name": "S&S Power Switchgear Ltd"
@@ -7781,7 +7781,7 @@
             "Security Name": "Incap Ltd"
         },
         {
-            "Security Name": "Gujarat Intrux Ltd-$"
+            "Security Name": "Gujarat Intrux Ltd"
         },
         {
             "Security Name": "Mukesh Strips Ltd"
@@ -7826,7 +7826,7 @@
             "Security Name": "Aditya Electro Communication Ltd"
         },
         {
-            "Security Name": "Toyama Electric Ltd-$"
+            "Security Name": "Toyama Electric Ltd"
         },
         {
             "Security Name": "Shyam Telecom Ltd"
@@ -7850,7 +7850,7 @@
             "Security Name": "Hartron Networks Ltd"
         },
         {
-            "Security Name": "Athena Global Technologies Ltd-$"
+            "Security Name": "Athena Global Technologies Ltd"
         },
         {
             "Security Name": "Narmada Macplast Drip Irrigation Systems Ltd"
@@ -7862,7 +7862,7 @@
             "Security Name": "Equipment Conductors & Cables Ltd"
         },
         {
-            "Security Name": "Dutron Polymers Ltd-$"
+            "Security Name": "Dutron Polymers Ltd"
         },
         {
             "Security Name": "Trans India Glass Ltd"
@@ -7871,7 +7871,7 @@
             "Security Name": "R.S. Software (India) Ltd"
         },
         {
-            "Security Name": "Magna Electro Castings Ltd-$"
+            "Security Name": "Magna Electro Castings Ltd"
         },
         {
             "Security Name": "Arun Pipes Ltd"
@@ -7898,7 +7898,7 @@
             "Security Name": "Datapro Information Technology Ltd"
         },
         {
-            "Security Name": "Elnet Technologies Ltd-$"
+            "Security Name": "Elnet Technologies Ltd"
         },
         {
             "Security Name": "Artech Power & Trading Ltd"
@@ -7949,7 +7949,7 @@
             "Security Name": "Moti Electric Industries Ltd"
         },
         {
-            "Security Name": "D & H India Ltd-$"
+            "Security Name": "D & H India Ltd"
         },
         {
             "Security Name": "Datar Switchgear Ltd"
@@ -7994,7 +7994,7 @@
             "Security Name": "Starlite Components Ltd"
         },
         {
-            "Security Name": "Advanced Micronic Devices Ltd-$"
+            "Security Name": "Advanced Micronic Devices Ltd"
         },
         {
             "Security Name": "NHC Foods Ltd"
@@ -8012,7 +8012,7 @@
             "Security Name": "Clenon Enterprises Ltd"
         },
         {
-            "Security Name": "Ashco Niulab Industries Ltd-$"
+            "Security Name": "Ashco Niulab Industries Ltd"
         },
         {
             "Security Name": "Rams Transformers Ltd"
@@ -8093,7 +8093,7 @@
             "Security Name": "Shubham Industries Ltd"
         },
         {
-            "Security Name": "Anjani Portland Cement Ltd-$"
+            "Security Name": "Anjani Portland Cement Ltd"
         },
         {
             "Security Name": "Gangotri Cement Ltd"
@@ -8177,7 +8177,7 @@
             "Security Name": "Dharnendra Industries Ltd"
         },
         {
-            "Security Name": "Nahar Industrial Enterprises Ltd-$"
+            "Security Name": "Nahar Industrial Enterprises Ltd"
         },
         {
             "Security Name": "M Ravji Oil Industries Ltd"
@@ -8195,7 +8195,7 @@
             "Security Name": "Vadilal Enterprises Ltd"
         },
         {
-            "Security Name": "Vadilal Industries Ltd-$"
+            "Security Name": "Vadilal Industries Ltd"
         },
         {
             "Security Name": "Kanha Vanaspati Ltd"
@@ -8219,7 +8219,7 @@
             "Security Name": "Premier Proteins Ltd"
         },
         {
-            "Security Name": "Adf Foods Ltd-$"
+            "Security Name": "Adf Foods Ltd"
         },
         {
             "Security Name": "Fortune Foods Ltd"
@@ -8297,7 +8297,7 @@
             "Security Name": "Swad Industries Leasing Ltd"
         },
         {
-            "Security Name": "Sanwaria Consumer Ltd-$"
+            "Security Name": "Sanwaria Consumer Ltd"
         },
         {
             "Security Name": "Prima Agro Ltd"
@@ -8375,7 +8375,7 @@
             "Security Name": "Western Fruits & Vegetables Ltd"
         },
         {
-            "Security Name": "Murli Industries Ltd-$"
+            "Security Name": "Murli Industries Ltd"
         },
         {
             "Security Name": "Pan Asia Global Ltd"
@@ -8441,7 +8441,7 @@
             "Security Name": "Somkan Marine Foods Ltd"
         },
         {
-            "Security Name": "Vimal Oil & Foods Ltd-$"
+            "Security Name": "Vimal Oil & Foods Ltd"
         },
         {
             "Security Name": "RMI Foods Ltd"
@@ -8504,7 +8504,7 @@
             "Security Name": "Maya Agro Products Ltd"
         },
         {
-            "Security Name": "KSE Ltd-$"
+            "Security Name": "KSE Ltd"
         },
         {
             "Security Name": "Herman Milkfoods Ltd"
@@ -8576,7 +8576,7 @@
             "Security Name": "Mihijam Vanaspati Ltd"
         },
         {
-            "Security Name": "TAI Industries Ltd-$"
+            "Security Name": "TAI Industries Ltd"
         },
         {
             "Security Name": "Kohinoor Techno Engineers Ltd"
@@ -8630,7 +8630,7 @@
             "Security Name": "Norben Tea & Exports Ltd"
         },
         {
-            "Security Name": "Asian Tea & Exports Ltd-$"
+            "Security Name": "Asian Tea & Exports Ltd"
         },
         {
             "Security Name": "Visakha Aqua Farms Ltd"
@@ -8729,7 +8729,7 @@
             "Security Name": "Lake Shore Realty Ltd"
         },
         {
-            "Security Name": "Vybra Automet Ltd-$"
+            "Security Name": "Vybra Automet Ltd"
         },
         {
             "Security Name": "Rico Auto Industries Ltd"
@@ -8738,7 +8738,7 @@
             "Security Name": "Omax Autos Ltd"
         },
         {
-            "Security Name": "Denso India Ltd-$"
+            "Security Name": "Denso India Ltd"
         },
         {
             "Security Name": "MANSAROVARP"
@@ -8783,10 +8783,10 @@
             "Security Name": "RACL Geartech Ltd"
         },
         {
-            "Security Name": "Samkrg Pistons & Rings Ltd-$"
+            "Security Name": "Samkrg Pistons & Rings Ltd"
         },
         {
-            "Security Name": "Amtek Auto Ltd-$"
+            "Security Name": "Amtek Auto Ltd"
         },
         {
             "Security Name": "India Steamship Company Ltd"
@@ -8813,7 +8813,7 @@
             "Security Name": "ZBAJAJTR"
         },
         {
-            "Security Name": "Ratnamani Metals & Tubes Ltd-$"
+            "Security Name": "Ratnamani Metals & Tubes Ltd"
         },
         {
             "Security Name": "Vesuvius India Ltd"
@@ -8831,7 +8831,7 @@
             "Security Name": "Arcee Industries Ltd"
         },
         {
-            "Security Name": "ABC India Ltd-$"
+            "Security Name": "ABC India Ltd"
         },
         {
             "Security Name": "Design Auto Systems Ltd"
@@ -8891,7 +8891,7 @@
             "Security Name": "Maral Overseas Ltd"
         },
         {
-            "Security Name": "Suryajyoti Spinning Mills Ltd-$"
+            "Security Name": "Suryajyoti Spinning Mills Ltd"
         },
         {
             "Security Name": "Amethi Textiles Ltd"
@@ -8903,7 +8903,7 @@
             "Security Name": "Veena Textiles Ltd"
         },
         {
-            "Security Name": "Nakoda Ltd-$"
+            "Security Name": "Nakoda Ltd"
         },
         {
             "Security Name": "Soma Textiles & Industries Ltd"
@@ -8915,7 +8915,7 @@
             "Security Name": "Tamilnadu Jai Bharath Mills Ltd"
         },
         {
-            "Security Name": "Vanasthali Textile Industries Ltd-$"
+            "Security Name": "Vanasthali Textile Industries Ltd"
         },
         {
             "Security Name": "Advance Lifestyles Ltd"
@@ -8993,7 +8993,7 @@
             "Security Name": "Sajjan Textiles Mills Ltd"
         },
         {
-            "Security Name": "Nagreeka Exports Ltd-$"
+            "Security Name": "Nagreeka Exports Ltd"
         },
         {
             "Security Name": "Salzer Textiles Ltd"
@@ -9059,7 +9059,7 @@
             "Security Name": "Persian Carpet & Textiles Ltd"
         },
         {
-            "Security Name": "Sri Lakshmi Saraswathi Textiles Arni Ltd-$"
+            "Security Name": "Sri Lakshmi Saraswathi Textiles Arni Ltd"
         },
         {
             "Security Name": "Zodiac Clothing Company Ltd"
@@ -9083,7 +9083,7 @@
             "Security Name": "Gangotri Textiles Ltd"
         },
         {
-            "Security Name": "Sri Ramakrishna Mills Coimbatore Ltd-$"
+            "Security Name": "Sri Ramakrishna Mills Coimbatore Ltd"
         },
         {
             "Security Name": "Super Spinning Mills Ltd"
@@ -9116,7 +9116,7 @@
             "Security Name": "Siddhartha Spinfab Ltd"
         },
         {
-            "Security Name": "Samtex Fashions Ltd-$"
+            "Security Name": "Samtex Fashions Ltd"
         },
         {
             "Security Name": "Atlantic Spinning & Weaving Mills Ltd"
@@ -9137,7 +9137,7 @@
             "Security Name": "Delight Handicraft Palace Ltd"
         },
         {
-            "Security Name": "Damodar Industries Ltd-$"
+            "Security Name": "Damodar Industries Ltd"
         },
         {
             "Security Name": "Sanblue Corporation Ltd"
@@ -9158,7 +9158,7 @@
             "Security Name": "Sunil Industries Ltd"
         },
         {
-            "Security Name": "Sri Nachammai Cotton Mills Ltd-$"
+            "Security Name": "Sri Nachammai Cotton Mills Ltd"
         },
         {
             "Security Name": "Sri Ganapathy Mills Company Ltd"
@@ -9167,10 +9167,10 @@
             "Security Name": "Bharat Global Developers Ltd"
         },
         {
-            "Security Name": "Sambandam Spinning Mills Ltd-$"
+            "Security Name": "Sambandam Spinning Mills Ltd"
         },
         {
-            "Security Name": "Kandagiri Spinning Mills Ltd-$"
+            "Security Name": "Kandagiri Spinning Mills Ltd"
         },
         {
             "Security Name": "MKP Mobility Ltd"
@@ -9191,7 +9191,7 @@
             "Security Name": "Cranex Ltd"
         },
         {
-            "Security Name": "Batliboi Ltd-$"
+            "Security Name": "Batliboi Ltd"
         },
         {
             "Security Name": "Austin Engineering Company Ltd"
@@ -9233,7 +9233,7 @@
             "Security Name": "Sachs India Ltd"
         },
         {
-            "Security Name": "Indage Vintners Ltd-$"
+            "Security Name": "Indage Vintners Ltd"
         },
         {
             "Security Name": "Kaveri Engineering Industries Ltd"
@@ -9257,7 +9257,7 @@
             "Security Name": "Terruzzi Fercalx India Ltd"
         },
         {
-            "Security Name": "Stone India Ltd-$"
+            "Security Name": "Stone India Ltd"
         },
         {
             "Security Name": "United Van Der Horst Ltd"
@@ -9284,7 +9284,7 @@
             "Security Name": "Vipras Corporation Ltd"
         },
         {
-            "Security Name": "Yuken India Ltd-$"
+            "Security Name": "Yuken India Ltd"
         },
         {
             "Security Name": "Timken India Ltd"
@@ -9299,7 +9299,7 @@
             "Security Name": "Meekan Transmissions Ltd"
         },
         {
-            "Security Name": "Voith Paper Fabrics India Ltd-$"
+            "Security Name": "Voith Paper Fabrics India Ltd"
         },
         {
             "Security Name": "Heatshrink Technologies Ltd"
@@ -9311,7 +9311,7 @@
             "Security Name": "Artson Ltd"
         },
         {
-            "Security Name": "Bhagheeratha Engineering Ltd-$"
+            "Security Name": "Bhagheeratha Engineering Ltd"
         },
         {
             "Security Name": "Patni Engineering Ltd"
@@ -9335,10 +9335,10 @@
             "Security Name": "Banka India Ltd"
         },
         {
-            "Security Name": "Diamond Power Infrastructure Ltd-$"
+            "Security Name": "Diamond Power Infrastructure Ltd"
         },
         {
-            "Security Name": "Indsil Hydro Power and Manganese Ltd-$"
+            "Security Name": "Indsil Hydro Power and Manganese Ltd"
         },
         {
             "Security Name": "Flex Engineering Ltd"
@@ -9353,13 +9353,13 @@
             "Security Name": "Krishna Engineering Works Ltd"
         },
         {
-            "Security Name": "SVOGL Oil Gas And Energy Ltd-$"
+            "Security Name": "SVOGL Oil Gas And Energy Ltd"
         },
         {
             "Security Name": "Precision Fasteners Ltd"
         },
         {
-            "Security Name": "ITL Industries Ltd-$"
+            "Security Name": "ITL Industries Ltd"
         },
         {
             "Security Name": "TTG Industries Ltd"
@@ -9386,7 +9386,7 @@
             "Security Name": "Praj Industries Ltd"
         },
         {
-            "Security Name": "Rasandik Engineering Industries India Ltd-$"
+            "Security Name": "Rasandik Engineering Industries India Ltd"
         },
         {
             "Security Name": "Yogi Sungwon (India) Ltd"
@@ -9410,10 +9410,10 @@
             "Security Name": "Maruti Telstar Industries Ltd"
         },
         {
-            "Security Name": "Taneja Aerospace & Aviation Ltd-$"
+            "Security Name": "Taneja Aerospace & Aviation Ltd"
         },
         {
-            "Security Name": "Conart Engineers Ltd-$"
+            "Security Name": "Conart Engineers Ltd"
         },
         {
             "Security Name": "VHCL Industries Ltd"
@@ -9425,7 +9425,7 @@
             "Security Name": "Shivagrico Implements Ltd"
         },
         {
-            "Security Name": "MM Forgings Ltd-$"
+            "Security Name": "MM Forgings Ltd"
         },
         {
             "Security Name": "Lakshmiratan Engineering Works Ltd"
@@ -9434,7 +9434,7 @@
             "Security Name": "Iykot Hitech Toolroom Ltd"
         },
         {
-            "Security Name": "Mayur Uniquoters Ltd-$"
+            "Security Name": "Mayur Uniquoters Ltd"
         },
         {
             "Security Name": "Cenlub Industries Ltd"
@@ -9443,19 +9443,19 @@
             "Security Name": "Forge & Blower Industries Ltd"
         },
         {
-            "Security Name": "Rajoo Engineers Ltd-$"
+            "Security Name": "Rajoo Engineers Ltd"
         },
         {
-            "Security Name": "Kalindee Rail Nirman (Engineers) Ltd-$"
+            "Security Name": "Kalindee Rail Nirman (Engineers) Ltd"
         },
         {
-            "Security Name": "Dolphin Offshore Enterprises (India) Ltd-$"
+            "Security Name": "Dolphin Offshore Enterprises (India) Ltd"
         },
         {
-            "Security Name": "JMC Projects (India) Ltd-$"
+            "Security Name": "JMC Projects (India) Ltd"
         },
         {
-            "Security Name": "Veejay Lakshmi Engineering Works Ltd-$"
+            "Security Name": "Veejay Lakshmi Engineering Works Ltd"
         },
         {
             "Security Name": "Coventry Spring & Engineering Company Ltd"
@@ -9476,7 +9476,7 @@
             "Security Name": "Satellite Engineering Ltd"
         },
         {
-            "Security Name": "Ram Ratna Wires Ltd-$"
+            "Security Name": "Ram Ratna Wires Ltd"
         },
         {
             "Security Name": "Bhilai Engineering Corporation Ltd"
@@ -9497,7 +9497,7 @@
             "Security Name": "T & I Global Ltd"
         },
         {
-            "Security Name": "Control Print Ltd-$"
+            "Security Name": "Control Print Ltd"
         },
         {
             "Security Name": "SS Forgings & Engineering Ltd"
@@ -9512,7 +9512,7 @@
             "Security Name": "Professional Diamonds Ltd"
         },
         {
-            "Security Name": "Ansal Buildwell Ltd-$"
+            "Security Name": "Ansal Buildwell Ltd"
         },
         {
             "Security Name": "Weizmann Ltd"
@@ -9524,7 +9524,7 @@
             "Security Name": "Rishi Techtex Ltd"
         },
         {
-            "Security Name": "Sinclairs Hotels Ltd-$"
+            "Security Name": "Sinclairs Hotels Ltd"
         },
         {
             "Security Name": "Safari Industries India Ltd"
@@ -9584,7 +9584,7 @@
             "Security Name": "Hope Leasing & Finance Ltd"
         },
         {
-            "Security Name": "Cosmo Ferrites Ltd-$"
+            "Security Name": "Cosmo Ferrites Ltd"
         },
         {
             "Security Name": "Consolidated Foundations India Ltd"
@@ -9608,7 +9608,7 @@
             "Security Name": "Elar Fashions Ltd"
         },
         {
-            "Security Name": "EIH Associated Hotels Ltd-$"
+            "Security Name": "EIH Associated Hotels Ltd"
         },
         {
             "Security Name": "Khaitan Overseas & Finance Ltd"
@@ -9620,7 +9620,7 @@
             "Security Name": "Solar Busiforms Ltd"
         },
         {
-            "Security Name": "Medi Caps Ltd-$"
+            "Security Name": "Medi Caps Ltd"
         },
         {
             "Security Name": "Arpan Leasing Company Ltd"
@@ -9662,7 +9662,7 @@
             "Security Name": "Aban Offshore Ltd"
         },
         {
-            "Security Name": "Kokuyo Camlin Ltd-$"
+            "Security Name": "Kokuyo Camlin Ltd"
         },
         {
             "Security Name": "Nicco Uco Alliance Credit Ltd"
@@ -9677,7 +9677,7 @@
             "Security Name": "SRM Energy Ltd"
         },
         {
-            "Security Name": "Bharat Seats Ltd-$"
+            "Security Name": "Bharat Seats Ltd"
         },
         {
             "Security Name": "Jalpac India Ltd"
@@ -9701,7 +9701,7 @@
             "Security Name": "Chokhani International Ltd"
         },
         {
-            "Security Name": "Machino Plastics Ltd-$"
+            "Security Name": "Machino Plastics Ltd"
         },
         {
             "Security Name": "Dewan Tyres Ltd"
@@ -9743,13 +9743,13 @@
             "Security Name": "Rockwool (India) Ltd"
         },
         {
-            "Security Name": "TCPL Packaging Ltd-$"
+            "Security Name": "TCPL Packaging Ltd"
         },
         {
             "Security Name": "Bestavision Electronics Ltd"
         },
         {
-            "Security Name": "Panasonic Appliances India Company Ltd-$"
+            "Security Name": "Panasonic Appliances India Company Ltd"
         },
         {
             "Security Name": "Shri Gang Industries & Allied Products Ltd"
@@ -9782,7 +9782,7 @@
             "Security Name": "Dharnendra Overseas Ltd"
         },
         {
-            "Security Name": "Polar Pharma India Ltd-$"
+            "Security Name": "Polar Pharma India Ltd"
         },
         {
             "Security Name": "Kushal Diamonds Ltd"
@@ -9809,7 +9809,7 @@
             "Security Name": "Agritech Hatcheries & Foods Ltd"
         },
         {
-            "Security Name": "Sterling Holiday Resorts India Ltd-$"
+            "Security Name": "Sterling Holiday Resorts India Ltd"
         },
         {
             "Security Name": "Rikvin Floors Ltd"
@@ -9818,7 +9818,7 @@
             "Security Name": "DCM Shriram Ltd"
         },
         {
-            "Security Name": "DCM Shriram Industries Ltd-$"
+            "Security Name": "DCM Shriram Industries Ltd"
         },
         {
             "Security Name": "Mawana Sugars Ltd"
@@ -9860,7 +9860,7 @@
             "Security Name": "Detroit Industries Ltd"
         },
         {
-            "Security Name": "JM Financial Ltd-$"
+            "Security Name": "JM Financial Ltd"
         },
         {
             "Security Name": "Lan Eseda Industries Ltd"
@@ -9869,7 +9869,7 @@
             "Security Name": "Hindustan Magnetics Ltd"
         },
         {
-            "Security Name": "ADC India Communications Ltd-$"
+            "Security Name": "ADC India Communications Ltd"
         },
         {
             "Security Name": "HMG Industries Ltd"
@@ -9956,7 +9956,7 @@
             "Security Name": "Pacific Industries Ltd"
         },
         {
-            "Security Name": "Chennai Meenakshi Multispeciality Hospital Ltd-$"
+            "Security Name": "Chennai Meenakshi Multispeciality Hospital Ltd"
         },
         {
             "Security Name": "Lunar Diamonds Ltd"
@@ -9983,7 +9983,7 @@
             "Security Name": "Universal Office Automation Ltd"
         },
         {
-            "Security Name": "Rainbow Papers Ltd-$"
+            "Security Name": "Rainbow Papers Ltd"
         },
         {
             "Security Name": "Speciality Petrolubes Ltd"
@@ -9992,7 +9992,7 @@
             "Security Name": "Avon Industries Ltd"
         },
         {
-            "Security Name": "APM Industries Ltd-$"
+            "Security Name": "APM Industries Ltd"
         },
         {
             "Security Name": "Precision Wires India Ltd"
@@ -10040,7 +10040,7 @@
             "Security Name": "SI Property Development Ltd"
         },
         {
-            "Security Name": "Indian Toners & Developers Ltd-$"
+            "Security Name": "Indian Toners & Developers Ltd"
         },
         {
             "Security Name": "Jenson & Nicholson (India) Ltd"
@@ -10097,7 +10097,7 @@
             "Security Name": "Vashisti Detergents Ltd"
         },
         {
-            "Security Name": "IP Rings Ltd-$"
+            "Security Name": "IP Rings Ltd"
         },
         {
             "Security Name": "VENKYS(IND)"
@@ -10109,7 +10109,7 @@
             "Security Name": "Hallmark Healthcare Ltd"
         },
         {
-            "Security Name": "Plastiblends India Ltd-$"
+            "Security Name": "Plastiblends India Ltd"
         },
         {
             "Security Name": "Yash Innoventures Ltd"
@@ -10136,7 +10136,7 @@
             "Security Name": "Noida Medicare Centre Ltd"
         },
         {
-            "Security Name": "Flex Foods Ltd-$"
+            "Security Name": "Flex Foods Ltd"
         },
         {
             "Security Name": "Golkunda Diamonds & Jewellery Ltd"
@@ -10178,7 +10178,7 @@
             "Security Name": "JMG Corporation Ltd"
         },
         {
-            "Security Name": "Ashiana Housing Ltd-$"
+            "Security Name": "Ashiana Housing Ltd"
         },
         {
             "Security Name": "Ashok Fashions Ltd"
@@ -10199,7 +10199,7 @@
             "Security Name": "Ecoboard Industries Ltd"
         },
         {
-            "Security Name": "Dhunseri Ventures Ltd-$"
+            "Security Name": "Dhunseri Ventures Ltd"
         },
         {
             "Security Name": "Alacrity Housing Ltd"
@@ -10253,7 +10253,7 @@
             "Security Name": "Shukra Jewellery Ltd"
         },
         {
-            "Security Name": "Mazda Ltd-$"
+            "Security Name": "Mazda Ltd"
         },
         {
             "Security Name": "Global Infrastructure & Technologies Ltd"
@@ -10298,13 +10298,13 @@
             "Security Name": "Sovereign Diamonds Ltd"
         },
         {
-            "Security Name": "Menon Bearings Ltd-$"
+            "Security Name": "Menon Bearings Ltd"
         },
         {
             "Security Name": "Fleetweld India Ltd"
         },
         {
-            "Security Name": "Mukat Pipes Ltd-$"
+            "Security Name": "Mukat Pipes Ltd"
         },
         {
             "Security Name": "Mangalwedhe Sun Soya Ltd"
@@ -10418,7 +10418,7 @@
             "Security Name": "Hindustan Fluorocarbons Ltd"
         },
         {
-            "Security Name": "Kingfa Science & Technology (India) Ltd-$"
+            "Security Name": "Kingfa Science & Technology (India) Ltd"
         },
         {
             "Security Name": "Patidar Buildcon Ltd"
@@ -10454,7 +10454,7 @@
             "Security Name": "AMRACHEDM"
         },
         {
-            "Security Name": "Albert David Ltd-$"
+            "Security Name": "Albert David Ltd"
         },
         {
             "Security Name": "Haryana Leather Chemicals Ltd"
@@ -10511,7 +10511,7 @@
             "Security Name": "Pee Cee Cosma Sope Ltd"
         },
         {
-            "Security Name": "Mahindra Composites Ltd-$"
+            "Security Name": "Mahindra Composites Ltd"
         },
         {
             "Security Name": "Cheminor Drugs Ltd"
@@ -10559,7 +10559,7 @@
             "Security Name": "Benzo Petrochemicals Ltd"
         },
         {
-            "Security Name": "Vinati Organics Ltd-$"
+            "Security Name": "Vinati Organics Ltd"
         },
         {
             "Security Name": "Lactose India Ltd"
@@ -10583,7 +10583,7 @@
             "Security Name": "Kings Chemicals & Distilleries Ltd"
         },
         {
-            "Security Name": "Resonance Specialties Ltd-$"
+            "Security Name": "Resonance Specialties Ltd"
         },
         {
             "Security Name": "Nariman Point Chemical industriesus Ltd"
@@ -10637,7 +10637,7 @@
             "Security Name": "Cebon India Ltd"
         },
         {
-            "Security Name": "Dujodwala Paper Chemicals Ltd-$"
+            "Security Name": "Dujodwala Paper Chemicals Ltd"
         },
         {
             "Security Name": "Kopran Ltd"
@@ -10676,7 +10676,7 @@
             "Security Name": "Jayant Agro Organics Ltd"
         },
         {
-            "Security Name": "BCL Industries Ltd-$"
+            "Security Name": "BCL Industries Ltd"
         },
         {
             "Security Name": "Shree Hari Chemicals Export Ltd"
@@ -10685,7 +10685,7 @@
             "Security Name": "Madhu Refoils & Chemicals Ltd"
         },
         {
-            "Security Name": "Indo Borax & Chemicals Ltd-$"
+            "Security Name": "Indo Borax & Chemicals Ltd"
         },
         {
             "Security Name": "Elegant Pharmaceuticals Ltd"
@@ -10718,7 +10718,7 @@
             "Security Name": "Orchid Pharma Ltd"
         },
         {
-            "Security Name": "EPIC Enzymes Pharmaceuticals & Industrial Chemicals Ltd-$"
+            "Security Name": "EPIC Enzymes Pharmaceuticals & Industrial Chemicals Ltd"
         },
         {
             "Security Name": "JMDE Packaging & Realties Ltd"
@@ -10742,7 +10742,7 @@
             "Security Name": "Manav Pharmaceuticals Ltd"
         },
         {
-            "Security Name": "Vimta Labs Ltd-$"
+            "Security Name": "Vimta Labs Ltd"
         },
         {
             "Security Name": "Biofil Chemicals & Pharmaceuticals Ltd"
@@ -10835,7 +10835,7 @@
             "Security Name": "White Way Products Pharma Ltd"
         },
         {
-            "Security Name": "Syncom Formulations India Ltd-$"
+            "Security Name": "Syncom Formulations India Ltd"
         },
         {
             "Security Name": "Hitech Orgochem Ltd"
@@ -10847,7 +10847,7 @@
             "Security Name": "Esskay Pharmaceuticals Ltd"
         },
         {
-            "Security Name": "Riddhi Siddhi Gluco Biols Ltd-$"
+            "Security Name": "Riddhi Siddhi Gluco Biols Ltd"
         },
         {
             "Security Name": "Shilpax Laboratories Ltd"
@@ -10898,13 +10898,13 @@
             "Security Name": "Bacil Pharma Ltd"
         },
         {
-            "Security Name": "Krebs Biochemicals & Industries Ltd-$"
+            "Security Name": "Krebs Biochemicals & Industries Ltd"
         },
         {
             "Security Name": "KMC Speciality Hospitals (India) Ltd"
         },
         {
-            "Security Name": "Laffans Petrochemicals Ltd-$"
+            "Security Name": "Laffans Petrochemicals Ltd"
         },
         {
             "Security Name": "Velvette International Pharma Products Ltd"
@@ -10925,7 +10925,7 @@
             "Security Name": "Secunderabad Healthcare Ltd"
         },
         {
-            "Security Name": "Sukhjit Starch & Chemicals Ltd-$"
+            "Security Name": "Sukhjit Starch & Chemicals Ltd"
         },
         {
             "Security Name": "Satiate Agri Ltd"
@@ -10955,7 +10955,7 @@
             "Security Name": "Eclat Chemicals Ltd"
         },
         {
-            "Security Name": "Poddar Pigments Ltd-$"
+            "Security Name": "Poddar Pigments Ltd"
         },
         {
             "Security Name": "Pharmaids Pharmaceuticals Ltd"
@@ -10970,7 +10970,7 @@
             "Security Name": "Dolphin Laboratories Ltd"
         },
         {
-            "Security Name": "Priya Ltd-$"
+            "Security Name": "Priya Ltd"
         },
         {
             "Security Name": "Tirupati Starch & Chemicals Ltd"
@@ -10997,7 +10997,7 @@
             "Security Name": "Alchemie Organics Ltd"
         },
         {
-            "Security Name": "AksharChem India Ltd-$"
+            "Security Name": "AksharChem India Ltd"
         },
         {
             "Security Name": "FCL Technologies & Products Ltd"
@@ -11033,7 +11033,7 @@
             "Security Name": "Sriman Petrochemicals Ltd"
         },
         {
-            "Security Name": "Parker Agrochem Exports Ltd-$"
+            "Security Name": "Parker Agrochem Exports Ltd"
         },
         {
             "Security Name": "IOTA Chemiculture Ltd"
@@ -11060,7 +11060,7 @@
             "Security Name": "Vitara Chemicals Ltd"
         },
         {
-            "Security Name": "Indo Amines Ltd-$"
+            "Security Name": "Indo Amines Ltd"
         },
         {
             "Security Name": "Narmada Chematur Petrochemicals Ltd"
@@ -11075,7 +11075,7 @@
             "Security Name": "Welcure Drugs & Pharmaceuticals Ltd"
         },
         {
-            "Security Name": "Bharat Immunologicals & Biologicals Corporation Ltd-$"
+            "Security Name": "Bharat Immunologicals & Biologicals Corporation Ltd"
         },
         {
             "Security Name": "Add Life Pharma Ltd"
@@ -11099,16 +11099,16 @@
             "Security Name": "Hindustan Industrial Chemicals Ltd"
         },
         {
-            "Security Name": "Metrochem Industries Ltd-$"
+            "Security Name": "Metrochem Industries Ltd"
         },
         {
             "Security Name": "Kanva Hydro-Chem Ltd"
         },
         {
-            "Security Name": "Basant Agro Tech India Ltd-$"
+            "Security Name": "Basant Agro Tech India Ltd"
         },
         {
-            "Security Name": "Parenteral Drugs India Ltd-$"
+            "Security Name": "Parenteral Drugs India Ltd"
         },
         {
             "Security Name": "RS Petrochemicals Ltd"
@@ -11120,7 +11120,7 @@
             "Security Name": "Pioneer Products Ltd"
         },
         {
-            "Security Name": "Kilburn Chemicals Ltd-$"
+            "Security Name": "Kilburn Chemicals Ltd"
         },
         {
             "Security Name": "Kedia Chemical Industries Ltd"
@@ -11153,7 +11153,7 @@
             "Security Name": "Bhuvan Tripura Industries Ltd"
         },
         {
-            "Security Name": "Span Divergent Ltd-$"
+            "Security Name": "Span Divergent Ltd"
         },
         {
             "Security Name": "Merven Drug Products Ltd"
@@ -11198,7 +11198,7 @@
             "Security Name": "Wintac Ltd"
         },
         {
-            "Security Name": "Arvind International Ltd-$"
+            "Security Name": "Arvind International Ltd"
         },
         {
             "Security Name": "Nova Surgikos Ltd"
@@ -11279,7 +11279,7 @@
             "Security Name": "Natco Pharma Ltd"
         },
         {
-            "Security Name": "Dynamic Industries Ltd-$"
+            "Security Name": "Dynamic Industries Ltd"
         },
         {
             "Security Name": "Panama Petrochem Ltd"
@@ -11291,7 +11291,7 @@
             "Security Name": "Bal Pharma Ltd"
         },
         {
-            "Security Name": "Jupiter Bioscience Ltd-$"
+            "Security Name": "Jupiter Bioscience Ltd"
         },
         {
             "Security Name": "BDH Industries Ltd"
@@ -11471,7 +11471,7 @@
             "Security Name": "Apex Intertech Ltd"
         },
         {
-            "Security Name": "Nikhil Adhesives Ltd-$"
+            "Security Name": "Nikhil Adhesives Ltd"
         },
         {
             "Security Name": "Spenta International Ltd"
@@ -11516,7 +11516,7 @@
             "Security Name": "Cosmos Leather Exports Ltd"
         },
         {
-            "Security Name": "Royal Cushion Vinyl Products Ltd-$"
+            "Security Name": "Royal Cushion Vinyl Products Ltd"
         },
         {
             "Security Name": "Neogem India Ltd"
@@ -11531,7 +11531,7 @@
             "Security Name": "DCL Maritech Ltd"
         },
         {
-            "Security Name": "K S Oils Ltd-$"
+            "Security Name": "K S Oils Ltd"
         },
         {
             "Security Name": "Suraj Industries Ltd"
@@ -11540,13 +11540,13 @@
             "Security Name": "Carbon Composites (India) Ltd"
         },
         {
-            "Security Name": "Hitech Corporation Ltd-$"
+            "Security Name": "Hitech Corporation Ltd"
         },
         {
-            "Security Name": "Bloom Dekor Ltd-$"
+            "Security Name": "Bloom Dekor Ltd"
         },
         {
-            "Security Name": "Filatex India Ltd-$"
+            "Security Name": "Filatex India Ltd"
         },
         {
             "Security Name": "Jayanti Business Machines Ltd"
@@ -11555,7 +11555,7 @@
             "Security Name": "Standard Surfactants Ltd"
         },
         {
-            "Security Name": "Mercator Ltd-$"
+            "Security Name": "Mercator Ltd"
         },
         {
             "Security Name": "Morgan Ventures Ltd"
@@ -11696,13 +11696,13 @@
             "Security Name": "Swarnsarita Jewels India Ltd"
         },
         {
-            "Security Name": "Ganesh Housing Ltd-$"
+            "Security Name": "Ganesh Housing Ltd"
         },
         {
             "Security Name": "NMDC Ltd"
         },
         {
-            "Security Name": "Cindrella Hotels Ltd-$"
+            "Security Name": "Cindrella Hotels Ltd"
         },
         {
             "Security Name": "Anjani Solvents India Ltd"
@@ -11711,7 +11711,7 @@
             "Security Name": "Konkan Tyres Ltd"
         },
         {
-            "Security Name": "Patel Integrated Logistics Ltd-$"
+            "Security Name": "Patel Integrated Logistics Ltd"
         },
         {
             "Security Name": "Hamilton Shoes Ltd"
@@ -11732,7 +11732,7 @@
             "Security Name": "Rajshri Forex Ltd"
         },
         {
-            "Security Name": "Alphageo (India) Ltd-$"
+            "Security Name": "Alphageo (India) Ltd"
         },
         {
             "Security Name": "Vishal Footwear Ltd"
@@ -11765,7 +11765,7 @@
             "Security Name": "Lokmanya Industries Ltd"
         },
         {
-            "Security Name": "Kriti Industries India Ltd-$"
+            "Security Name": "Kriti Industries India Ltd"
         },
         {
             "Security Name": "Fidelity Industries Ltd"
@@ -11840,7 +11840,7 @@
             "Security Name": "South Asian Enterprises Ltd"
         },
         {
-            "Security Name": "Sky Industries Ltd-$"
+            "Security Name": "Sky Industries Ltd"
         },
         {
             "Security Name": "Phoenix International Ltd"
@@ -11882,7 +11882,7 @@
             "Security Name": "Systematix Corporate Services Ltd"
         },
         {
-            "Security Name": "Shahi Shipping Ltd-$"
+            "Security Name": "Shahi Shipping Ltd"
         },
         {
             "Security Name": "Shakti Met-Dor Ltd"
@@ -11951,7 +11951,7 @@
             "Security Name": "James Hotels Ltd"
         },
         {
-            "Security Name": "EICL Ltd-$"
+            "Security Name": "EICL Ltd"
         },
         {
             "Security Name": "Pearl Engineering Polymers Ltd"
@@ -11981,7 +11981,7 @@
             "Security Name": "Bagwe Udyog Ltd"
         },
         {
-            "Security Name": "Wim Plast Ltd-$"
+            "Security Name": "Wim Plast Ltd"
         },
         {
             "Security Name": "Photoquip India Ltd"
@@ -11999,7 +11999,7 @@
             "Security Name": "Patel On-Board Couriers Ltd"
         },
         {
-            "Security Name": "Lippi Systems Ltd-$"
+            "Security Name": "Lippi Systems Ltd"
         },
         {
             "Security Name": "Pertech Computers Ltd"
@@ -12113,7 +12113,7 @@
             "Security Name": "Polo Hotels Ltd"
         },
         {
-            "Security Name": "Fenoplast Ltd-$"
+            "Security Name": "Fenoplast Ltd"
         },
         {
             "Security Name": "Pretto Leather Industries Ltd"
@@ -12134,7 +12134,7 @@
             "Security Name": "Samrat Ashoka Exports Ltd"
         },
         {
-            "Security Name": "Ecoplast Ltd-$"
+            "Security Name": "Ecoplast Ltd"
         },
         {
             "Security Name": "Elegant Marbles & Grani Industries Ltd"
@@ -12164,7 +12164,7 @@
             "Security Name": "MISOFPP"
         },
         {
-            "Security Name": "Nicco Parks & Resorts Ltd-$"
+            "Security Name": "Nicco Parks & Resorts Ltd"
         },
         {
             "Security Name": "NTC Industries Ltd"
@@ -12179,7 +12179,7 @@
             "Security Name": "Goldiam International Ltd"
         },
         {
-            "Security Name": "Bright Brothers Ltd-$"
+            "Security Name": "Bright Brothers Ltd"
         },
         {
             "Security Name": "Suashish Diamonds Ltd"
@@ -12236,7 +12236,7 @@
             "Security Name": "Pressure Sensitive Systems India Ltd"
         },
         {
-            "Security Name": "Valiant Communications Ltd-$"
+            "Security Name": "Valiant Communications Ltd"
         },
         {
             "Security Name": "New Plastomers India Ltd"
@@ -12245,7 +12245,7 @@
             "Security Name": "Hinafil India Ltd"
         },
         {
-            "Security Name": "Dr Agarwals Eye Hospital Ltd-$"
+            "Security Name": "Dr Agarwals Eye Hospital Ltd"
         },
         {
             "Security Name": "Crest Animation Studios Ltd"
@@ -12293,19 +12293,19 @@
             "Security Name": "RJPNTMS-B"
         },
         {
-            "Security Name": "Cheviot Company Ltd-$"
+            "Security Name": "Cheviot Company Ltd"
         },
         {
             "Security Name": "Translam Ltd"
         },
         {
-            "Security Name": "Dai-Ichi Karkaria Ltd-$"
+            "Security Name": "Dai-Ichi Karkaria Ltd"
         },
         {
             "Security Name": "Rajeswari Infrastructure Ltd"
         },
         {
-            "Security Name": "Spice Islands Industries Ltd-$"
+            "Security Name": "Spice Islands Industries Ltd"
         },
         {
             "Security Name": "Confidence Petroleum India Ltd"
@@ -12317,13 +12317,13 @@
             "Security Name": "Rajendra Caterers & Confectioners Ltd"
         },
         {
-            "Security Name": "Silktex Ltd-$"
+            "Security Name": "Silktex Ltd"
         },
         {
             "Security Name": "Anusha International Ltd"
         },
         {
-            "Security Name": "Shelter Infra Projects Ltd-$"
+            "Security Name": "Shelter Infra Projects Ltd"
         },
         {
             "Security Name": "Shakti Press Ltd"
@@ -12341,7 +12341,7 @@
             "Security Name": "Arex Industries Ltd"
         },
         {
-            "Security Name": "Bilcare Ltd-$"
+            "Security Name": "Bilcare Ltd"
         },
         {
             "Security Name": "Madhumilan Fincorp Ltd"
@@ -12386,7 +12386,7 @@
             "Security Name": "Shikhar Consultants Ltd"
         },
         {
-            "Security Name": "Sarla Performance Fibers Ltd-$"
+            "Security Name": "Sarla Performance Fibers Ltd"
         },
         {
             "Security Name": "Indo Credit Capital Ltd"
@@ -12395,7 +12395,7 @@
             "Security Name": "Market Creators Ltd"
         },
         {
-            "Security Name": "Srinivasa Hatcheries Ltd-$"
+            "Security Name": "Srinivasa Hatcheries Ltd"
         },
         {
             "Security Name": "Odissi Securities Ltd"
@@ -12422,7 +12422,7 @@
             "Security Name": "Unique Agro Processors India Ltd"
         },
         {
-            "Security Name": "CHD Developers Ltd-$"
+            "Security Name": "CHD Developers Ltd"
         },
         {
             "Security Name": "ALP Exports Ltd"
@@ -12440,7 +12440,7 @@
             "Security Name": "Dion Global Solutions Ltd"
         },
         {
-            "Security Name": "Hariyana Ship Breakers Ltd-$"
+            "Security Name": "Hariyana Ship Breakers Ltd"
         },
         {
             "Security Name": "Konar Organics Ltd"
@@ -12524,7 +12524,7 @@
             "Security Name": "Oriental Remedies & Herbals Ltd"
         },
         {
-            "Security Name": "Atlas Copco India Ltd-$"
+            "Security Name": "Atlas Copco India Ltd"
         },
         {
             "Security Name": "Ashapura Minechem Ltd"
@@ -12614,7 +12614,7 @@
             "Security Name": "Vivanza Biosciences Ltd"
         },
         {
-            "Security Name": "Maharaja Shree Umaid Mills Ltd-$"
+            "Security Name": "Maharaja Shree Umaid Mills Ltd"
         },
         {
             "Security Name": "Rockland Thermionics Ltd"
@@ -12641,13 +12641,13 @@
             "Security Name": "Sanghvi Movers Ltd"
         },
         {
-            "Security Name": "Antelopus Selan Energy Ltd-$"
+            "Security Name": "Antelopus Selan Energy Ltd"
         },
         {
             "Security Name": "Puretrop Fruits  Ltd"
         },
         {
-            "Security Name": "Faze Three Ltd-$"
+            "Security Name": "Faze Three Ltd"
         },
         {
             "Security Name": "Mother Mira Industries Ltd"
@@ -12704,7 +12704,7 @@
             "Security Name": "Sushant Capitals Ltd"
         },
         {
-            "Security Name": "Samrat Pharmachem Ltd-$"
+            "Security Name": "Samrat Pharmachem Ltd"
         },
         {
             "Security Name": "NPR Finance Ltd"
@@ -12716,7 +12716,7 @@
             "Security Name": "Udaipur Cement Works Ltd"
         },
         {
-            "Security Name": "Amco India Ltd-$"
+            "Security Name": "Amco India Ltd"
         },
         {
             "Security Name": "Optiemus Infracom Ltd"
@@ -12731,13 +12731,13 @@
             "Security Name": "Pennar Aqua Exports Ltd"
         },
         {
-            "Security Name": "Kisan Mouldings Ltd-$"
+            "Security Name": "Kisan Mouldings Ltd"
         },
         {
             "Security Name": "Kaprinas Pharmaceuticals & Chemicals Ltd"
         },
         {
-            "Security Name": "KSL & Industries Ltd-$"
+            "Security Name": "KSL & Industries Ltd"
         },
         {
             "Security Name": "Vijay Textiles Ltd"
@@ -12776,7 +12776,7 @@
             "Security Name": "Oscar Global Ltd"
         },
         {
-            "Security Name": "Odyssey Technologies Ltd-$"
+            "Security Name": "Odyssey Technologies Ltd"
         },
         {
             "Security Name": "VK Global Industries Ltd"
@@ -12815,7 +12815,7 @@
             "Security Name": "Themis Medicare Ltd"
         },
         {
-            "Security Name": "Kallam Textiles Ltd-$"
+            "Security Name": "Kallam Textiles Ltd"
         },
         {
             "Security Name": "Sanghvi Asbestos Cements Ltd"
@@ -12875,7 +12875,7 @@
             "Security Name": "Minhas Steels Ltd"
         },
         {
-            "Security Name": "Ratnakar Securities Ltd"
+            "Security Name": "Mangalya Soft Tech Ltd"
         },
         {
             "Security Name": "Aryaman Financial Services Ltd"
@@ -12965,10 +12965,10 @@
             "Security Name": "Piccadily Agro Industries Ltd"
         },
         {
-            "Security Name": "Chaman Lal Setia Exports Ltd-$"
+            "Security Name": "Chaman Lal Setia Exports Ltd"
         },
         {
-            "Security Name": "Chandra Prabhu International Ltd-$"
+            "Security Name": "Chandra Prabhu International Ltd"
         },
         {
             "Security Name": "Delta Polysters Ltd"
@@ -12977,7 +12977,7 @@
             "Security Name": "Kimia Biosciences Ltd"
         },
         {
-            "Security Name": "Hindustan Tin Works Ltd-$"
+            "Security Name": "Hindustan Tin Works Ltd"
         },
         {
             "Security Name": "Godavari Drugs Ltd"
@@ -12989,7 +12989,7 @@
             "Security Name": "Unimin India Ltd"
         },
         {
-            "Security Name": "Era Infra Engineering Ltd-$"
+            "Security Name": "Era Infra Engineering Ltd"
         },
         {
             "Security Name": "Kumars Cotex Ltd"
@@ -13001,7 +13001,7 @@
             "Security Name": "Mukunda Industrial Finance Ltd"
         },
         {
-            "Security Name": "Premco Global Ltd-$"
+            "Security Name": "Premco Global Ltd"
         },
         {
             "Security Name": "Emgee Cables & Communications Ltd"
@@ -13019,7 +13019,7 @@
             "Security Name": "Mukesh Babu Financial Services Ltd"
         },
         {
-            "Security Name": "Genus Power Infrastructures Ltd-$"
+            "Security Name": "Genus Power Infrastructures Ltd"
         },
         {
             "Security Name": "Creative World Telefilms Ltd"
@@ -13043,10 +13043,10 @@
             "Security Name": "Prabhhans Industries Ltd"
         },
         {
-            "Security Name": "Ugar Sugar Works Ltd-$"
+            "Security Name": "Ugar Sugar Works Ltd"
         },
         {
-            "Security Name": "Orient Bell Ltd-$"
+            "Security Name": "Orient Bell Ltd"
         },
         {
             "Security Name": "NRB Bearings Ltd"
@@ -13103,7 +13103,7 @@
             "Security Name": "Jindal Capital Ltd"
         },
         {
-            "Security Name": "EPIC Energy Ltd-$"
+            "Security Name": "EPIC Energy Ltd"
         },
         {
             "Security Name": "Eupharma Laboratories Ltd"
@@ -13139,7 +13139,7 @@
             "Security Name": "Ashish Polyplast Ltd"
         },
         {
-            "Security Name": "Ador Fontech Ltd-$"
+            "Security Name": "Ador Fontech Ltd"
         },
         {
             "Security Name": "Shiva Global Agro Industries Ltd"
@@ -13181,7 +13181,7 @@
             "Security Name": "GTT Data Solutions Ltd"
         },
         {
-            "Security Name": "Valson Industries Ltd-$"
+            "Security Name": "Valson Industries Ltd"
         },
         {
             "Security Name": "Saboo Sodium Chloro Ltd"
@@ -13265,7 +13265,7 @@
             "Security Name": "Shriram Overseas Finance Ltd"
         },
         {
-            "Security Name": "Relaxo Footwears Ltd-$"
+            "Security Name": "Relaxo Footwears Ltd"
         },
         {
             "Security Name": "Interface Financial Services Ltd"
@@ -13304,7 +13304,7 @@
             "Security Name": "Marg Ltd"
         },
         {
-            "Security Name": "Cosco India Ltd-$"
+            "Security Name": "Cosco India Ltd"
         },
         {
             "Security Name": "Ken Financial Services Ltd"
@@ -13319,7 +13319,7 @@
             "Security Name": "Global Industries Ltd"
         },
         {
-            "Security Name": "Paramount Communications Ltd-$"
+            "Security Name": "Paramount Communications Ltd"
         },
         {
             "Security Name": "NCL Research & Financial Services Ltd"
@@ -13433,7 +13433,7 @@
             "Security Name": "Rose Zinc Ltd"
         },
         {
-            "Security Name": "Hitkari Industries Ltd-$"
+            "Security Name": "Hitkari Industries Ltd"
         },
         {
             "Security Name": "Texplast Industries Ltd"
@@ -13511,13 +13511,13 @@
             "Security Name": "Aditya Info Soft Ltd"
         },
         {
-            "Security Name": "Prime Property Development Corporation Ltd-$"
+            "Security Name": "Prime Property Development Corporation Ltd"
         },
         {
             "Security Name": "Zenlabs Ethica Ltd"
         },
         {
-            "Security Name": "Raj Rayon Industries Ltd-$"
+            "Security Name": "Raj Rayon Industries Ltd"
         },
         {
             "Security Name": "KDJ Holidayscapes and Resorts Ltd"
@@ -13601,7 +13601,7 @@
             "Security Name": "Shentracon Chemicals Ltd"
         },
         {
-            "Security Name": "Sterling Tools Ltd-$"
+            "Security Name": "Sterling Tools Ltd"
         },
         {
             "Security Name": "Sathya Kamal Agros Ltd"
@@ -13691,7 +13691,7 @@
             "Security Name": "Teaktex Processing Complex Ltd"
         },
         {
-            "Security Name": "SSPDL Ltd-$"
+            "Security Name": "SSPDL Ltd"
         },
         {
             "Security Name": "Somani Strips Ltd"
@@ -13718,7 +13718,7 @@
             "Security Name": "Shri Bholanath Carpets Ltd"
         },
         {
-            "Security Name": "Cupid Ltd-$"
+            "Security Name": "Cupid Ltd"
         },
         {
             "Security Name": "Sunshield Chemicals Ltd"
@@ -13757,7 +13757,7 @@
             "Security Name": "Praman Capital Market Services Ltd"
         },
         {
-            "Security Name": "Chembond Material Technologies Ltd-$"
+            "Security Name": "Chembond Material Technologies Ltd"
         },
         {
             "Security Name": "Girish Hotel Resorts & Health Farm Ltd"
@@ -13790,7 +13790,7 @@
             "Security Name": "Moulik Finance & Resorts Ltd"
         },
         {
-            "Security Name": "NG Industries Ltd-$"
+            "Security Name": "NG Industries Ltd"
         },
         {
             "Security Name": "Asia Pack Ltd"
@@ -13862,7 +13862,7 @@
             "Security Name": "Raminfo Ltd"
         },
         {
-            "Security Name": "Sunil Agro Foods Ltd-$"
+            "Security Name": "Sunil Agro Foods Ltd"
         },
         {
             "Security Name": "Mindvision Capital Ltd"
@@ -13910,7 +13910,7 @@
             "Security Name": "LSK Finance & Allied Services Ltd"
         },
         {
-            "Security Name": "Shantivijay Jewels Ltd-$"
+            "Security Name": "Shantivijay Jewels Ltd"
         },
         {
             "Security Name": "Roopa Industries Ltd"
@@ -13925,7 +13925,7 @@
             "Security Name": "Unique Organics Ltd"
         },
         {
-            "Security Name": "Balaji Amines Ltd-$"
+            "Security Name": "Balaji Amines Ltd"
         },
         {
             "Security Name": "Kamar Chemicals & Industries Ltd"
@@ -14060,7 +14060,7 @@
             "Security Name": "Indo Bonito Multinational Ltd"
         },
         {
-            "Security Name": "Lakhani India Ltd-$"
+            "Security Name": "Lakhani India Ltd"
         },
         {
             "Security Name": "Napa Papers Ltd"
@@ -14069,7 +14069,7 @@
             "Security Name": "Kashyap Fiscal Services Ltd"
         },
         {
-            "Security Name": "Tulip Star Hotels Ltd-$"
+            "Security Name": "Tulip Star Hotels Ltd"
         },
         {
             "Security Name": "Swissen Inter Space Ltd"
@@ -14144,7 +14144,7 @@
             "Security Name": "Ceenik Exports India Ltd"
         },
         {
-            "Security Name": "Patel Engineering Ltd-$"
+            "Security Name": "Patel Engineering Ltd"
         },
         {
             "Security Name": "Sierra Optima Ltd"
@@ -14213,10 +14213,10 @@
             "Security Name": "Esenes Forgings Ltd"
         },
         {
-            "Security Name": "El Forge Ltd-$"
+            "Security Name": "El Forge Ltd"
         },
         {
-            "Security Name": "Medicamen Biotech Ltd-$"
+            "Security Name": "Medicamen Biotech Ltd"
         },
         {
             "Security Name": "Alicon Castalloy Ltd"
@@ -14264,7 +14264,7 @@
             "Security Name": "ABM Knowledgeware Ltd"
         },
         {
-            "Security Name": "Emami Ltd-$"
+            "Security Name": "Emami Ltd"
         },
         {
             "Security Name": "Kemistar Corporation Ltd"
@@ -14417,7 +14417,7 @@
             "Security Name": "RTS Power Corporation Ltd"
         },
         {
-            "Security Name": "Comfort Intech Ltd-$"
+            "Security Name": "Comfort Intech Ltd"
         },
         {
             "Security Name": "Western India Shipyard Ltd"
@@ -14438,7 +14438,7 @@
             "Security Name": "Vibrant Investment & Properties Ltd"
         },
         {
-            "Security Name": "Anjani Synthetics Ltd-$"
+            "Security Name": "Anjani Synthetics Ltd"
         },
         {
             "Security Name": "Computech International Ltd"
@@ -14486,7 +14486,7 @@
             "Security Name": "Shamrock Industrial Company Ltd"
         },
         {
-            "Security Name": "Linc Ltd-$"
+            "Security Name": "Linc Ltd"
         },
         {
             "Security Name": "Gummadi Industries Ltd"
@@ -14519,7 +14519,7 @@
             "Security Name": "Aneri Fincap Ltd"
         },
         {
-            "Security Name": "India Gelatine & Chemicals Ltd-$"
+            "Security Name": "India Gelatine & Chemicals Ltd"
         },
         {
             "Security Name": "Optimus Finance Ltd"
@@ -14558,7 +14558,7 @@
             "Security Name": "Progrex Ventures Ltd"
         },
         {
-            "Security Name": "VST Tillers Tractors Ltd-$"
+            "Security Name": "VST Tillers Tractors Ltd"
         },
         {
             "Security Name": "Indo Vanillon Chemicals Ltd"
@@ -14750,7 +14750,7 @@
             "Security Name": "Vikalp Securities Ltd"
         },
         {
-            "Security Name": "Zydus Wellness Ltd-$"
+            "Security Name": "Zydus Wellness Ltd"
         },
         {
             "Security Name": "Auroma Coke Ltd"
@@ -14885,7 +14885,7 @@
             "Security Name": "Centenial Surgical Suture Ltd"
         },
         {
-            "Security Name": "Arihant Foundations & Housing Ltd-$"
+            "Security Name": "Arihant Foundations & Housing Ltd"
         },
         {
             "Security Name": "Jayavant Products Ltd"
@@ -14948,7 +14948,7 @@
             "Security Name": "LWSNITW"
         },
         {
-            "Security Name": "Zicom Electronic Security Systems Ltd-$"
+            "Security Name": "Zicom Electronic Security Systems Ltd"
         },
         {
             "Security Name": "Sugam Agro Tech Ltd"
@@ -15026,7 +15026,7 @@
             "Security Name": "STGRFLD"
         },
         {
-            "Security Name": "Shakti Pumps India Ltd-$"
+            "Security Name": "Shakti Pumps India Ltd"
         },
         {
             "Security Name": "Systematix Securities Ltd"
@@ -15089,7 +15089,7 @@
             "Security Name": "NCC Finance Ltd"
         },
         {
-            "Security Name": "Mohit Industries Ltd-$"
+            "Security Name": "Mohit Industries Ltd"
         },
         {
             "Security Name": "Polylink Polymers India Ltd"
@@ -15218,13 +15218,13 @@
             "Security Name": "Omkar Overseas Ltd"
         },
         {
-            "Security Name": "Madhucon Projects Ltd-$"
+            "Security Name": "Madhucon Projects Ltd"
         },
         {
             "Security Name": "Classic Filaments Ltd"
         },
         {
-            "Security Name": "Sybly Industries Ltd-$"
+            "Security Name": "Sybly Industries Ltd"
         },
         {
             "Security Name": "Rajesh Exports Ltd"
@@ -15236,7 +15236,7 @@
             "Security Name": "Esaar India Ltd"
         },
         {
-            "Security Name": "Maris Spinners Ltd-$"
+            "Security Name": "Maris Spinners Ltd"
         },
         {
             "Security Name": "Great Western Industries Ltd"
@@ -15299,10 +15299,10 @@
             "Security Name": "PAL Peugeot Ltd"
         },
         {
-            "Security Name": "ICSA (India) Ltd-$"
+            "Security Name": "ICSA (India) Ltd"
         },
         {
-            "Security Name": "ACE Software Exports Ltd-$"
+            "Security Name": "ACE Software Exports Ltd"
         },
         {
             "Security Name": "Radiant Rotogravure Ltd"
@@ -15344,13 +15344,13 @@
             "Security Name": "Shayona Petrochem Ltd"
         },
         {
-            "Security Name": "Rishabh Digha Steel & Allied Products Ltd-$"
+            "Security Name": "Rishabh Digha Steel & Allied Products Ltd"
         },
         {
             "Security Name": "Maruti Infrastructure Ltd"
         },
         {
-            "Security Name": "Kobo Biotech Ltd-$"
+            "Security Name": "Kobo Biotech Ltd"
         },
         {
             "Security Name": "Jindal Worldwide Ltd"
@@ -15587,7 +15587,7 @@
             "Security Name": "Sangam Health Care Products Ltd"
         },
         {
-            "Security Name": "Orosil Smiths India Ltd-$"
+            "Security Name": "Orosil Smiths India Ltd"
         },
         {
             "Security Name": "Raghava Estates and Properties Ltd"
@@ -15620,7 +15620,7 @@
             "Security Name": "Praveg Ltd"
         },
         {
-            "Security Name": "Suraj Ltd-$"
+            "Security Name": "Suraj Ltd"
         },
         {
             "Security Name": "Rochees Breweries Ltd"
@@ -15638,7 +15638,7 @@
             "Security Name": "Tokyo Finance Ltd"
         },
         {
-            "Security Name": "Southern Ispat and Energy Ltd-$"
+            "Security Name": "Southern Ispat and Energy Ltd"
         },
         {
             "Security Name": "RFL International Ltd"
@@ -15725,7 +15725,7 @@
             "Security Name": "Indo-Asian Projects Ltd"
         },
         {
-            "Security Name": "Tricom India Ltd-$"
+            "Security Name": "Tricom India Ltd"
         },
         {
             "Security Name": "Vaghani Techno Build Ltd"
@@ -15749,7 +15749,7 @@
             "Security Name": "Cat Technologies Ltd"
         },
         {
-            "Security Name": "Ankur Drugs and Pharma Ltd-$"
+            "Security Name": "Ankur Drugs and Pharma Ltd"
         },
         {
             "Security Name": "Frontline Financial Services Ltd"
@@ -15839,7 +15839,7 @@
             "Security Name": "Tricom Fruit Products Ltd"
         },
         {
-            "Security Name": "Vidhi Specialty Food Ingredients Ltd-$"
+            "Security Name": "Vidhi Specialty Food Ingredients Ltd"
         },
         {
             "Security Name": "Anik Ship Breaking Industries Ltd"
@@ -15920,7 +15920,7 @@
             "Security Name": "Hira Automobiles Ltd"
         },
         {
-            "Security Name": "Gini Silk Mills Ltd-$"
+            "Security Name": "Gini Silk Mills Ltd"
         },
         {
             "Security Name": "SG Global Exports Ltd"
@@ -15935,7 +15935,7 @@
             "Security Name": "Grandleas Florex Ltd"
         },
         {
-            "Security Name": "Encore Software Ltd-$"
+            "Security Name": "Encore Software Ltd"
         },
         {
             "Security Name": "Sonell Clocks & Gifts Ltd"
@@ -16010,7 +16010,7 @@
             "Security Name": "CISTRO Telelink Ltd"
         },
         {
-            "Security Name": "Intellvisions Software Ltd-$"
+            "Security Name": "Intellvisions Software Ltd"
         },
         {
             "Security Name": "Kachchh Minerals Ltd"
@@ -16061,7 +16061,7 @@
             "Security Name": "Seshachal Technologies Ltd"
         },
         {
-            "Security Name": "Atul Auto Ltd-$"
+            "Security Name": "Atul Auto Ltd"
         },
         {
             "Security Name": "Srinivassa Ferro Alloys Ltd"
@@ -16175,7 +16175,7 @@
             "Security Name": "Indus Finance Ltd"
         },
         {
-            "Security Name": "Lahoti Overseas Ltd-$"
+            "Security Name": "Lahoti Overseas Ltd"
         },
         {
             "Security Name": "MYM Technologies Ltd"
@@ -16184,13 +16184,13 @@
             "Security Name": "SU-RAJD"
         },
         {
-            "Security Name": "Zenith Steel Pipes & Industries Ltd-$"
+            "Security Name": "Zenith Steel Pipes & Industries Ltd"
         },
         {
             "Security Name": "Trinity League India Ltd"
         },
         {
-            "Security Name": "Asian Star Company Ltd-$"
+            "Security Name": "Asian Star Company Ltd"
         },
         {
             "Security Name": "Regent Agro Products Ltd"
@@ -16280,7 +16280,7 @@
             "Security Name": "Lyons Industrial Enterprises Ltd"
         },
         {
-            "Security Name": "Gujarat Metallic Coal & Coke Ltd-$"
+            "Security Name": "Gujarat Metallic Coal & Coke Ltd"
         },
         {
             "Security Name": "Kwality Ltd"
@@ -16328,7 +16328,7 @@
             "Security Name": "LIC -Dhan 88 (India)"
         },
         {
-            "Security Name": "Accentia Technologies Ltd-$"
+            "Security Name": "Accentia Technologies Ltd"
         },
         {
             "Security Name": "Sanguine Media Ltd"
@@ -16349,7 +16349,7 @@
             "Security Name": "National Flask Industries Ltd"
         },
         {
-            "Security Name": "Globus Corpooration Ltd-$"
+            "Security Name": "Globus Corpooration Ltd"
         },
         {
             "Security Name": "Accurate Exports Ltd"
@@ -16574,7 +16574,7 @@
             "Security Name": "Ambika Cotton Mills Ltd"
         },
         {
-            "Security Name": "Hind Aluminium Industries Ltd-$"
+            "Security Name": "Hind Aluminium Industries Ltd"
         },
         {
             "Security Name": "Senthil Infotek Ltd"
@@ -16670,7 +16670,7 @@
             "Security Name": "Naval Technoplast Industries Ltd"
         },
         {
-            "Security Name": "Gravity India Ltd-$"
+            "Security Name": "Gravity India Ltd"
         },
         {
             "Security Name": "Espire Hospitality Limited"
@@ -16739,7 +16739,7 @@
             "Security Name": "Giriraj Print Plast Ltd"
         },
         {
-            "Security Name": "Emmsons International Ltd-$"
+            "Security Name": "Emmsons International Ltd"
         },
         {
             "Security Name": "Zenotech Laboratories Ltd"
@@ -16778,7 +16778,7 @@
             "Security Name": "Priyadarsini Fabs Ltd"
         },
         {
-            "Security Name": "Swelect Energy Systems Ltd-$"
+            "Security Name": "Swelect Energy Systems Ltd"
         },
         {
             "Security Name": "Uma Fabrics Ltd"
@@ -16787,7 +16787,7 @@
             "Security Name": "Wallfort Financial Services Ltd"
         },
         {
-            "Security Name": "KDDL Ltd-$"
+            "Security Name": "KDDL Ltd"
         },
         {
             "Security Name": "Rashel Agrotech Ltd"
@@ -16829,7 +16829,7 @@
             "Security Name": "Sumuka Agro Industries Ltd"
         },
         {
-            "Security Name": "Interworld Digital Ltd-$"
+            "Security Name": "Interworld Digital Ltd"
         },
         {
             "Security Name": "Marvel Industries Ltd"
@@ -16856,7 +16856,7 @@
             "Security Name": "GTCL Mobile Com Technology Ltd"
         },
         {
-            "Security Name": "KSS Ltd-$"
+            "Security Name": "KSS Ltd"
         },
         {
             "Security Name": "Zodiac Cements Ltd"
@@ -16910,7 +16910,7 @@
             "Security Name": "Database Finance Ltd"
         },
         {
-            "Security Name": "Indo City Infotech Ltd-$"
+            "Security Name": "Indo City Infotech Ltd"
         },
         {
             "Security Name": "MINISPP"
@@ -17126,7 +17126,7 @@
             "Security Name": "Panasonic AVC Networks India Company Ltd"
         },
         {
-            "Security Name": "Zigma Software Ltd-$"
+            "Security Name": "Zigma Software Ltd"
         },
         {
             "Security Name": "Engineers India Ltd"
@@ -17246,7 +17246,7 @@
             "Security Name": "India Nippon Electricals Ltd"
         },
         {
-            "Security Name": "Sql Star International Ltd-$"
+            "Security Name": "Sql Star International Ltd"
         },
         {
             "Security Name": "TIMEBDM"
@@ -17297,7 +17297,7 @@
             "Security Name": "HCL Technologies Ltd"
         },
         {
-            "Security Name": "Castex Technologies Ltd-$"
+            "Security Name": "Castex Technologies Ltd"
         },
         {
             "Security Name": "Kaashyap Technologies Ltd"
@@ -17351,7 +17351,7 @@
             "Security Name": "Ind-Swift Laboratories Ltd"
         },
         {
-            "Security Name": "Compudyne Winfosystems Ltd-$"
+            "Security Name": "Compudyne Winfosystems Ltd"
         },
         {
             "Security Name": "Melstar Information Technologies Ltd"
@@ -17366,7 +17366,7 @@
             "Security Name": "Shree Rama Multi-Tech Ltd"
         },
         {
-            "Security Name": "Tutis Technologies Ltd-$"
+            "Security Name": "Tutis Technologies Ltd"
         },
         {
             "Security Name": "Geometric Ltd"
@@ -17411,7 +17411,7 @@
             "Security Name": "Vital Communications Ltd"
         },
         {
-            "Security Name": "Intense Technologies Ltd-$"
+            "Security Name": "Intense Technologies Ltd"
         },
         {
             "Security Name": "Allsoft Corporation Ltd"
@@ -17420,10 +17420,10 @@
             "Security Name": "Rane Brake Linings Ltd"
         },
         {
-            "Security Name": "Danlaw Technologies India Ltd-$"
+            "Security Name": "Danlaw Technologies India Ltd"
         },
         {
-            "Security Name": "Biopac India Corporation Ltd-$"
+            "Security Name": "Biopac India Corporation Ltd"
         },
         {
             "Security Name": "Ajanta Pharma Ltd"
@@ -17450,13 +17450,13 @@
             "Security Name": "Valuemart Info Technologies Ltd"
         },
         {
-            "Security Name": "Compucom Software Ltd-$"
+            "Security Name": "Compucom Software Ltd"
         },
         {
             "Security Name": "Omni AXs Software Ltd"
         },
         {
-            "Security Name": "IZMO Ltd-$"
+            "Security Name": "IZMO Ltd"
         },
         {
             "Security Name": "Commex Technology Ltd"
@@ -17474,7 +17474,7 @@
             "Security Name": "Blue Star Infotech Ltd"
         },
         {
-            "Security Name": "Helios and Matheson Information Technology Ltd-$"
+            "Security Name": "Helios and Matheson Information Technology Ltd"
         },
         {
             "Security Name": "Subex Ltd"
@@ -17573,7 +17573,7 @@
             "Security Name": "First Fintec Ltd"
         },
         {
-            "Security Name": "Baba Arts Ltd-$"
+            "Security Name": "Baba Arts Ltd"
         },
         {
             "Security Name": "Indus Networks Ltd"
@@ -17600,7 +17600,7 @@
             "Security Name": "Indian Overseas Bank"
         },
         {
-            "Security Name": "Valecha Engineering Ltd-$"
+            "Security Name": "Valecha Engineering Ltd"
         },
         {
             "Security Name": "Taj Gvk Hotels & Resorts Ltd"
@@ -17723,7 +17723,7 @@
             "Security Name": "STEBBPH"
         },
         {
-            "Security Name": "BF Utilities Ltd-$"
+            "Security Name": "BF Utilities Ltd"
         },
         {
             "Security Name": "BDMBBPH"
@@ -17810,7 +17810,7 @@
             "Security Name": "IVPPHBB"
         },
         {
-            "Security Name": "Faze Three Autofab Ltd-$"
+            "Security Name": "Faze Three Autofab Ltd"
         },
         {
             "Security Name": "Ponni Sugars (Erode) Ltd"
@@ -17834,10 +17834,10 @@
             "Security Name": "Oracle Financial Services Software Ltd"
         },
         {
-            "Security Name": "Hazoor Multi Projects Ltd-$"
+            "Security Name": "Hazoor Multi Projects Ltd"
         },
         {
-            "Security Name": "Kama Holdings Ltd-$"
+            "Security Name": "Kama Holdings Ltd"
         },
         {
             "Security Name": "Mather & Platt Pumps Ltd"
@@ -17867,7 +17867,7 @@
             "Security Name": "Union Bank of India"
         },
         {
-            "Security Name": "United Breweries Ltd-$"
+            "Security Name": "United Breweries Ltd"
         },
         {
             "Security Name": "ISMT Ltd"
@@ -17879,7 +17879,7 @@
             "Security Name": "Noida Toll Bridge Company Ltd"
         },
         {
-            "Security Name": "Granules India Ltd-$"
+            "Security Name": "Granules India Ltd"
         },
         {
             "Security Name": "Canara Bank"
@@ -17906,7 +17906,7 @@
             "Security Name": "Rane Engine Valves Ltd"
         },
         {
-            "Security Name": "ECE Industries Ltd-$"
+            "Security Name": "ECE Industries Ltd"
         },
         {
             "Security Name": "Indo Gulf Fertilisers Ltd"
@@ -17915,7 +17915,7 @@
             "Security Name": "Astra Microwave Products Ltd"
         },
         {
-            "Security Name": "Micro Technologies (India) Ltd-$"
+            "Security Name": "Micro Technologies (India) Ltd"
         },
         {
             "Security Name": "FINLNCBBPH"
@@ -17933,10 +17933,10 @@
             "Security Name": "MAZDABBPH"
         },
         {
-            "Security Name": "Rajapalayam Mills Ltd-$"
+            "Security Name": "Rajapalayam Mills Ltd"
         },
         {
-            "Security Name": "Navin Fluorine International Ltd-$"
+            "Security Name": "Navin Fluorine International Ltd"
         },
         {
             "Security Name": "UCO Bank"
@@ -17951,7 +17951,7 @@
             "Security Name": "Jindal Stainless Ltd"
         },
         {
-            "Security Name": "Suprajit Engineering Ltd-$"
+            "Security Name": "Suprajit Engineering Ltd"
         },
         {
             "Security Name": "ASLEYF"
@@ -17972,10 +17972,10 @@
             "Security Name": "Patni Computer Systems Ltd"
         },
         {
-            "Security Name": "Florence Investech Ltd-$"
+            "Security Name": "Florence Investech Ltd"
         },
         {
-            "Security Name": "JK Sugar Ltd-$"
+            "Security Name": "JK Sugar Ltd"
         },
         {
             "Security Name": "Palred Technologies Ltd"
@@ -18032,7 +18032,7 @@
             "Security Name": "UltraTech Cement Ltd"
         },
         {
-            "Security Name": "UNO Minda Ltd-$"
+            "Security Name": "UNO Minda Ltd"
         },
         {
             "Security Name": "Tata Consultancy Services Ltd"
@@ -18053,7 +18053,7 @@
             "Security Name": "Fresenius Kabi Oncology Ltd"
         },
         {
-            "Security Name": "Century Plyboards (India) Ltd-$"
+            "Security Name": "Century Plyboards (India) Ltd"
         },
         {
             "Security Name": "Welspun Enterprises Ltd"
@@ -18953,7 +18953,7 @@
             "Security Name": "IL&FS Engineering and Construction Company Ltd"
         },
         {
-            "Security Name": "Sharon Bio-Medicine Ltd-$"
+            "Security Name": "Sharon Bio-Medicine Ltd"
         },
         {
             "Security Name": "Grabal Alok Impex Ltd"
@@ -19145,7 +19145,7 @@
             "Security Name": "GOLDIAM INT*"
         },
         {
-            "Security Name": "Aditya Birla Money Ltd-$"
+            "Security Name": "Aditya Birla Money Ltd"
         },
         {
             "Security Name": "Telogica Ltd"
@@ -19175,7 +19175,7 @@
             "Security Name": "RPG Life Sciences Ltd"
         },
         {
-            "Security Name": "Enso Secutrack Ltd-$"
+            "Security Name": "Enso Secutrack Ltd"
         },
         {
             "Security Name": "Kotak S&P BSE Sensex ETF"
@@ -20177,7 +20177,7 @@
             "Security Name": "Hexa Tradex Ltd"
         },
         {
-            "Security Name": "Max heights Infrastucture Ltd"
+            "Security Name": "Maxheights Infrastructure Ltd"
         },
         {
             "Security Name": "INDBULBBPH"
@@ -21716,7 +21716,7 @@
             "Security Name": "Jain Marmo Industries Ltd"
         },
         {
-            "Security Name": "Grameva Ltd"
+            "Security Name": "Bangalore Fort Farms Ltd"
         },
         {
             "Security Name": "Palco Metals Ltd"
@@ -22452,9 +22452,6 @@
         },
         {
             "Security Name": "Fredun Pharmaceuticals Ltd"
-        },
-        {
-            "Security Name": "Simbhaoli Sugars Ltd"
         },
         {
             "Security Name": "Relicab Cable Manufacturing Ltd"
@@ -23339,7 +23336,7 @@
             "Security Name": "Cochin Shipyard Ltd"
         },
         {
-            "Security Name": "Haleos Labs Ltd"
+            "Security Name": "SMS Lifesciences India Ltd"
         },
         {
             "Security Name": "KIOCL Ltd"
@@ -24650,9 +24647,6 @@
             "Security Name": "Prince Pipes and Fittings Ltd"
         },
         {
-            "Security Name": "Valencia Nutrition Ltd"
-        },
-        {
             "Security Name": "Assam Entrade Ltd"
         },
         {
@@ -24669,9 +24663,6 @@
         },
         {
             "Security Name": "Mirae Asset Nifty Next 50 ETF (MANXT50ETF)"
-        },
-        {
-            "Security Name": "Tranway21 Technologies Ltd"
         },
         {
             "Security Name": "Janus Corporation Ltd"
@@ -24788,9 +24779,6 @@
             "Security Name": "DJ Mediaprint & Logistics Ltd"
         },
         {
-            "Security Name": "Nirmitee Robotics India Ltd"
-        },
-        {
             "Security Name": "Regis Industries Ltd"
         },
         {
@@ -24822,9 +24810,6 @@
         },
         {
             "Security Name": "ICICI Prudential Nifty IT ETF"
-        },
-        {
-            "Security Name": "Trekkingtoes.com Ltd"
         },
         {
             "Security Name": "HDFC Nifty Banking ETF"
@@ -25127,9 +25112,6 @@
             "Security Name": "Vijaya Diagnostic Centre Ltd"
         },
         {
-            "Security Name": "Naapbooks Ltd"
-        },
-        {
             "Security Name": "PlatinumOne Business Services Ltd"
         },
         {
@@ -25170,9 +25152,6 @@
         },
         {
             "Security Name": "Adishakti Loha and Ispat Ltd"
-        },
-        {
-            "Security Name": "CWD Ltd"
         },
         {
             "Security Name": "ICICI Prudential Nifty India Consumption ETF"
@@ -25287,9 +25266,6 @@
         },
         {
             "Security Name": "Brand Concepts Ltd"
-        },
-        {
-            "Security Name": "Ascensive Educare Ltd"
         },
         {
             "Security Name": "Fabino Enterprises Ltd"
@@ -25839,9 +25815,6 @@
         },
         {
             "Security Name": "Maiden Forgings Ltd"
-        },
-        {
-            "Security Name": "Emami Ltd"
         },
         {
             "Security Name": "Exhicon Events Media Solutions Ltd"
@@ -26432,7 +26405,7 @@
             "Security Name": "Amkay Products Ltd"
         },
         {
-            "Security Name": "Dolphin Kitchen Utencilsand Appliances Ltd"
+            "Security Name": "Sai Swami Metals and Alloys Ltd"
         },
         {
             "Security Name": "Storage Technologies and Automation Ltd"
@@ -27104,7 +27077,7 @@
             "Security Name": "Oswal Pumps Ltd"
         },
         {
-            "Security Name": "ArisInfra Solutions Ltd"
+            "Security Name": "ARISINFRA"
         },
         {
             "Security Name": "Raymond Realty Ltd"
@@ -27647,33 +27620,6 @@
             "Security Name": "Capillary Technologies India Ltd"
         },
         {
-            "Security Name": "KSR Footwear Ltd"
-        },
-        {
-            "Security Name": "Gallard Steel Ltd"
-        },
-        {
-            "Security Name": "Excelsoft Technologies Ltd"
-        },
-        {
-            "Security Name": "Edelweiss BSE Sensex ETF"
-        },
-        {
-            "Security Name": "Sudeep Pharma Ltd"
-        },
-        {
-            "Security Name": "MSCIADD"
-        },
-        {
-            "Security Name": "SSMD Agrotech India Ltd"
-        },
-        {
-            "Security Name": "Mother Nutri Foods Ltd"
-        },
-        {
-            "Security Name": "K K Silk Mills Ltd"
-        },
-        {
             "Security Name": "ICICI Prudential BSE Sensex ETF"
         },
         {
@@ -27704,7 +27650,7 @@
             "Security Name": "Veedol Corporation Ltd"
         },
         {
-            "Security Name": "Amrutanjan Health Care Ltd-$"
+            "Security Name": "Amrutanjan Health Care Ltd"
         },
         {
             "Security Name": "Moving Picture Company India Ltd"
@@ -27722,7 +27668,7 @@
             "Security Name": "UTIUS64I12"
         },
         {
-            "Security Name": "Hisar Metal Industries Ltd-$"
+            "Security Name": "Hisar Metal Industries Ltd"
         },
         {
             "Security Name": "Elgi Rubber Company Ltd"
@@ -27740,28 +27686,22 @@
             "Security Name": "Schneider Electric President Systems Ltd"
         },
         {
-            "Security Name": "Tirupati Foam Ltd-$"
+            "Security Name": "Kalptaru Papers Ltd"
         },
         {
-            "Security Name": "Kalptaru Papers Ltd-$"
+            "Security Name": "Steel Exchange India  Ltd"
         },
         {
-            "Security Name": "Steel Exchange India  Ltd-$"
+            "Security Name": "Visu International Ltd"
         },
         {
-            "Security Name": "Visu International Ltd-$"
+            "Security Name": "Kavveri Defence & Wireless Technologies Ltd"
         },
         {
-            "Security Name": "Kavveri Defence & Wireless Technologies Ltd-$"
-        },
-        {
-            "Security Name": "Harita Seating Systems Ltd-$"
+            "Security Name": "Harita Seating Systems Ltd"
         },
         {
             "Security Name": "Tezpore Tea Company Ltd"
-        },
-        {
-            "Security Name": "Smruthi Organics Ltd-$"
         },
         {
             "Security Name": "CSS Technergy  Ltd"
@@ -27770,7 +27710,7 @@
             "Security Name": "Saksoft Ltd"
         },
         {
-            "Security Name": "Kar Mobiles Ltd-$"
+            "Security Name": "Kar Mobiles Ltd"
         },
         {
             "Security Name": "Jeypore Sugar Company Ltd"
@@ -27782,7 +27722,7 @@
             "Security Name": "Equippp Social Impact Technologies Ltd"
         },
         {
-            "Security Name": "Brushman India Ltd-$"
+            "Security Name": "Brushman India Ltd"
         },
         {
             "Security Name": "Andhra Sugars Ltd"
@@ -27812,16 +27752,16 @@
             "Security Name": "Wheels India Ltd"
         },
         {
-            "Security Name": "Ortin Laboratories    Ltd-$"
+            "Security Name": "Ortin Laboratories    Ltd"
         },
         {
-            "Security Name": "Lambodhara Textile Ltd-$"
+            "Security Name": "Lambodhara Textile Ltd"
         },
         {
-            "Security Name": "Camson Bio Technologies  Ltd-$"
+            "Security Name": "Camson Bio Technologies  Ltd"
         },
         {
-            "Security Name": "Ranklin Solutions Ltd-$"
+            "Security Name": "Ranklin Solutions Ltd"
         },
         {
             "Security Name": "Maithan Alloys Ltd"
@@ -27854,16 +27794,16 @@
             "Security Name": "Cigniti Technologies  Ltd"
         },
         {
-            "Security Name": "Swarnajyothi Agrotech & Power Ltd-$"
+            "Security Name": "Swarnajyothi Agrotech & Power Ltd"
         },
         {
-            "Security Name": "Trinethra Infra Ventures Ltd-$"
+            "Security Name": "Trinethra Infra Ventures Ltd"
         },
         {
-            "Security Name": "Trimurthi Drugs & Pharmaceuticals Ltd-$"
+            "Security Name": "Trimurthi Drugs & Pharmaceuticals Ltd"
         },
         {
-            "Security Name": "Farmax India Ltd-$"
+            "Security Name": "Farmax India Ltd"
         },
         {
             "Security Name": "UTI Mutual Fund - S&P CNX Nifty UTI Notional DEpository Receipt (SUNDER)"
@@ -27890,7 +27830,7 @@
             "Security Name": "Quantum Nifty 50 ETF"
         },
         {
-            "Security Name": "Vaishnavi Gold Ltd-$"
+            "Security Name": "Vaishnavi Gold Ltd"
         },
         {
             "Security Name": "Kotak Mahindra Mutual Fund - Kotak Nifty ETF"
@@ -27902,10 +27842,10 @@
             "Security Name": "Motilal Oswal MOSt Shares M50 ETF"
         },
         {
-            "Security Name": "7Seas Technologies Ltd-$"
+            "Security Name": "7Seas Technologies Ltd"
         },
         {
-            "Security Name": "Mahaveer       Infoway Ltd-$"
+            "Security Name": "Mahaveer       Infoway Ltd"
         },
         {
             "Security Name": "Infronics Systems  Ltd"
@@ -28131,9 +28071,6 @@
         },
         {
             "Security Name": "ESTER CRPS"
-        },
-        {
-            "Security Name": "Timex Group India Ltd"
         },
         {
             "Security Name": "ASAHI CRPD"
@@ -28928,9 +28865,6 @@
             "Security Name": "ALOKINDSLR"
         },
         {
-            "Security Name": "Kokuyo Camlin Ltd"
-        },
-        {
             "Security Name": "WHEELS INDIA LTD"
         },
         {
@@ -28979,12 +28913,6 @@
             "Security Name": "CIL Nova Petrochemicals Ltd"
         },
         {
-            "Security Name": "IP Rings Ltd"
-        },
-        {
-            "Security Name": "Kingfa Science & Technology (India) Ltd"
-        },
-        {
             "Security Name": "INTELLECT DESIGN ARENA Ltd"
         },
         {
@@ -28992,9 +28920,6 @@
         },
         {
             "Security Name": "LAKSHVILALR"
-        },
-        {
-            "Security Name": "Sumeet Industries Ltd"
         },
         {
             "Security Name": "TATA STEEL Ltd"
@@ -29006,9 +28931,6 @@
             "Security Name": "Scanpoint Geomatics Ltd"
         },
         {
-            "Security Name": "Shalimar Paints Ltd"
-        },
-        {
             "Security Name": "Hatsun Agro Products Ltd"
         },
         {
@@ -29016,9 +28938,6 @@
         },
         {
             "Security Name": "CAPITAL INDIA FINANCE Ltd"
-        },
-        {
-            "Security Name": "Krebs Biochemicals & Industries Ltd"
         },
         {
             "Security Name": "VODAFONE IDEA Ltd"
@@ -29030,25 +28949,16 @@
             "Security Name": "Tata Sponge Iron Ltd"
         },
         {
-            "Security Name": "Reliance Chemotex Industries Ltd"
-        },
-        {
             "Security Name": "Ishan Dyes & Chemicals Ltd"
         },
         {
             "Security Name": "Pacific Industries ltd"
         },
         {
-            "Security Name": "Patel Engineering Ltd"
-        },
-        {
             "Security Name": "Shri Keshav Cements and Infra Ltd"
         },
         {
             "Security Name": "Piramal Enterprises Limited"
-        },
-        {
-            "Security Name": "Bajaj Electricals Ltd"
         },
         {
             "Security Name": "BROOKS LABORATORIES Ltd"
@@ -29072,25 +28982,13 @@
             "Security Name": "L&T FINANCE HOLDINGS Ltd"
         },
         {
-            "Security Name": "Patel Integrated Logistics Ltd"
-        },
-        {
-            "Security Name": "Rajapalayam Mills Ltd"
-        },
-        {
             "Security Name": "Emerald Leasing Finance & Investment Company Ltd"
         },
         {
             "Security Name": "India Grid Trust"
         },
         {
-            "Security Name": "KDDL Ltd"
-        },
-        {
             "Security Name": "VIKAS LIFECARE Ltd"
-        },
-        {
-            "Security Name": "Aplab Ltd"
         },
         {
             "Security Name": "ASIAN GRANITO INDIA Ltd"
@@ -29100,9 +28998,6 @@
         },
         {
             "Security Name": "NXTDIGITAL Ltd"
-        },
-        {
-            "Security Name": "Asian Tea & Exports Ltd"
         },
         {
             "Security Name": "SWISS MILITARY CONSUMER GOODS Ltd"
@@ -29141,9 +29036,6 @@
             "Security Name": "HCP PLASTENE BULKPACK Ltd"
         },
         {
-            "Security Name": "Makers Laboratories Ltd"
-        },
-        {
             "Security Name": "NAKODA GROUP OF INDUSTRIES Ltd"
         },
         {
@@ -29174,9 +29066,6 @@
             "Security Name": "SMC Credits ltd"
         },
         {
-            "Security Name": "Anjani Portland Cement Ltd"
-        },
-        {
             "Security Name": "GYSCOAL ALLOYS Ltd"
         },
         {
@@ -29184,9 +29073,6 @@
         },
         {
             "Security Name": "FAMILY CARE HOSPITALS Ltd"
-        },
-        {
-            "Security Name": "Hazoor Multi Projects Ltd"
         },
         {
             "Security Name": "Sprayking Agro Equipment Ltd"
@@ -29267,10 +29153,10 @@
             "Security Name": "MAGNUM VENTURES Ltd"
         },
         {
-            "Security Name": "Nagreeka Exports Ltd"
+            "Security Name": "DIPNA PHARMACHEM Ltd"
         },
         {
-            "Security Name": "DIPNA PHARMACHEM Ltd"
+            "Security Name": "Valencia Nutrition Ltd"
         },
         {
             "Security Name": "Sawaca Business Machines Ltd"
@@ -29444,9 +29330,6 @@
             "Security Name": "EXICOM TELE-SYSTEMS Ltd"
         },
         {
-            "Security Name": "T T Ltd"
-        },
-        {
             "Security Name": "KATI PATANG LIFESTYLE Ltd"
         },
         {
@@ -29502,15 +29385,6 @@
         },
         {
             "Security Name": "TITAN INTECH Ltd"
-        },
-        {
-            "Security Name": "BAID FINSERV Ltd"
-        },
-        {
-            "Security Name": "JAINEX-RE"
-        },
-        {
-            "Security Name": "INDO-RE2"
         },
         {
             "Security Name": "Jaisukh Dealers Ltd"
